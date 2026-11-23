@@ -1,4 +1,45 @@
-<!DOCTYPE html>
-<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Artist-Website Vorschauen</title>
-<style>body{margin:0;background:#0c0b0a;color:#f6f1e7;font:17px/1.6 system-ui,sans-serif;display:grid;place-items:center;min-height:100vh}main{max-width:560px;padding:32px}h1{font-size:30px;margin:0 0 8px}p{color:#a89f8f}a{display:block;margin-top:14px;padding:18px 22px;border:1px solid rgba(255,255,255,.14);border-radius:12px;color:#f6f1e7;text-decoration:none;font-weight:600}a:hover{border-color:#f2b632}</style></head>
-<body><main><h1>Design-Vorschauen</h1><p>Interne Vorschau, keine offiziellen Websites.</p><a href="jah-mason/">Jah Mason &rarr;</a><a href="lutan-fyah/">Lutan Fyah &rarr;</a><p style="margin-top:40px;font-size:13px;opacity:.7"><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p></main></body></html>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Roots Pages · Websites for reggae artists</title><meta name="robots" content="noindex">
+<meta name="description" content="Roots Pages builds official websites for reggae artists: video header, music player, vinyl shop links and booking form.">
+<meta property="og:title" content="Roots Pages · Websites for reggae artists"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230c0b0a'/%3E%3Ctext x='32' y='44' font-family='Impact,Arial Narrow,sans-serif' font-size='30' text-anchor='middle' fill='%23f2b632'%3ERP%3C/text%3E%3C/svg%3E">
+<style>@font-face{font-family:"Anton";font-weight:400;font-display:swap;src:url("assets/fonts/anton-latin-400-normal.woff2") format("woff2")}@font-face{font-family:"Inter";font-weight:400;font-display:swap;src:url("assets/fonts/inter-latin-400-normal.woff2") format("woff2")}@font-face{font-family:"Inter";font-weight:600;font-display:swap;src:url("assets/fonts/inter-latin-600-normal.woff2") format("woff2")}@font-face{font-family:"Inter";font-weight:700;font-display:swap;src:url("assets/fonts/inter-latin-700-normal.woff2") format("woff2")}
+:root{--bg:#0c0b0a;--ink:#f6f1e7;--mute:#a89f8f;--line:rgba(255,255,255,.1);--acc:#f2b632;--g:#3fa34d;--r:#d9452b}
+*{box-sizing:border-box;margin:0;padding:0}body{background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+nav{padding:26px 0;border-bottom:1px solid var(--line)}nav .wrap{display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:Anton,Impact,sans-serif;font-size:24px;letter-spacing:.04em;text-transform:uppercase}.logo i{font-style:normal;color:var(--acc)}
+.stripe{height:5px;background:linear-gradient(90deg,var(--g) 0 33%,var(--acc) 33% 66%,var(--r) 66%)}
+.btn{display:inline-block;background:var(--acc);color:#0c0b0a;font-weight:700;padding:14px 24px;border-radius:999px}
+.hero{padding:120px 0 90px}.hero h1{font-family:Anton,Impact,sans-serif;font-size:clamp(54px,9vw,132px);line-height:.95;text-transform:uppercase}
+.hero h1 span{color:transparent;-webkit-text-stroke:2px var(--acc)}.hero p{max-width:640px;color:#d8d1c3;font-size:20px;margin:28px 0 36px}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--acc);font-weight:600;margin-bottom:14px}
+h2{font-family:Anton,Impact,sans-serif;font-size:clamp(38px,5vw,64px);text-transform:uppercase;line-height:1}
+section{padding:90px 0;border-top:1px solid var(--line)}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px}.card{border:1px solid var(--line);border-radius:10px;overflow:hidden;transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--acc);transform:translateY(-4px)}.card .img{aspect-ratio:16/9;background:#222 center/cover}
+.card .t{padding:22px}.card b{display:block;font-family:Anton,Impact,sans-serif;font-size:30px;text-transform:uppercase;font-weight:400}.card span{display:block;color:var(--mute);margin:4px 0 12px}.card em{font-style:normal;color:var(--acc);font-weight:600}
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:40px}
+.feat div{background:var(--bg);padding:26px}.feat b{display:block;margin-bottom:6px}.feat p{color:var(--mute);font-size:15px}
+.price{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.price .n{font-family:Anton,Impact,sans-serif;font-size:96px;color:var(--acc);line-height:1}.price ul{list-style:none;margin-top:18px}.price li{padding:8px 0;border-bottom:1px solid var(--line);color:#d8d1c3}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:40px}.steps div{counter-increment:s}.steps div:before{content:"0" counter(s);font-family:Anton,Impact,sans-serif;font-size:42px;color:var(--acc);display:block}.steps p{color:var(--mute);font-size:15px}
+footer{padding:40px 0;border-top:1px solid var(--line);color:var(--mute);font-size:13px}footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}footer a{text-decoration:underline}
+@media(max-width:860px){.cards,.price{grid-template-columns:1fr}.feat{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}}
+</style></head><body><div class="stripe"></div>
+<nav><div class="wrap"><div class="logo">Roots<i>Pages</i></div><a class="btn" href="#contact">Get a website</a></div></nav>
+<header class="hero"><div class="wrap"><div class="eyebrow">Websites for reggae artists</div><h1>Your music.<br><span>Your home.</span></h1>
+<p>Many great artists have no official website. Fans land on streaming profiles and third-party pages instead. We build a home for the artist: video, music, vinyl, story and booking in one place.</p><a class="btn" href="#work">See the previews</a></div></header>
+<section id="work"><div class="wrap"><div class="eyebrow">Previews</div><h2>Ready to go live</h2><div class="cards"><a class="card" href="jah-mason/"><div class="img" style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Ruhr_Reggae_Summer_2013_-_Jah_Mason_02.jpg/1920px-Ruhr_Reggae_Summer_2013_-_Jah_Mason_02.jpg');background-position:50% 22%"></div><div class="t"><b>Jah Mason</b><span>Roots singer and deejay from Manchester, Jamaica. On record since 1991.</span><em>View preview &rarr;</em></div></a><a class="card" href="lutan-fyah/"><div class="img" style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Lutan_Fyah_performing_at_Roma%2C_Borgerhout%2C_Belgium_in_2023.jpg/1920px-Lutan_Fyah_performing_at_Roma%2C_Borgerhout%2C_Belgium_in_2023.jpg');background-position:70% 30%"></div><div class="t"><b>Lutan Fyah</b><span>Roots reggae singer from Spanish Town, Jamaica. Strength and resilience since 1999.</span><em>View preview &rarr;</em></div></a></div></div></section>
+<section><div class="wrap"><div class="eyebrow">What you get</div><h2>Everything in one place</h2><div class="feat">
+<div><b>Live video header</b><p>Full-screen performance footage the moment the page opens.</p></div>
+<div><b>Built-in player</b><p>Fans preview the releases right on the page.</p></div>
+<div><b>Vinyl &amp; streaming links</b><p>Every record shop and platform, one click away.</p></div>
+<div><b>Booking form</b><p>Enquiries go straight to the management inbox.</p></div>
+<div><b>Bio &amp; gallery</b><p>The artist's story with press photos.</p></div>
+<div><b>Domain &amp; hosting</b><p>Your own domain, hosting and updates included in year one.</p></div></div></div></section>
+<section><div class="wrap price"><div><div class="eyebrow">Price</div><div class="n">€1,000</div><p style="color:var(--mute);margin-top:10px">per artist website · package price for 3 or more artists</p></div>
+<ul><li>Design based on the preview, one round of changes</li><li>Domain and hosting for 12 months</li><li>Imprint, privacy policy and consent for embedded media</li><li>Updates with new releases and photos</li><li>Domain registered in the artist's or management's name</li></ul></div></section>
+<section><div class="wrap"><div class="eyebrow">How it works</div><h2>Live in two weeks</h2><div class="steps">
+<div><b>Look</b><p>You review the free preview.</p></div><div><b>Talk</b><p>A short call about your wishes.</p></div><div><b>Send</b><p>Photos, bio and booking email.</p></div><div><b>Launch</b><p>Your site goes live on your domain.</p></div></div></div></section>
+<section id="contact"><div class="wrap"><div class="eyebrow">Contact</div><h2>Let's talk</h2><p style="color:#d8d1c3;margin-top:18px;max-width:560px">Contact details follow once rootspages.com is live. Until then, simply reply to our email.</p></div></section>
+<footer><div class="wrap"><span>&copy; 2026 Roots Pages · Previews are design proposals, not official artist websites.</span><span><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span></div></footer>
+</body></html>
