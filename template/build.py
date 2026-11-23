@@ -8,6 +8,31 @@ e = html.escape
 PLAY = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg>'
 CART = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg>'
 
+from urllib.parse import quote_plus, quote
+
+def links_for(a):
+    """Stream and shop links. Official profile URLs from artists.json win; otherwise a search link (replace before go-live)."""
+    q, n = quote_plus(a["name"]), quote(a["name"])
+    o = a.get("links", {})
+    stream = [("Apple Music", a["apple"]),
+              ("Spotify", o.get("spotify", f"https://open.spotify.com/search/{n}/artists")),
+              ("YouTube", o.get("youtube", f"https://www.youtube.com/results?search_query={q}")),
+              ("Deezer", o.get("deezer", f"https://www.deezer.com/search/{n}/artist")),
+              ("Tidal", o.get("tidal", f"https://listen.tidal.com/search/artists?q={q}"))]
+    shop = [("Buyreggae", a["buyreggae"]),
+            ("Discogs", o.get("discogs", f"https://www.discogs.com/search/?q={q}&type=artist")),
+            ("Juno Records", o.get("juno", f"https://www.juno.co.uk/search/?q%5Ball%5D%5B%5D={q}")),
+            ("Bandcamp", o.get("bandcamp", f"https://bandcamp.com/search?q={q}&item_type=b")),
+            ("Beatport / Traxsource", o.get("downloads", f"https://www.traxsource.com/search?term={q}"))]
+    fmt = lambda xs: "".join(f'<a href="{e(u)}" target="_blank" rel="noopener">{e(l)}</a>' for l, u in xs)
+    return fmt(stream), fmt(shop), [u for _, u in stream + shop if "search" not in u]
+
+def favicon(a):
+    ini = "".join(w[0] for w in a["name"].split()[:2]).upper()
+    svg = (f"<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='#0c0b0a'/>"
+           f"<text x='32' y='44' font-family='Impact,Arial Narrow,sans-serif' font-size='30' text-anchor='middle' fill='{a['accent']}'>{ini}</text></svg>")
+    return "data:image/svg+xml," + quote(svg)
+
 def sample(pid):  # buyreggae preview pattern: /sounds/<id//10000>/<id>A.mp3
     return f"https://www.buyreggae.com/sounds/{pid // 10000}/{pid}A.mp3"
 
@@ -31,7 +56,12 @@ for slug, a in data.items():
     gallery = "".join(f'<img src="{u}" alt="{e(a["name"])} live">' for u in a["gallery"])
     facts = "".join(f"<div><dt>{e(k)}</dt><dd>{e(v)}</dd></div>" for k, v in a["facts"])
     bio = "".join(f"<p>{e(p)}</p>" for p in a["bio"])
-    rep = {"NAME_H1": h1, "NAME": e(a["name"]), "TAGLINE": e(a["tagline"]), "ACCENT2": a["accent2"], "ACCENT": a["accent"],
+    stream_html, shop_html, same_as = links_for(a)
+    ld = {"@context": "https://schema.org", "@type": "MusicGroup", "name": a["name"], "genre": "Reggae",
+          "description": a["tagline"], "image": a["hero"], "sameAs": same_as,
+          "track": [{"@type": "MusicRecording", "name": t["title"], "url": t["url"]} for t in tracks[:6]]}
+    rep = {"NAME_H1": h1, "STREAM_LINKS": stream_html, "SHOP_LINKS": shop_html, "FAVICON": favicon(a),
+           "JSONLD": json.dumps(ld, ensure_ascii=False).replace("</", "<\\/"), "FORM_ENDPOINT": e(a.get("form_endpoint", "")), "NAME": e(a["name"]), "TAGLINE": e(a["tagline"]), "ACCENT2": a["accent2"], "ACCENT": a["accent"],
            "HERO_POS": a["hero_pos"], "HERO": a["hero"], "BAND": a["band_img"], "ABOUT_IMG": a["about_img"],
            "MARQUEE": marquee, "TRACKS_JSON": json.dumps(tracks, ensure_ascii=False), "TRACKS": "\n".join(rows),
            "RELEASES": "\n".join(cards), "GALLERY": gallery, "FACTS": facts, "BIO": bio, "SHOP": a["buyreggae"],
