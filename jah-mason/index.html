@@ -275,8 +275,8 @@ document.querySelectorAll('.rv').forEach(el => io.observe(el));
 if (!matchMedia('(prefers-reduced-motion: reduce)').matches && innerWidth > 700) {
   window.onYouTubeIframeAPIReady = () => {
     const v = document.getElementById('vid');
-    new YT.Player('yt', {videoId: 'DlL5Lc5Szt4', host: 'https://www.youtube-nocookie.com',
-      playerVars: {autoplay:1, mute:1, controls:0, loop:1, playlist:'DlL5Lc5Szt4', start:45, playsinline:1, rel:0, modestbranding:1, iv_load_policy:3, disablekb:1, fs:0},
+    new YT.Player('yt', {videoId: 'DlL5Lc5Szt4',
+      playerVars: {autoplay:1, mute:1, controls:0, loop:1, playlist:'DlL5Lc5Szt4', start:45, playsinline:1, rel:0, origin: location.origin, modestbranding:1, iv_load_policy:3, disablekb:1, fs:0},
       events: {onReady: e => { e.target.mute(); e.target.playVideo(); },
                onStateChange: e => { if (e.data === 1) v.classList.add('on'); if (e.data === 0) e.target.seekTo(45); },
                onError: () => v.remove()}});
