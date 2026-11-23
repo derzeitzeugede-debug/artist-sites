@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jah Mason · Official Website</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="Roots singer and deejay from Manchester, Jamaica. On record since 1991.">
+<meta property="og:title" content="Jah Mason">
+<meta property="og:image" content="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Ruhr_Reggae_Summer_2013_-_Jah_Mason_02.jpg/1920px-Ruhr_Reggae_Summer_2013_-_Jah_Mason_02.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0c0b0a;--panel:#151311;--ink:#f6f1e7;--mute:#a89f8f;--line:rgba(255,255,255,.09);--acc:#f2b632;--acc2:#3f8f5a;
+  --display:"Anton",Impact,"Arial Narrow",sans-serif;--body:"Inter","Helvetica Neue",Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:16px/1.65 var(--body);-webkit-font-smoothing:antialiased;padding-bottom:90px}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+.eyebrow{font:600 12px/1 var(--body);letter-spacing:.28em;text-transform:uppercase;color:var(--acc)}
+.h2{font:400 clamp(44px,6vw,84px)/.95 var(--display);text-transform:uppercase;letter-spacing:.01em;margin:14px 0 0}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;font-weight:700;font-size:15px;cursor:pointer;border:0;font-family:var(--body);transition:transform .2s,background .2s,color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.p{background:var(--acc);color:#0c0b0a}
+.btn.g{background:rgba(255,255,255,.08);color:var(--ink);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.18)}
+.btn svg{width:16px;height:16px}
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+.nav.solid{background:rgba(12,11,10,.86);backdrop-filter:blur(14px);border-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px}
+.logo{font:400 26px/1 var(--display);letter-spacing:.06em;text-transform:uppercase}
+.nav ul{display:flex;gap:30px;list-style:none;font-size:14px;font-weight:500;color:#ddd5c6}
+.nav ul a:hover{color:var(--acc)}
+.nav .btn{padding:10px 18px;font-size:13px}
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden}
+.hero .slides{position:absolute;inset:0;background:#000}
+.hero .slides div{position:absolute;inset:-4%;background-size:cover;background-repeat:no-repeat;opacity:0;animation:kb 18s linear infinite}
+.hero .slides div:nth-child(2){animation-delay:6s}.hero .slides div:nth-child(3){animation-delay:12s}
+@keyframes kb{0%{opacity:0;transform:scale(1.12) translate(1.5%,1%)}6%{opacity:1}33%{opacity:1}40%{opacity:0;transform:scale(1) translate(-1.5%,-1%)}100%{opacity:0}}
+.hero .vid{position:absolute;inset:0;overflow:hidden;opacity:0;transition:opacity 1.6s;pointer-events:none}
+.hero .vid.on{opacity:1}
+.hero .vid iframe,.hero .vid #yt{position:absolute;top:50%;left:50%;width:100vw;height:56.25vw;min-height:100%;min-width:177.78vh;transform:translate(-50%,-50%) scale(1.25);border:0}
+.hero .grain{position:absolute;inset:0;z-index:1;opacity:.18;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hero .watch{position:absolute;right:28px;bottom:110px;z-index:3;display:flex;align-items:center;gap:12px;font-size:13px;font-weight:600;color:#e3dccd}
+.hero .watch span{width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.35);display:grid;place-items:center}
+.hero .watch svg{width:14px;height:14px}
+@media(prefers-reduced-motion:reduce){.hero .slides div{animation:none}.hero .slides div:first-child{opacity:1}}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,11,10,.92) 0%,rgba(12,11,10,.55) 45%,rgba(12,11,10,.1) 100%),linear-gradient(0deg,var(--bg) 0%,transparent 40%)}
+.hero .wrap{position:relative;z-index:2;padding-bottom:110px;width:100%}
+.chip{display:inline-flex;align-items:center;gap:10px;padding:8px 16px 8px 8px;border-radius:99px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);font-size:13px;font-weight:600;backdrop-filter:blur(8px)}
+.chip b{background:var(--acc);color:#0c0b0a;border-radius:99px;padding:3px 10px;font-size:11px;letter-spacing:.1em}
+.hero h1{font:400 clamp(84px,15vw,220px)/.84 var(--display);text-transform:uppercase;margin:26px 0 22px;letter-spacing:-.005em}
+.hero h1 span{display:block;color:transparent;-webkit-text-stroke:2px var(--ink)}
+.hero p.lead{max-width:520px;font-size:19px;color:#e3dccd}
+.hero .cta{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
+.scroll{position:absolute;right:28px;bottom:40px;z-index:2;writing-mode:vertical-rl;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--mute)}
+.marquee{border-block:1px solid var(--line);overflow:hidden;padding:20px 0;background:var(--panel)}
+.marquee div{display:flex;gap:56px;width:max-content;animation:mq 40s linear infinite;font:400 28px/1 var(--display);text-transform:uppercase;color:#5c554b}
+.marquee div span:nth-child(odd){color:var(--ink)}
+.marquee i{color:var(--acc);font-style:normal}
+@keyframes mq{to{transform:translateX(-50%)}}
+section{padding:130px 0}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:56px;flex-wrap:wrap}
+.head p{max-width:420px;color:var(--mute)}
+.listen{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
+.deck{position:relative;aspect-ratio:1;max-width:520px;width:100%}
+.deck .sleeve{position:absolute;top:0;bottom:0;left:0;aspect-ratio:1;border-radius:6px;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.6);z-index:2;background:#222;width:82%}
+.deck .sleeve img{width:100%;height:100%;object-fit:cover}
+.deck .disc{position:absolute;top:4%;bottom:4%;right:0;aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle,var(--acc) 0 15%,#111 15.5% 17%,transparent 17%),repeating-radial-gradient(circle,#1b1a19 0 2px,#0e0d0c 2px 4px);
+  box-shadow:0 30px 60px rgba(0,0,0,.5);transition:right .6s}
+.playing .deck .disc{animation:spin 3s linear infinite;right:-6%}
+@keyframes spin{to{transform:rotate(360deg)}}
+.tracks{list-style:none;border-top:1px solid var(--line)}
+.tracks li{display:grid;grid-template-columns:44px 1fr auto auto;gap:18px;align-items:center;padding:14px 6px;border-bottom:1px solid var(--line);cursor:pointer;transition:background .2s}
+.tracks li:hover{background:rgba(255,255,255,.03)}
+.tracks .pb{width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.22);display:grid;place-items:center}
+.tracks .pb svg{width:13px;height:13px}
+.tracks li.on .pb{background:var(--acc);border-color:var(--acc);color:#0c0b0a}
+.tracks li.on .t{color:var(--acc)}
+.tracks .t{font-weight:600}
+.tracks .s{display:block;font-size:13px;color:var(--mute);font-weight:400}
+.tracks .y{font-size:13px;color:var(--mute)}
+.tracks .b{font-size:13px;font-weight:700;color:var(--acc);padding:7px 12px;border:1px solid rgba(255,255,255,.14);border-radius:99px}
+.tracks .b:hover{background:var(--acc);color:#0c0b0a}
+.eq{display:none;gap:2px;height:13px;align-items:flex-end}
+.eq i{width:3px;background:#0c0b0a;animation:eq .8s ease-in-out infinite}
+.eq i:nth-child(2){animation-delay:.2s}.eq i:nth-child(3){animation-delay:.4s}
+@keyframes eq{0%,100%{height:3px}50%{height:13px}}
+.playing .tracks li.on .eq{display:flex}.playing .tracks li.on .ic{display:none}
+.shop{background:var(--panel);border-block:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
+.rel .cv{position:relative;aspect-ratio:1;border-radius:6px;overflow:hidden;background:#1d1b19}
+.rel .cv img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.rel:hover .cv img{transform:scale(1.06)}
+.rel .cv .ov{position:absolute;inset:0;background:rgba(12,11,10,.55);display:flex;align-items:center;justify-content:center;gap:10px;opacity:0;transition:opacity .25s}
+.rel:hover .cv .ov{opacity:1}
+.rel .ov button,.rel .ov a{width:54px;height:54px;border-radius:50%;border:0;display:grid;place-items:center;cursor:pointer;background:var(--acc);color:#0c0b0a}
+.rel .ov a{background:var(--ink)}
+.rel .ov svg{width:18px;height:18px}
+.rel .yr{position:absolute;top:12px;left:12px;background:rgba(12,11,10,.8);font-size:12px;font-weight:700;padding:3px 10px;border-radius:99px}
+.rel h3{font-size:16px;font-weight:600;margin-top:16px;line-height:1.35}
+.rel p{font-size:13px;color:var(--mute);margin-top:3px}
+.rel .buy{display:inline-block;margin-top:10px;font-size:13px;font-weight:700;color:var(--acc);border-bottom:1px solid currentColor}
+.shop .more{text-align:center;margin-top:60px}
+.about{display:grid;grid-template-columns:1fr 1.1fr;gap:90px;align-items:center}
+.about .ph{position:relative;z-index:1}
+.about .ph img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px}
+.about .ph:before{content:"";position:absolute;inset:26px -26px -26px 26px;border:1px solid var(--acc);border-radius:6px;z-index:-1}
+.about .txt p{color:#d8d1c3;margin-top:20px;font-size:17px}
+.about .txt p:first-of-type{font-size:21px;color:var(--ink);line-height:1.5}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden;margin-top:40px}
+.facts div{background:var(--bg);padding:18px 20px}
+.facts dt{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+.facts dd{font-weight:600;margin-top:4px}
+.gal{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:16px;padding:0 16px}
+.gal img{width:100%;height:520px;object-fit:cover;border-radius:4px}
+.band{position:relative;padding:170px 0;overflow:hidden;text-align:center;margin-top:130px}
+.band .bg{position:absolute;inset:0;background:url("https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Ruhr_Reggae_Summer_2013_-_Jah_Mason_08.jpg/1920px-Ruhr_Reggae_Summer_2013_-_Jah_Mason_08.jpg") center 35%/cover;filter:grayscale(.3)}
+.band:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(12,11,10,.88),rgba(12,11,10,.6))}
+.band .wrap{position:relative;z-index:2}
+.band .h2{font-size:clamp(54px,9vw,140px)}
+.band p{color:#ddd5c6;max-width:520px;margin:20px auto 36px;font-size:18px}
+.band .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+footer{padding:60px 0 40px;border-top:1px solid var(--line);color:var(--mute);font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer .logo{color:var(--ink)}
+footer .cr{max-width:620px;font-size:12px;opacity:.8}
+.bar{position:fixed;left:16px;right:16px;bottom:16px;z-index:60;background:rgba(21,19,17,.92);backdrop-filter:blur(18px);border:1px solid var(--line);border-radius:16px;
+  display:grid;grid-template-columns:auto auto 1fr auto;gap:20px;align-items:center;padding:10px 16px 10px 10px;transform:translateY(calc(100% + 40px));visibility:hidden;transition:transform .45s,visibility .45s cubic-bezier(.2,.8,.2,1);box-shadow:0 20px 50px rgba(0,0,0,.5)}
+.bar.show{transform:none;visibility:visible}
+.bar img{width:52px;height:52px;border-radius:8px;object-fit:cover}
+.bar .ctl{display:flex;gap:6px;align-items:center}
+.bar .ctl button{background:none;border:0;color:var(--ink);cursor:pointer;width:38px;height:38px;border-radius:50%;display:grid;place-items:center}
+.bar .ctl button.main{background:var(--acc);color:#0c0b0a;width:46px;height:46px}
+.bar svg{width:16px;height:16px}
+.bar .info{min-width:0}
+.bar .info b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:14px}
+.bar .info small{color:var(--mute);font-size:12px}
+.prog{height:4px;background:rgba(255,255,255,.12);border-radius:4px;margin-top:8px;cursor:pointer;position:relative}
+.prog i{position:absolute;left:0;top:0;bottom:0;background:var(--acc);border-radius:4px;width:0}
+.bar .btn{padding:10px 18px;font-size:13px}
+.demo{position:fixed;top:84px;right:16px;z-index:40;background:rgba(12,11,10,.7);border:1px solid var(--line);color:var(--mute);font-size:11px;padding:6px 12px;border-radius:99px;backdrop-filter:blur(8px)}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .9s,transform .9s}
+.rv.in{opacity:1;transform:none}
+@media(max-width:980px){
+  .nav ul{display:none}.listen,.about{grid-template-columns:1fr;gap:50px}.grid{grid-template-columns:repeat(2,1fr);gap:20px}
+  .gal{grid-template-columns:1fr 1fr}.gal img{height:320px}.gal img:first-child{grid-column:1/-1}
+  section{padding:90px 0}.band{margin-top:90px}.scroll{display:none}.tracks li{grid-template-columns:40px 1fr auto}.tracks .y{display:none}
+  .bar{grid-template-columns:auto 1fr}.bar .ctl .sec,.bar .btn,.bar img{display:none}
+  .hero .wrap{padding-bottom:70px}.demo{display:none}.nav .btn{display:none}
+  .rel .cv .ov{opacity:1;background:transparent;align-items:flex-end;justify-content:flex-end;padding:10px}.rel .ov a{display:none}.rel .ov button{width:44px;height:44px}
+}
+</style>
+</head>
+<body>
+<nav class="nav" id="nav"><div class="wrap">
+  <a class="logo" href="#top">Jah Mason</a>
+  <ul><li><a href="#listen">Listen</a></li><li><a href="#vinyl">Vinyl</a></li><li><a href="#about">About</a></li><li><a href="#booking">Booking</a></li></ul>
+  <a class="btn p" href="https://www.buyreggae.com/artists/32247/jah-mason" target="_blank" rel="noopener">Shop vinyl</a>
+</div></nav>
+<div class="demo">Design preview</div>
+
+<header class="hero" id="top">
+  <div class="slides"><div style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Ruhr_Reggae_Summer_2013_-_Jah_Mason_02.jpg/1920px-Ruhr_Reggae_Summer_2013_-_Jah_Mason_02.jpg');background-position:50% 22%"></div><div style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Ruhr_Reggae_Summer_2013_-_Jah_Mason_03.jpg/1920px-Ruhr_Reggae_Summer_2013_-_Jah_Mason_03.jpg');background-position:50% 20%"></div><div style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Ruhr_Reggae_Summer_2013_-_Jah_Mason_08.jpg/1920px-Ruhr_Reggae_Summer_2013_-_Jah_Mason_08.jpg');background-position:60% 40%"></div></div>
+  <div class="vid" id="vid"><div id="yt"></div></div>
+  <div class="grain"></div>
+  <a class="watch" href="https://www.youtube.com/watch?v=DlL5Lc5Szt4" target="_blank" rel="noopener"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></span>Watch live at Garance 2013</a>
+  <div class="wrap">
+    <a class="chip" href="#listen"><b>NEW</b>New 7&quot;: More Than Music (2026)</a>
+    <h1>Jah<span>Mason</span></h1>
+    <p class="lead">Roots singer and deejay from Manchester, Jamaica. On record since 1991.</p>
+    <div class="cta">
+      <button class="btn p" onclick="playIdx(0)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg>Play latest</button>
+      <a class="btn g" href="#vinyl">Shop the vinyl</a>
+    </div>
+  </div>
+  <div class="scroll">Scroll</div>
+</header>
+
+<div class="marquee"><div><span>Greensleeves</span><i>✦</i><span>VP Records</span><i>✦</i><span>Jah Warrior</span><i>✦</i><span>Pow Pow</span><i>✦</i><span>Irie Ites</span><i>✦</i><span>Kickin</span><i>✦</i><span>Henfield</span><i>✦</i><span>Fire Ball</span><i>✦</i><span>A Lustre Kings</span><i>✦</i><span>In The Streetz</span><i>✦</i><span>Greensleeves</span><i>✦</i><span>VP Records</span><i>✦</i><span>Jah Warrior</span><i>✦</i><span>Pow Pow</span><i>✦</i><span>Irie Ites</span><i>✦</i><span>Kickin</span><i>✦</i><span>Henfield</span><i>✦</i><span>Fire Ball</span><i>✦</i><span>A Lustre Kings</span><i>✦</i><span>In The Streetz</span><i>✦</i></div></div>
+
+<section id="listen"><div class="wrap">
+  <div class="head rv"><div><div class="eyebrow">Listen</div><h2 class="h2">Hear the<br>records</h2></div><p>Previews straight from the vinyl. Every track links to the record in the shop.</p></div>
+  <div class="listen">
+    <div class="deck rv"><div class="sleeve"><img id="deckImg" src="" alt=""></div><div class="disc"></div></div>
+    <ol class="tracks rv" id="tracks"><li onclick="playIdx(0)"><span class="pb"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></span><span class="eq"><i></i><i></i><i></i></span></span><span class="t">More Than Music<span class="s">B: Brush, I See · Five Disciples Crew Records</span></span><span class="y">2026</span><a class="b" href="https://www.buyreggae.com/products/181145" target="_blank" rel="noopener" onclick="event.stopPropagation()">Buy</a></li>
+<li onclick="playIdx(1)"><span class="pb"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></span><span class="eq"><i></i><i></i><i></i></span></span><span class="t">Bag A Talk<span class="s">Licky Licky Riddim · Irie Ites Records</span></span><span class="y">2023</span><a class="b" href="https://www.buyreggae.com/products/161209" target="_blank" rel="noopener" onclick="event.stopPropagation()">Buy</a></li>
+<li onclick="playIdx(2)"><span class="pb"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></span><span class="eq"><i></i><i></i><i></i></span></span><span class="t">Baby Look (Remix)<span class="s">Safe &amp; Fine Riddim · Press Star Music</span></span><span class="y">2016</span><a class="b" href="https://www.buyreggae.com/products/102434" target="_blank" rel="noopener" onclick="event.stopPropagation()">Buy</a></li>
+<li onclick="playIdx(3)"><span class="pb"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></span><span class="eq"><i></i><i></i><i></i></span></span><span class="t">Come Back Home<span class="s">Badman Riddim · House Of Hits</span></span><span class="y">2008</span><a class="b" href="https://www.buyreggae.com/products/45648" target="_blank" rel="noopener" onclick="event.stopPropagation()">Buy</a></li>
+<li onclick="playIdx(4)"><span class="pb"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></span><span class="eq"><i></i><i></i><i></i></span></span><span class="t">Lots Of Tribulation<span class="s">Higher Medz Riddim · In The Streetz</span></span><span class="y">2009</span><a class="b" href="https://www.buyreggae.com/products/49377" target="_blank" rel="noopener" onclick="event.stopPropagation()">Buy</a></li>
+<li onclick="playIdx(5)"><span class="pb"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></span><span class="eq"><i></i><i></i><i></i></span></span><span class="t">Nah Push It<span class="s">Follow Riddim · Pow Pow</span></span><span class="y">2007</span><a class="b" href="https://www.buyreggae.com/products/40974" target="_blank" rel="noopener" onclick="event.stopPropagation()">Buy</a></li>
+<li onclick="playIdx(6)"><span class="pb"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></span><span class="eq"><i></i><i></i><i></i></span></span><span class="t">Glorious Morning<span class="s">Glorious Riddim · Bassrunner</span></span><span class="y">2008</span><a class="b" href="https://www.buyreggae.com/products/100191" target="_blank" rel="noopener" onclick="event.stopPropagation()">Buy</a></li>
+<li onclick="playIdx(7)"><span class="pb"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></span><span class="eq"><i></i><i></i><i></i></span></span><span class="t">Don&#x27;t Deny Me<span class="s">Hit Drop Riddim · Irie Vibrations</span></span><span class="y">2008</span><a class="b" href="https://www.buyreggae.com/products/43221" target="_blank" rel="noopener" onclick="event.stopPropagation()">Buy</a></li>
+<li onclick="playIdx(8)"><span class="pb"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></span><span class="eq"><i></i><i></i><i></i></span></span><span class="t">Ruff &amp; Tuff<span class="s">Ruff &amp; Tuff Riddim · Pow Pow</span></span><span class="y">2007</span><a class="b" href="https://www.buyreggae.com/products/40977" target="_blank" rel="noopener" onclick="event.stopPropagation()">Buy</a></li>
+<li onclick="playIdx(9)"><span class="pb"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></span><span class="eq"><i></i><i></i><i></i></span></span><span class="t">Chant To Zion<span class="s">Visita Riddim · Coppola Music</span></span><span class="y">2006</span><a class="b" href="https://www.buyreggae.com/products/31887" target="_blank" rel="noopener" onclick="event.stopPropagation()">Buy</a></li>
+<li onclick="playIdx(10)"><span class="pb"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></span><span class="eq"><i></i><i></i><i></i></span></span><span class="t">Throw Away The Key<span class="s">Hand Cart Bwoy Riddim · Fire Ball</span></span><span class="y">2006</span><a class="b" href="https://www.buyreggae.com/products/36357" target="_blank" rel="noopener" onclick="event.stopPropagation()">Buy</a></li>
+<li onclick="playIdx(11)"><span class="pb"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></span><span class="eq"><i></i><i></i><i></i></span></span><span class="t">Working So Hard (with Jah Cure)<span class="s">Nuh Pardon Riddim · Henfield</span></span><span class="y">1998</span><a class="b" href="https://www.buyreggae.com/products/85219" target="_blank" rel="noopener" onclick="event.stopPropagation()">Buy</a></li></ol>
+  </div>
+</div></section>
+
+<section class="shop" id="vinyl"><div class="wrap">
+  <div class="head rv"><div><div class="eyebrow">Vinyl shop</div><h2 class="h2">On wax<br>right now</h2></div><p>12 hand-picked records, in stock and ready to ship. Hover to preview, click to buy.</p></div>
+  <div class="grid"><article class="rel rv"><div class="cv"><img src="https://www.buyreggae.com/images/product/P181145.jpg" alt="More Than Music" loading="lazy"><span class="yr">2026</span><div class="ov"><button onclick="playId(181145)" aria-label="Preview"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></button><a href="https://www.buyreggae.com/products/181145" target="_blank" rel="noopener" aria-label="Buy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg></a></div></div><h3>More Than Music</h3><p>B: Brush, I See · Five Disciples Crew Records</p><a class="buy" href="https://www.buyreggae.com/products/181145" target="_blank" rel="noopener">Buy vinyl</a></article>
+<article class="rel rv"><div class="cv"><img src="https://www.buyreggae.com/images/product/P161209.jpg" alt="Bag A Talk" loading="lazy"><span class="yr">2023</span><div class="ov"><button onclick="playId(161209)" aria-label="Preview"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></button><a href="https://www.buyreggae.com/products/161209" target="_blank" rel="noopener" aria-label="Buy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg></a></div></div><h3>Bag A Talk</h3><p>Licky Licky Riddim · Irie Ites Records</p><a class="buy" href="https://www.buyreggae.com/products/161209" target="_blank" rel="noopener">Buy vinyl</a></article>
+<article class="rel rv"><div class="cv"><img src="https://www.buyreggae.com/images/product/P102434.jpg" alt="Baby Look (Remix)" loading="lazy"><span class="yr">2016</span><div class="ov"><button onclick="playId(102434)" aria-label="Preview"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></button><a href="https://www.buyreggae.com/products/102434" target="_blank" rel="noopener" aria-label="Buy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg></a></div></div><h3>Baby Look (Remix)</h3><p>Safe &amp; Fine Riddim · Press Star Music</p><a class="buy" href="https://www.buyreggae.com/products/102434" target="_blank" rel="noopener">Buy vinyl</a></article>
+<article class="rel rv"><div class="cv"><img src="https://www.buyreggae.com/images/product/P45648.jpg" alt="Come Back Home" loading="lazy"><span class="yr">2008</span><div class="ov"><button onclick="playId(45648)" aria-label="Preview"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></button><a href="https://www.buyreggae.com/products/45648" target="_blank" rel="noopener" aria-label="Buy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg></a></div></div><h3>Come Back Home</h3><p>Badman Riddim · House Of Hits</p><a class="buy" href="https://www.buyreggae.com/products/45648" target="_blank" rel="noopener">Buy vinyl</a></article>
+<article class="rel rv"><div class="cv"><img src="https://www.buyreggae.com/images/product/P49377.jpg" alt="Lots Of Tribulation" loading="lazy"><span class="yr">2009</span><div class="ov"><button onclick="playId(49377)" aria-label="Preview"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></button><a href="https://www.buyreggae.com/products/49377" target="_blank" rel="noopener" aria-label="Buy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg></a></div></div><h3>Lots Of Tribulation</h3><p>Higher Medz Riddim · In The Streetz</p><a class="buy" href="https://www.buyreggae.com/products/49377" target="_blank" rel="noopener">Buy vinyl</a></article>
+<article class="rel rv"><div class="cv"><img src="https://www.buyreggae.com/images/product/P40974.jpg" alt="Nah Push It" loading="lazy"><span class="yr">2007</span><div class="ov"><button onclick="playId(40974)" aria-label="Preview"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></button><a href="https://www.buyreggae.com/products/40974" target="_blank" rel="noopener" aria-label="Buy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg></a></div></div><h3>Nah Push It</h3><p>Follow Riddim · Pow Pow</p><a class="buy" href="https://www.buyreggae.com/products/40974" target="_blank" rel="noopener">Buy vinyl</a></article>
+<article class="rel rv"><div class="cv"><img src="https://www.buyreggae.com/images/product/P100191.jpg" alt="Glorious Morning" loading="lazy"><span class="yr">2008</span><div class="ov"><button onclick="playId(100191)" aria-label="Preview"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></button><a href="https://www.buyreggae.com/products/100191" target="_blank" rel="noopener" aria-label="Buy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg></a></div></div><h3>Glorious Morning</h3><p>Glorious Riddim · Bassrunner</p><a class="buy" href="https://www.buyreggae.com/products/100191" target="_blank" rel="noopener">Buy vinyl</a></article>
+<article class="rel rv"><div class="cv"><img src="https://www.buyreggae.com/images/product/P43221.jpg" alt="Don&#x27;t Deny Me" loading="lazy"><span class="yr">2008</span><div class="ov"><button onclick="playId(43221)" aria-label="Preview"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></button><a href="https://www.buyreggae.com/products/43221" target="_blank" rel="noopener" aria-label="Buy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg></a></div></div><h3>Don&#x27;t Deny Me</h3><p>Hit Drop Riddim · Irie Vibrations</p><a class="buy" href="https://www.buyreggae.com/products/43221" target="_blank" rel="noopener">Buy vinyl</a></article>
+<article class="rel rv"><div class="cv"><img src="https://www.buyreggae.com/images/product/P40977.jpg" alt="Ruff &amp; Tuff" loading="lazy"><span class="yr">2007</span><div class="ov"><button onclick="playId(40977)" aria-label="Preview"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></button><a href="https://www.buyreggae.com/products/40977" target="_blank" rel="noopener" aria-label="Buy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg></a></div></div><h3>Ruff &amp; Tuff</h3><p>Ruff &amp; Tuff Riddim · Pow Pow</p><a class="buy" href="https://www.buyreggae.com/products/40977" target="_blank" rel="noopener">Buy vinyl</a></article>
+<article class="rel rv"><div class="cv"><img src="https://www.buyreggae.com/images/product/P31887.jpg" alt="Chant To Zion" loading="lazy"><span class="yr">2006</span><div class="ov"><button onclick="playId(31887)" aria-label="Preview"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></button><a href="https://www.buyreggae.com/products/31887" target="_blank" rel="noopener" aria-label="Buy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg></a></div></div><h3>Chant To Zion</h3><p>Visita Riddim · Coppola Music</p><a class="buy" href="https://www.buyreggae.com/products/31887" target="_blank" rel="noopener">Buy vinyl</a></article>
+<article class="rel rv"><div class="cv"><img src="https://www.buyreggae.com/images/product/P36357.jpg" alt="Throw Away The Key" loading="lazy"><span class="yr">2006</span><div class="ov"><button onclick="playId(36357)" aria-label="Preview"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></button><a href="https://www.buyreggae.com/products/36357" target="_blank" rel="noopener" aria-label="Buy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg></a></div></div><h3>Throw Away The Key</h3><p>Hand Cart Bwoy Riddim · Fire Ball</p><a class="buy" href="https://www.buyreggae.com/products/36357" target="_blank" rel="noopener">Buy vinyl</a></article>
+<article class="rel rv"><div class="cv"><img src="https://www.buyreggae.com/images/product/P85219.jpg" alt="Working So Hard (with Jah Cure)" loading="lazy"><span class="yr">1998</span><div class="ov"><button onclick="playId(85219)" aria-label="Preview"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></button><a href="https://www.buyreggae.com/products/85219" target="_blank" rel="noopener" aria-label="Buy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg></a></div></div><h3>Working So Hard (with Jah Cure)</h3><p>Nuh Pardon Riddim · Henfield</p><a class="buy" href="https://www.buyreggae.com/products/85219" target="_blank" rel="noopener">Buy vinyl</a></article></div>
+  <div class="more rv"><a class="btn g" href="https://www.buyreggae.com/artists/32247/jah-mason" target="_blank" rel="noopener">Full catalogue on Buyreggae &rarr;</a></div>
+</div></section>
+
+<section id="about"><div class="wrap about">
+  <div class="ph rv"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Ruhr_Reggae_Summer_2013_-_Jah_Mason_01.jpg/960px-Ruhr_Reggae_Summer_2013_-_Jah_Mason_01.jpg" alt="Jah Mason live"></div>
+  <div class="txt rv"><div class="eyebrow">Biography</div><h2 class="h2">The story</h2><p>Jah Mason, born Andre Johnson in Manchester Parish, Jamaica, has been recording since 1991, when his first single came out under the name Perry Mason. Known to many as Fire Mason, he moves easily between singing and deejaying.</p><p>His catalogue runs to nearly twenty studio albums, among them Keep Your Joy and Working So Hard (2002), Wheat and Tears (2006, Greensleeves), Princess Gone... The Saga Bed (2006, VP) and Love &amp; Wisdom (2015). He also cut The Pow Pow Trilogy (2008) together with Anthony B and Turbulence.</p><p>From early Jah Cure combinations on Henfield to his 2026 seven inch on Five Disciples Crew Records, his music has been pressed on vinyl by labels across Jamaica and Europe.</p><dl class="facts"><div><dt>Real name</dt><dd>Andre Johnson</dd></div><div><dt>From</dt><dd>Manchester, Jamaica</dd></div><div><dt>Active</dt><dd>1991 to today</dd></div><div><dt>Labels</dt><dd>Greensleeves, VP, Jah Warrior, Pow Pow, Kickin</dd></div></dl></div>
+</div></section>
+
+<div class="gal rv"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Ruhr_Reggae_Summer_2013_-_Jah_Mason_03.jpg/960px-Ruhr_Reggae_Summer_2013_-_Jah_Mason_03.jpg" alt="Jah Mason live"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Ruhr_Reggae_Summer_2013_-_Jah_Mason_08.jpg/960px-Ruhr_Reggae_Summer_2013_-_Jah_Mason_08.jpg" alt="Jah Mason live"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Ruhr_Reggae_Summer_2013_-_Jah_Mason_04.jpg/960px-Ruhr_Reggae_Summer_2013_-_Jah_Mason_04.jpg" alt="Jah Mason live"></div>
+
+<section class="band" id="booking"><div class="bg"></div><div class="wrap rv">
+  <div class="eyebrow">Live &amp; booking</div>
+  <h2 class="h2">Bring Jah Mason<br>to your stage</h2>
+  <p>Festivals, club shows and sound system dates worldwide.</p>
+  <div class="cta"><a class="btn p" href="https://www.aaemusic.com/artist/jah-mason" target="_blank" rel="noopener">Booking enquiry</a><a class="btn g" href="https://music.apple.com/artist/26045682" target="_blank" rel="noopener">Stream on Apple Music</a></div>
+</div></section>
+
+<footer><div class="wrap">
+  <div><div class="logo">Jah Mason</div><p style="margin-top:8px">&copy; 2026 · Vinyl sold via Buyreggae.com</p></div>
+  <p class="cr">Photos: Krd, Ruhr Reggae Summer 2013, CC BY-SA 3.0, via Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Ruhr_Reggae_Summer_2013_-_Jah_Mason_02.jpg). Audio previews and cover images: Buyreggae.com. Design preview, not an official website.</p>
+</div></footer>
+
+<div class="bar" id="bar">
+  <img id="barImg" src="" alt="">
+  <div class="ctl">
+    <button class="sec" onclick="step(-1)" aria-label="Previous"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 5h2v14H6zM20 5v14L9 12z"/></svg></button>
+    <button class="main" id="pp" onclick="toggle()" aria-label="Play or pause"></button>
+    <button class="sec" onclick="step(1)" aria-label="Next"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 5h2v14h-2zM4 5v14l11-7z"/></svg></button>
+  </div>
+  <div class="info"><b id="barT"></b><small id="barS"></small><div class="prog" id="prog"><i id="progI"></i></div></div>
+  <a class="btn p" id="barBuy" href="#" target="_blank" rel="noopener">Buy this record</a>
+</div>
+<audio id="au" preload="none"></audio>
+
+<script>
+const TRACKS = [{"id": 181145, "title": "More Than Music", "sub": "B: Brush, I See · Five Disciples Crew Records · 2026", "mp3": "https://www.buyreggae.com/sounds/18/181145A.mp3", "img": "https://www.buyreggae.com/images/product/P181145.jpg", "url": "https://www.buyreggae.com/products/181145"}, {"id": 161209, "title": "Bag A Talk", "sub": "Licky Licky Riddim · Irie Ites Records · 2023", "mp3": "https://www.buyreggae.com/sounds/16/161209A.mp3", "img": "https://www.buyreggae.com/images/product/P161209.jpg", "url": "https://www.buyreggae.com/products/161209"}, {"id": 102434, "title": "Baby Look (Remix)", "sub": "Safe & Fine Riddim · Press Star Music · 2016", "mp3": "https://www.buyreggae.com/sounds/10/102434A.mp3", "img": "https://www.buyreggae.com/images/product/P102434.jpg", "url": "https://www.buyreggae.com/products/102434"}, {"id": 45648, "title": "Come Back Home", "sub": "Badman Riddim · House Of Hits · 2008", "mp3": "https://www.buyreggae.com/sounds/4/45648A.mp3", "img": "https://www.buyreggae.com/images/product/P45648.jpg", "url": "https://www.buyreggae.com/products/45648"}, {"id": 49377, "title": "Lots Of Tribulation", "sub": "Higher Medz Riddim · In The Streetz · 2009", "mp3": "https://www.buyreggae.com/sounds/4/49377A.mp3", "img": "https://www.buyreggae.com/images/product/P49377.jpg", "url": "https://www.buyreggae.com/products/49377"}, {"id": 40974, "title": "Nah Push It", "sub": "Follow Riddim · Pow Pow · 2007", "mp3": "https://www.buyreggae.com/sounds/4/40974A.mp3", "img": "https://www.buyreggae.com/images/product/P40974.jpg", "url": "https://www.buyreggae.com/products/40974"}, {"id": 100191, "title": "Glorious Morning", "sub": "Glorious Riddim · Bassrunner · 2008", "mp3": "https://www.buyreggae.com/sounds/10/100191A.mp3", "img": "https://www.buyreggae.com/images/product/P100191.jpg", "url": "https://www.buyreggae.com/products/100191"}, {"id": 43221, "title": "Don't Deny Me", "sub": "Hit Drop Riddim · Irie Vibrations · 2008", "mp3": "https://www.buyreggae.com/sounds/4/43221A.mp3", "img": "https://www.buyreggae.com/images/product/P43221.jpg", "url": "https://www.buyreggae.com/products/43221"}, {"id": 40977, "title": "Ruff & Tuff", "sub": "Ruff & Tuff Riddim · Pow Pow · 2007", "mp3": "https://www.buyreggae.com/sounds/4/40977A.mp3", "img": "https://www.buyreggae.com/images/product/P40977.jpg", "url": "https://www.buyreggae.com/products/40977"}, {"id": 31887, "title": "Chant To Zion", "sub": "Visita Riddim · Coppola Music · 2006", "mp3": "https://www.buyreggae.com/sounds/3/31887A.mp3", "img": "https://www.buyreggae.com/images/product/P31887.jpg", "url": "https://www.buyreggae.com/products/31887"}, {"id": 36357, "title": "Throw Away The Key", "sub": "Hand Cart Bwoy Riddim · Fire Ball · 2006", "mp3": "https://www.buyreggae.com/sounds/3/36357A.mp3", "img": "https://www.buyreggae.com/images/product/P36357.jpg", "url": "https://www.buyreggae.com/products/36357"}, {"id": 85219, "title": "Working So Hard (with Jah Cure)", "sub": "Nuh Pardon Riddim · Henfield · 1998", "mp3": "https://www.buyreggae.com/sounds/8/85219A.mp3", "img": "https://www.buyreggae.com/images/product/P85219.jpg", "url": "https://www.buyreggae.com/products/85219"}];
+const au = document.getElementById('au'), bar = document.getElementById('bar'), lis = [...document.querySelectorAll('#tracks li')];
+const PLAY = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg>', PAUSE = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg>';
+let cur = -1;
+function setUI(){ const t = TRACKS[cur]; if(!t) return;
+  document.getElementById('barImg').src = t.img; document.getElementById('deckImg').src = t.img;
+  document.getElementById('barT').textContent = t.title; document.getElementById('barS').textContent = t.sub;
+  document.getElementById('barBuy').href = t.url; lis.forEach((l,i)=>l.classList.toggle('on', i===cur)); }
+function playIdx(i){ if(i===cur){ toggle(); return; } cur = i; au.src = TRACKS[i].mp3; setUI(); au.play(); bar.classList.add('show'); }
+function toggle(){ if(cur<0) return playIdx(0); au.paused ? au.play() : au.pause(); }
+function step(d){ playIdx((cur + d + TRACKS.length) % TRACKS.length); }
+function playId(id){ const i = TRACKS.findIndex(t=>t.id===id); if(i>=0) playIdx(i); }
+au.onplay = () => { document.body.classList.add('playing'); document.getElementById('pp').innerHTML = PAUSE; };
+au.onpause = () => { document.body.classList.remove('playing'); document.getElementById('pp').innerHTML = PLAY; };
+au.onended = () => step(1);
+au.ontimeupdate = () => { document.getElementById('progI').style.width = (au.currentTime/(au.duration||1)*100)+'%'; };
+document.getElementById('prog').onclick = e => { const r = e.currentTarget.getBoundingClientRect(); if(au.duration) au.currentTime = (e.clientX-r.left)/r.width*au.duration; };
+document.getElementById('pp').innerHTML = PLAY;
+document.getElementById('deckImg').src = TRACKS[0].img;
+const nav = document.getElementById('nav'); addEventListener('scroll', () => nav.classList.toggle('solid', scrollY > 60), {passive:true});
+const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.12});
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+/* hero background video: muted YouTube loop; only shown once it really plays, photos stay as fallback */
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches && innerWidth > 700) {
+  window.onYouTubeIframeAPIReady = () => {
+    const v = document.getElementById('vid');
+    new YT.Player('yt', {videoId: 'DlL5Lc5Szt4', host: 'https://www.youtube-nocookie.com',
+      playerVars: {autoplay:1, mute:1, controls:0, loop:1, playlist:'DlL5Lc5Szt4', start:45, playsinline:1, rel:0, modestbranding:1, iv_load_policy:3, disablekb:1, fs:0},
+      events: {onReady: e => { e.target.mute(); e.target.playVideo(); },
+               onStateChange: e => { if (e.data === 1) v.classList.add('on'); if (e.data === 0) e.target.seekTo(45); },
+               onError: () => v.remove()}});
+  };
+  const s = document.createElement('script'); s.src = 'https://www.youtube.com/iframe_api'; document.body.appendChild(s);
+}
+</script>
+</body>
+</html>
