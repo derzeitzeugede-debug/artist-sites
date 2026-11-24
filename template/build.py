@@ -111,17 +111,17 @@ LAYOUTS = {
  "framed": """
 .hero{align-items:center}
 .hero .wrap{padding:120px 0 90px}
-.hero h1{display:inline-block;font-size:clamp(50px,7.6vw,118px);line-height:1.02;border:3px solid var(--acc);padding:.22em .34em .16em;margin:28px 0 26px;background:rgba(16,12,20,.45);backdrop-filter:blur(3px)}
+.hero h1{display:table;font-size:clamp(50px,7.6vw,118px);line-height:1.02;border:3px solid var(--acc);padding:.22em .34em .16em;margin:28px 0 26px;background:rgba(16,12,20,.45);backdrop-filter:blur(3px)}
 .hero h1 span{display:block}
 .hero p.lead{border-left:2px solid var(--acc);padding-left:18px}
 """,
  "vertical": """
 @media(min-width:900px){
-.hero .wrap{display:grid;grid-template-columns:auto 1fr;column-gap:56px;align-items:end;align-content:end}
-.hero h1{grid-column:1;grid-row:1/span 3;writing-mode:vertical-rl;transform:rotate(180deg);font-size:clamp(90px,15vh,170px);line-height:.86;margin:0;white-space:nowrap}
+.hero .wrap{display:grid;grid-template-columns:auto 1fr;grid-template-rows:1fr auto auto auto;column-gap:56px;align-items:end;min-height:72vh}
+.hero h1{grid-column:1;grid-row:1/5;writing-mode:vertical-rl;transform:rotate(180deg);font-size:clamp(90px,15vh,170px);line-height:.86;margin:0;white-space:nowrap}
 .hero h1 span{display:inline}
 .hero .wrap>*:not(h1){grid-column:2;justify-self:start}
-.hero .chip{align-self:end}
+.hero .chip{grid-row:2}.hero p.lead{grid-row:3}.hero .cta{grid-row:4}
 }
 """,
 }
