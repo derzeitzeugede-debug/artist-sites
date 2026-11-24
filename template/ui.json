@@ -84,7 +84,12 @@
   "lbl_album": "Latest album",
   "lbl_single": "New single",
   "lbl_7inch": "New 7\"",
-  "lbl_classic": "Classic"
+  "lbl_classic": "Classic",
+  "disco": "Discography",
+  "disco_h": "Every<br>album",
+  "disco_p": "albums and EPs, newest first. Click a cover to listen on Apple Music.",
+  "show_all": "Show all",
+  "nav_disco": "Discography"
  },
  "de": {
   "nav_listen": "Hören",
@@ -171,7 +176,12 @@
   "lbl_album": "Neues Album",
   "lbl_single": "Neue Single",
   "lbl_7inch": "Neue 7\"",
-  "lbl_classic": "Klassiker"
+  "lbl_classic": "Klassiker",
+  "disco": "Diskografie",
+  "disco_h": "Alle<br>Alben",
+  "disco_p": "Alben und EPs, die neuesten zuerst. Ein Klick aufs Cover öffnet Apple Music.",
+  "show_all": "Alle anzeigen",
+  "nav_disco": "Diskografie"
  },
  "fr": {
   "nav_listen": "Écouter",
@@ -258,6 +268,11 @@
   "lbl_album": "Dernier album",
   "lbl_single": "Nouveau single",
   "lbl_7inch": "Nouveau 7\"",
-  "lbl_classic": "Classique"
+  "lbl_classic": "Classique",
+  "disco": "Discographie",
+  "disco_h": "Tous les<br>albums",
+  "disco_p": "albums et EP, du plus récent au plus ancien. Cliquez sur une pochette pour écouter sur Apple Music.",
+  "show_all": "Tout afficher",
+  "nav_disco": "Discographie"
  }
 }

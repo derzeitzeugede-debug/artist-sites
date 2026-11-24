@@ -100,6 +100,15 @@ section{padding:130px 0}
 .eq i:nth-child(2){animation-delay:.2s}.eq i:nth-child(3){animation-delay:.4s}
 @keyframes eq{0%,100%{height:3px}50%{height:13px}}
 .playing .tracks li.on .eq{display:flex}.playing .tracks li.on .ic{display:none}
+.disco{border-top:1px solid var(--line)}
+.dgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:28px 22px}
+.dgrid a{display:block;color:inherit;text-decoration:none}
+.dgrid img{width:100%;aspect-ratio:1;object-fit:cover;display:block;border-radius:4px;background:var(--panel);box-shadow:0 10px 30px rgba(0,0,0,.35);transition:transform .25s}
+.dgrid a:hover img{transform:translateY(-4px)}
+.dgrid b{display:block;font-weight:600;font-size:14px;line-height:1.35;margin-top:12px}
+.dgrid small{color:var(--mute);font-size:13px}
+.dgrid .x{display:none}.disco.all .dgrid .x{display:block}
+.disco .more{text-align:center;margin-top:44px}.disco.all .more{display:none}
 .shop{background:var(--panel);border-block:1px solid var(--line)}
 .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
 .rel .cv{position:relative;aspect-ratio:1;border-radius:6px;overflow:hidden;background:#1d1b19}
@@ -217,7 +226,7 @@ footer .aff{font-size:12px;color:var(--mute);margin-top:8px}
 <body>
 <nav class="nav" id="nav"><div class="wrap">
   <a class="logo" href="#top">{{NAME}}</a>
-  <ul><li><a href="#listen" data-i18n="nav_listen">Listen</a></li><li><a href="#vinyl" data-i18n="nav_vinyl">Vinyl</a></li><li><a href="#tour" data-i18n="nav_tour">Tour</a></li><li><a href="#about" data-i18n="nav_about">About</a></li><li><a href="#merch" data-i18n="nav_merch">Merch</a></li><li><a href="#press" data-i18n="nav_press">Press</a></li><li><a href="#booking" data-i18n="nav_booking">Booking</a></li></ul>
+  <ul><li><a href="#listen" data-i18n="nav_listen">Listen</a></li><li><a href="#vinyl" data-i18n="nav_vinyl">Vinyl</a></li><li><a href="#discography" data-i18n="nav_disco">Discography</a></li><li><a href="#tour" data-i18n="nav_tour">Tour</a></li><li><a href="#about" data-i18n="nav_about">About</a></li><li><a href="#merch" data-i18n="nav_merch">Merch</a></li><li><a href="#press" data-i18n="nav_press">Press</a></li><li><a href="#booking" data-i18n="nav_booking">Booking</a></li></ul>
   <div style="display:flex;align-items:center"><div class="lang" id="lang"><button data-l="en">EN</button><button data-l="de">DE</button><button data-l="fr">FR</button></div><a class="btn p" href="{{SHOP}}" target="_blank" rel="noopener" data-i18n="shop_vinyl">Shop vinyl</a></div>
 </div></nav>
 <div class="demo">Design preview</div>
@@ -253,6 +262,12 @@ footer .aff{font-size:12px;color:var(--mute);margin-top:8px}
   <div class="head rv"><div><div class="eyebrow" data-i18n="vinyl_shop">Vinyl shop</div><h2 class="h2" data-i18n-html="on_wax">On wax<br>right now</h2></div><p><span>{{COUNT}}</span> <span data-i18n="vinyl_p">hand-picked records, in stock and ready to ship. Hover to preview, click to buy.</span></p></div>
   <div class="grid">{{RELEASES}}</div>
   <div class="more rv"><a class="btn g" href="{{SHOP}}" target="_blank" rel="noopener"><span data-i18n="full_cat">Full catalogue on Buyreggae</span> &rarr;</a></div>
+</div></section>
+
+<section class="disco" id="discography"><div class="wrap">
+  <div class="head rv"><div><div class="eyebrow" data-i18n="disco">Discography</div><h2 class="h2" data-i18n-html="disco_h">Every<br>album</h2></div><p><span>{{DISCO_COUNT}}</span> <span data-i18n="disco_p">albums and EPs, newest first. Click a cover to listen on Apple Music.</span></p></div>
+  <div class="dgrid rv">{{DISCO}}</div>
+  {{DISCO_MORE}}
 </div></section>
 
 <section class="everywhere" id="links"><div class="wrap rv">
