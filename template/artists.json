@@ -2493,13 +2493,13 @@
     ],
     "hero": "https://i.ytimg.com/vi/ZPKgyPgWZ-g/maxres1.jpg",
     "hero_pos": "50% 30%",
-    "about_img": "https://i.ytimg.com/vi/dprqtOrD6jk/maxres1.jpg",
+    "about_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Turbulence_Stay_Away.jpg/1280px-Turbulence_Stay_Away.jpg#x=40",
     "gallery": [
       "https://i.ytimg.com/vi/ozCfAjI5nZM/maxres1.jpg",
       "https://i.ytimg.com/vi/dprqtOrD6jk/maxres3.jpg"
     ],
     "band_img": "https://i.ytimg.com/vi/ozCfAjI5nZM/maxres3.jpg",
-    "credits": "Images: stills from the artist's official music videos on YouTube. Preview only, to be replaced by press photos",
+    "credits": "Images: stills from the artist's official music videos on YouTube. Preview only, to be replaced by press photos. Portrait: Peter Verwimp, Zappa Antwerp 2019, CC BY-SA 4.0, via Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Turbulence_Stay_Away.jpg)",
     "labels": [
       "Xterminator",
       "VP Records",
@@ -2513,9 +2513,9 @@
       "Kingston Records"
     ],
     "new_label": "New single: Rasta Nah Surrender (2026)",
-    "video": "dprqtOrD6jk",
-    "video_start": 10,
-    "video_label": "Watch: Rasta Dance",
+    "video": "ozCfAjI5nZM",
+    "video_start": 8,
+    "video_label": "Watch: Suffering In Silence",
     "slides": [
       [
         "https://i.ytimg.com/vi/ZPKgyPgWZ-g/maxres1.jpg",
@@ -2526,8 +2526,8 @@
         "50% 30%"
       ],
       [
-        "https://i.ytimg.com/vi/dprqtOrD6jk/maxres1.jpg",
-        "50% 30%"
+        "https://i.ytimg.com/vi/dprqtOrD6jk/maxres3.jpg",
+        "40% 30%"
       ]
     ],
     "spotify_id": "071vBgcrWSy5w3RmhMZpOb",
@@ -2541,12 +2541,12 @@
     },
     "video_file": "",
     "bandsintown": "https://www.bandsintown.com/a/12080-turbulence",
-    "merch_img": "https://i.ytimg.com/vi/ozCfAjI5nZM/maxres1.jpg",
+    "merch_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Turbulence_Stay_Away.jpg/1280px-Turbulence_Stay_Away.jpg",
     "merch_crop": [
-      0.45,
-      0.42,
-      1.9,
-      1.7778
+      0.4,
+      0.36,
+      2.3,
+      1.5
     ],
     "i18n": {
       "de": {

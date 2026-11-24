@@ -152,10 +152,13 @@ LAYOUTS = {
 @media(max-width:700px){.hero h1{white-space:normal}.hero h1 span{display:block}}
 """,
  "sticker": """
-.hero{align-items:center}
-.hero .wrap{padding-top:130px;padding-bottom:90px}
-.hero h1{display:inline-block;font-size:clamp(50px,9vw,148px);line-height:1;margin:34px 0 64px -6px;padding:.08em .28em .12em;background:var(--acc);color:#0b0d0a;transform:rotate(-3deg);box-shadow:12px 12px 0 #d42a20,24px 24px 0 #1f8a3b}
+.hero{align-items:stretch}
+.hero .wrap{display:flex;flex-direction:column;justify-content:flex-end;min-height:100vh;padding-top:130px;padding-bottom:64px}
+.hero .wrap>*:not(h1){align-self:flex-start}
+.hero h1{order:9;align-self:flex-start;display:inline-block;font-size:clamp(40px,6.2vw,96px);line-height:1;margin:40px 0 0 -4px;padding:.08em .28em .12em;background:var(--acc);color:#0b0d0a;transform:rotate(-3deg);transform-origin:left bottom;box-shadow:8px 8px 0 #d42a20,16px 16px 0 #1f8a3b}
 .hero h1 i,.hero h1 span{display:inline;color:#0b0d0a;-webkit-text-stroke:0}
+.hero:after{background:linear-gradient(0deg,rgba(11,13,10,.95) 0%,rgba(11,13,10,.55) 40%,rgba(11,13,10,.15) 100%)}
+.hero .watch{bottom:auto;top:120px}
 """,
 }
 
