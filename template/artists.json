@@ -2491,14 +2491,14 @@
         "1.98"
       ]
     ],
-    "hero": "https://i.ytimg.com/vi/dprqtOrD6jk/maxres1.jpg",
+    "hero": "https://i.ytimg.com/vi/ZPKgyPgWZ-g/maxres1.jpg",
     "hero_pos": "50% 30%",
-    "about_img": "https://i.ytimg.com/vi/ozCfAjI5nZM/maxres1.jpg",
+    "about_img": "https://i.ytimg.com/vi/dprqtOrD6jk/maxres1.jpg",
     "gallery": [
-      "https://i.ytimg.com/vi/DOeZai82HRs/maxres1.jpg",
-      "https://i.ytimg.com/vi/ZPKgyPgWZ-g/maxres1.jpg"
+      "https://i.ytimg.com/vi/ozCfAjI5nZM/maxres1.jpg",
+      "https://i.ytimg.com/vi/dprqtOrD6jk/maxres3.jpg"
     ],
-    "band_img": "https://i.ytimg.com/vi/DOeZai82HRs/maxres2.jpg",
+    "band_img": "https://i.ytimg.com/vi/ozCfAjI5nZM/maxres3.jpg",
     "credits": "Images: stills from the artist's official music videos on YouTube. Preview only, to be replaced by press photos",
     "labels": [
       "Xterminator",
@@ -2518,15 +2518,15 @@
     "video_label": "Watch: Rasta Dance",
     "slides": [
       [
-        "https://i.ytimg.com/vi/dprqtOrD6jk/maxres1.jpg",
-        "50% 30%"
-      ],
-      [
-        "https://i.ytimg.com/vi/DOeZai82HRs/maxres1.jpg",
+        "https://i.ytimg.com/vi/ZPKgyPgWZ-g/maxres1.jpg",
         "50% 30%"
       ],
       [
         "https://i.ytimg.com/vi/ozCfAjI5nZM/maxres1.jpg",
+        "50% 30%"
+      ],
+      [
+        "https://i.ytimg.com/vi/dprqtOrD6jk/maxres1.jpg",
         "50% 30%"
       ]
     ],

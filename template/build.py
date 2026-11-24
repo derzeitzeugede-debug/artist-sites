@@ -153,7 +153,7 @@ LAYOUTS = {
  "sticker": """
 .hero{align-items:center}
 .hero .wrap{padding-top:130px;padding-bottom:90px}
-.hero h1{display:inline-block;font-size:clamp(56px,11.5vw,180px);line-height:1;margin:30px 0 34px -6px;padding:.08em .28em .12em;background:var(--acc);color:#0b0d0a;transform:rotate(-3deg);box-shadow:12px 12px 0 #d42a20,24px 24px 0 #1f8a3b}
+.hero h1{display:inline-block;font-size:clamp(50px,9vw,148px);line-height:1;margin:34px 0 64px -6px;padding:.08em .28em .12em;background:var(--acc);color:#0b0d0a;transform:rotate(-3deg);box-shadow:12px 12px 0 #d42a20,24px 24px 0 #1f8a3b}
 .hero h1 i,.hero h1 span{display:inline;color:#0b0d0a;-webkit-text-stroke:0}
 """,
 }
