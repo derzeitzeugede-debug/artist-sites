@@ -117,11 +117,11 @@ LAYOUTS = {
 """,
  "vertical": """
 @media(min-width:900px){
-.hero .wrap{display:grid;grid-template-columns:auto 1fr;grid-template-rows:1fr auto auto auto;column-gap:56px;align-items:end;min-height:72vh}
-.hero h1{grid-column:1;grid-row:1/5;writing-mode:vertical-rl;transform:rotate(180deg);font-size:clamp(90px,15vh,170px);line-height:.86;margin:0;white-space:nowrap}
+.hero .wrap{display:grid;grid-template-columns:auto 1fr;grid-template-rows:1fr auto auto auto auto;column-gap:56px;align-items:end;min-height:72vh}
+.hero h1{grid-column:1;grid-row:1/6;writing-mode:vertical-rl;transform:rotate(180deg);font-size:clamp(90px,15vh,170px);line-height:.86;margin:0;white-space:nowrap}
 .hero h1 span{display:inline}
 .hero .wrap>*:not(h1){grid-column:2;justify-self:start}
-.hero .chip{grid-row:2}.hero p.lead{grid-row:3}.hero .cta{grid-row:4}
+.hero .chip{grid-row:2}.hero p.lead{grid-row:3}.hero .cta{grid-row:4}.hero .soc{grid-row:5}
 }
 """,
 }
