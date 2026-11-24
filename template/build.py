@@ -195,7 +195,7 @@ table{{width:100%;border-collapse:collapse;font-size:14px}}td{{padding:6px 8px;b
 <h2>Biography</h2>{bio}<h2>Facts</h2><dl>{facts}</dl>
 <h2>Selected vinyl releases</h2><table>{rel}</table>
 <h2>Press photos</h2><div class="ph">{imgs}</div><p class="small">{e(a["credits"])}. Please credit the photographer when publishing.</p>
-<h2>Booking &amp; contact</h2><p>Booking and management: <a href="{a["booking"]}">{a["booking"]}</a><br>Technical rider and hospitality rider on request.</p>
+<h2>Booking &amp; contact</h2><p>{(f'Booking and management: <a href="{a["booking"]}">{a["booking"]}</a>' if a["booking"] else "Booking and management: via the booking form on the website.")}<br>Technical rider and hospitality rider on request.</p>
 <p class="small">Design preview by Roots Pages, not an official press kit.</p></main></body></html>"""
     d = os.path.join(HERE, "..", slug, "press"); os.makedirs(d, exist_ok=True)
     open(os.path.join(d, "index.html"), "w").write(html_)
@@ -395,7 +395,7 @@ for slug, a in data.items():
            "HERO_POS": a["hero_pos"], "HERO": a["hero"], "BAND": a["band_img"], "ABOUT_IMG": a["about_img"],
            "MARQUEE": marquee, "TRACKS_JSON": json.dumps(tracks, ensure_ascii=False), "TRACKS": "\n".join(rows),
            "RELEASES": "\n".join(cards), "GALLERY": gallery, "FACTS": facts, "BIO": bio, "SHOP": a["buyreggae"],
-           "APPLE": a["apple"], "BOOKING": a["booking"], "COUNT": str(len(cards)), "CREDITS": e(a["credits"]),
+           "APPLE": a["apple"], "BOOKING": a["booking"], "MGMT_BTN": (f'<a class="btn g" href="{e(a["booking"])}" target="_blank" rel="noopener" data-i18n="mgmt">Management page</a>' if a["booking"] else ""), "COUNT": str(len(cards)), "CREDITS": e(a["credits"]),
            "NEW_LABEL": lbl(a["new_label"]),
            "SLIDES": "".join(f'<div style="background-image:url(\'{u}\');background-position:{p}"></div>' for u, p in a["slides"]),
            "VIDEO": a["video"], "VIDEO_START": str(a["video_start"]), "VIDEO_LABEL": lbl(a["video_label"])}
