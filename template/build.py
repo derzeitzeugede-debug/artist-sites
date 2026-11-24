@@ -320,6 +320,7 @@ def _duo(pid, dark, light, contrast=1.9):
         return f"{a:.3f} {b:.3f}"
     k = -(contrast - 1) / 2
     return (f'<filter id="{pid}" color-interpolation-filters="sRGB"><feColorMatrix type="saturate" values="0"/>'
+            f'<feComponentTransfer><feFuncR type="gamma" exponent=".62"/><feFuncG type="gamma" exponent=".62"/><feFuncB type="gamma" exponent=".62"/></feComponentTransfer>'
             f'<feComponentTransfer><feFuncR type="linear" slope="{contrast}" intercept="{k}"/><feFuncG type="linear" slope="{contrast}" intercept="{k}"/><feFuncB type="linear" slope="{contrast}" intercept="{k}"/></feComponentTransfer>'
             f'<feComponentTransfer><feFuncR type="table" tableValues="{ch(0)}"/><feFuncG type="table" tableValues="{ch(1)}"/><feFuncB type="table" tableValues="{ch(2)}"/></feComponentTransfer></filter>')
 
