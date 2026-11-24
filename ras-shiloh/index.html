@@ -103,7 +103,7 @@ section{padding:130px 0}
 .disco{border-top:1px solid var(--line)}
 .dgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:28px 22px}
 .dgrid a{display:block;color:inherit;text-decoration:none}
-.dgrid img{width:100%;aspect-ratio:1;object-fit:cover;display:block;border-radius:4px;background:var(--panel);box-shadow:0 10px 30px rgba(0,0,0,.35);transition:transform .25s}
+.disco .dgrid a img{width:100%;height:auto;aspect-ratio:1/1;max-height:none;object-fit:cover;display:block;border-radius:4px;background:var(--panel);box-shadow:0 10px 30px rgba(0,0,0,.35);transition:transform .25s}
 .dgrid a:hover img{transform:translateY(-4px)}
 .dgrid b{display:block;font-weight:600;font-size:14px;line-height:1.35;margin-top:12px}
 .dgrid small{color:var(--mute);font-size:13px}
@@ -250,9 +250,9 @@ footer .aff{font-size:12px;color:var(--mute);margin-top:8px}
   <div class="slides"><div style="background-image:url('https://i.ytimg.com/vi/aL3uPIj6Ebs/maxresdefault.jpg');background-position:50% 30%"></div><div style="background-image:url('https://i.ytimg.com/vi/7DGXyGQkshc/maxresdefault.jpg');background-position:50% 30%"></div><div style="background-image:url('https://i.ytimg.com/vi/fx_DuNsNATo/maxresdefault.jpg');background-position:50% 30%"></div></div>
   <div class="vid" id="vid"><div id="yt"></div></div>
   <div class="grain"></div>
-  <a class="watch" href="https://www.youtube.com/watch?v=aL3uPIj6Ebs" target="_blank" rel="noopener"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></span><span data-i18n="lbl_watch">Watch</span>: Think</a>
+  <a class="watch" href="https://www.youtube.com/watch?v=aL3uPIj6Ebs" target="_blank" rel="noopener"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></span><span><span data-i18n="lbl_watch">Watch</span>: Think</span></a>
   <div class="wrap">
-    <a class="chip" href="#listen"><b data-i18n="new">NEW</b><span data-i18n="lbl_single">New single</span>: Think (2025)</a>
+    <a class="chip" href="#listen"><b data-i18n="new">NEW</b><span><span data-i18n="lbl_single">New single</span>: Think (2025)</span></a>
     <h1><i>Ras</i> <span>Shiloh</span></h1>
     <p class="lead" id="tagline">Rastafari roots reggae with a clear tenor voice that critics compare to Garnett Silk.</p>
     <div class="cta">

@@ -103,7 +103,7 @@ section{padding:130px 0}
 .disco{border-top:1px solid var(--line)}
 .dgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:28px 22px}
 .dgrid a{display:block;color:inherit;text-decoration:none}
-.dgrid img{width:100%;aspect-ratio:1;object-fit:cover;display:block;border-radius:4px;background:var(--panel);box-shadow:0 10px 30px rgba(0,0,0,.35);transition:transform .25s}
+.disco .dgrid a img{width:100%;height:auto;aspect-ratio:1/1;max-height:none;object-fit:cover;display:block;border-radius:4px;background:var(--panel);box-shadow:0 10px 30px rgba(0,0,0,.35);transition:transform .25s}
 .dgrid a:hover img{transform:translateY(-4px)}
 .dgrid b{display:block;font-weight:600;font-size:14px;line-height:1.35;margin-top:12px}
 .dgrid small{color:var(--mute);font-size:13px}
@@ -252,9 +252,9 @@ footer .aff{font-size:12px;color:var(--mute);margin-top:8px}
   <div class="slides"><div style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Glen_Washington_%283768264265%29.jpg/1920px-Glen_Washington_%283768264265%29.jpg');background-position:50% 35%"></div><div style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Glen_Washington%2C_Ruhr_Reggae_Summer_2009.jpg/1920px-Glen_Washington%2C_Ruhr_Reggae_Summer_2009.jpg');background-position:50% 25%"></div><div style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Glen_Washington_%283768324649%29.jpg/1920px-Glen_Washington_%283768324649%29.jpg');background-position:50% 30%"></div></div>
   <div class="vid" id="vid"><div id="yt"></div></div>
   <div class="grain"></div>
-  <a class="watch" href="https://www.youtube.com/watch?v=l0XpBfqmUCQ" target="_blank" rel="noopener"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></span><span data-i18n="lbl_watch">Watch</span>: Better Than Before</a>
+  <a class="watch" href="https://www.youtube.com/watch?v=l0XpBfqmUCQ" target="_blank" rel="noopener"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></span><span><span data-i18n="lbl_watch">Watch</span>: Better Than Before</span></a>
   <div class="wrap">
-    <a class="chip" href="#listen"><b data-i18n="new">NEW</b><span data-i18n="lbl_album">Latest album</span>: Just Giving Thanks (2025)</a>
+    <a class="chip" href="#listen"><b data-i18n="new">NEW</b><span><span data-i18n="lbl_album">Latest album</span>: Just Giving Thanks (2025)</span></a>
     <h1><i>Glen</i> <span>Washington</span></h1>
     <p class="lead" id="tagline">Soulful roots and lovers rock from May Pen, Jamaica. A voice that has carried reggae for five decades.</p>
     <div class="cta">

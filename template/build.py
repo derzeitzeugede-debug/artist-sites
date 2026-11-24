@@ -142,7 +142,7 @@ def lbl(s):
     for p, k in PREFIX_KEYS.items():
         if s.startswith(p + ": ") or s.startswith(p + " "):
             sep = ": " if s.startswith(p + ": ") else " "
-            return f'<span data-i18n="{k}">{e(p)}</span>{e(sep)}{e(s[len(p) + len(sep):])}'
+            return f'<span><span data-i18n="{k}">{e(p)}</span>{e(sep)}{e(s[len(p) + len(sep):])}</span>'
     return e(s)
 
 def aff(url, slug=""):
