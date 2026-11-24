@@ -143,6 +143,7 @@ LAYOUTS = {
  "fire": """
 .hero{align-items:stretch}
 .hero .wrap{display:flex;flex-direction:column;justify-content:flex-end;min-height:100vh;padding-top:130px;padding-bottom:70px}
+.hero .wrap>*:not(h1){align-self:flex-start}
 .hero h1{order:9;font-size:clamp(56px,11vw,176px);line-height:.9;margin:34px 0 0;white-space:nowrap;background:linear-gradient(90deg,#f6c21a 0%,#f08a1c 45%,#d42a20 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero h1 i,.hero h1 span{display:inline;color:transparent;-webkit-text-stroke:0}
 .hero h1:after{content:"";display:block;height:8px;margin-top:14px;background:linear-gradient(90deg,#d42a20 0 33.3%,#f6c21a 33.3% 66.6%,#1f8a3b 66.6%)}
@@ -248,7 +249,7 @@ def favicon(a):
 
 def write_press(slug, a):
     """Printable one-page press kit (EPK) at ../<slug>/press/index.html"""
-    photos = [a["hero"], a["about_img"]] + a["gallery"]
+    photos = [u.split("#")[0] for u in [a["hero"], a["about_img"]] + a["gallery"]]
     seen, pics = set(), []
     for u in photos:
         if u not in seen:
@@ -532,7 +533,7 @@ for slug, a in data.items():
            "MERCH": merch_cards, "MERCH_BTN": merch_btn,
            "NAME_H1": h1, "STREAM_LINKS": stream_html, "SHOP_LINKS": shop_html, "FAVICON": favicon(a),
            "JSONLD": json.dumps(ld, ensure_ascii=False).replace("</", "<\\/"), "FORM_ENDPOINT": e(a.get("form_endpoint", "")), "NAME": e(a["name"]), "TAGLINE": e(a["tagline"]), "ACCENT2": a["accent2"], "ACCENT": a["accent"],
-           "HERO_POS": a["hero_pos"], "HERO": a["hero"], "BAND": a["band_img"], "ABOUT_IMG": a["about_img"], "ABOUT_PIC": pic(a["about_img"], a["name"] + " live"),
+           "HERO_POS": a["hero_pos"], "HERO": a["hero"], "BAND": a["band_img"], "ABOUT_IMG": a["about_img"].split("#")[0], "ABOUT_PIC": pic(a["about_img"], a["name"] + " live"),
            "MARQUEE": marquee, "TRACKS_JSON": json.dumps(tracks, ensure_ascii=False), "TRACKS": "\n".join(rows),
            "RELEASES": "\n".join(cards), "GALLERY": gallery, "FACTS": facts, "BIO": bio, "SHOP": a["buyreggae"],
            "APPLE": a["apple"], "BOOKING": a["booking"], "MGMT_BTN": (f'<a class="btn g" href="{e(a["booking"])}" target="_blank" rel="noopener" data-i18n="mgmt">Management page</a>' if a["booking"] else ""), "COUNT": str(len(cards)), "CREDITS": e(a["credits"]),
