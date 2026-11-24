@@ -311,11 +311,71 @@ def design(a, kind, pid):
         return g
     return ""
 
+R, Y, G, INK, CREAM = "#d42a20", "#f6c21a", "#1f8a3b", "#121212", "#f3ead6"
+
+def _duo(pid, dark, light, contrast=1.9):
+    """Black-and-white high-contrast portrait mapped onto two print colours (screen-print look)."""
+    def ch(i):
+        a, b = int(dark[1+2*i:3+2*i], 16)/255, int(light[1+2*i:3+2*i], 16)/255
+        return f"{a:.3f} {b:.3f}"
+    k = -(contrast - 1) / 2
+    return (f'<filter id="{pid}" color-interpolation-filters="sRGB"><feColorMatrix type="saturate" values="0"/>'
+            f'<feComponentTransfer><feFuncR type="linear" slope="{contrast}" intercept="{k}"/><feFuncG type="linear" slope="{contrast}" intercept="{k}"/><feFuncB type="linear" slope="{contrast}" intercept="{k}"/></feComponentTransfer>'
+            f'<feComponentTransfer><feFuncR type="table" tableValues="{ch(0)}"/><feFuncG type="table" tableValues="{ch(1)}"/><feFuncB type="table" tableValues="{ch(2)}"/></feComponentTransfer></filter>')
+
+def _face(a, pid, x, y, w, h, filt, clip):
+    """Artist photo cropped on the face. merch_crop = [focus x 0..1, focus y 0..1, zoom] in artists.json."""
+    fx, fy, z = a.get("merch_crop", [.5, .5, 1])
+    iw, ih = w * z, h * z   # slice keeps the photo's aspect ratio, whatever its format
+    ix, iy = x + w / 2 - iw * fx, y + h / 2 - ih * fy
+    return (f'<g clip-path="url(#{clip})"><image href="{e(a.get("merch_img") or a["about_img"])}" x="{ix:.1f}" y="{iy:.1f}" width="{iw:.1f}" height="{ih:.1f}" '
+            f'preserveAspectRatio="xMidYMid slice" filter="url(#{filt})"/></g>')
+
+def _name(x, y, s, size, fill, maxw, extra=""):
+    fit = f' textLength="{maxw}" lengthAdjust="spacingAndGlyphs"' if len(s) * size * .62 > maxw else ""
+    return f'<text x="{x}" y="{y}" text-anchor="middle" font-size="{size}" fill="{fill}" style="font-family:var(--display);font-weight:700"{fit} {extra}>{e(s)}</text>'
+
+def _small(x, y, s, size, fill, ls=3):
+    return f'<text x="{x}" y="{y}" text-anchor="middle" font-size="{size}" fill="{fill}" letter-spacing="{ls}" style="font-family:var(--body);font-weight:800">{e(s)}</text>'
+
+def art_badge(a, pid):
+    """Tee: portrait in red/gold/green rings with a name banner, classic band-tee layout."""
+    origin, _ = _facts(a)
+    g = f'<defs>{_duo(pid+"f", INK, Y)}<clipPath id="{pid}c"><circle cx="100" cy="88" r="62"/></clipPath></defs>'
+    g += "".join(f'<circle cx="100" cy="88" r="{r}" fill="{c}"/>' for r, c in ((84, R), (77, Y), (70, G), (64, INK)))
+    g += _face(a, pid, 38, 26, 124, 124, pid+"f", pid+"c")
+    g += f'<path d="M14 150 L186 150 L180 166 L186 182 L14 182 L20 166 Z" fill="{R}"/>'
+    g += _name(100, 175, a["name"].upper(), 24, CREAM, 150)
+    g += _small(100, 198, origin.upper(), 9, Y)
+    return g
+
+def art_stripes(a, pid):
+    """Hoodie: name over the three flag stripes, no photo."""
+    origin, yr = _facts(a)
+    w = a["name"].upper().split()
+    g = ""
+    if len(w) > 1:
+        g += _name(100, 62, w[0], 40, Y, 170) + _name(100, 104, " ".join(w[1:]), 40, CREAM, 170)
+        y0 = 118
+    else:
+        g += _name(100, 96, w[0], 54, Y, 170); y0 = 112
+    g += "".join(f'<rect x="20" y="{y0 + i*13}" width="160" height="10" fill="{c}"/>' for i, c in enumerate((R, Y, G)))
+    g += _small(100, y0 + 56, (origin + (f" · {yr}" if yr else "")).upper(), 10, CREAM)
+    return g
+
+def art_tote(a, pid):
+    """Tote: one-colour black portrait print on canvas, flag stripe underneath."""
+    g = f'<defs>{_duo(pid+"f", INK, "#e6dac2", 2.2)}<clipPath id="{pid}c"><rect x="30" y="0" width="140" height="140"/></clipPath></defs>'
+    g += _face(a, pid, 30, 0, 140, 140, pid+"f", pid+"c")
+    g += "".join(f'<rect x="{30 + i*47}" y="146" width="46" height="8" fill="{c}"/>' for i, c in enumerate((R, Y, G)))
+    g += _name(100, 184, a["name"].upper(), 26, INK, 140)
+    return g
+
 GARMENT = {
  "tee": ('M95 22 Q150 50 205 22 L262 44 L292 114 L250 130 L238 104 L238 300 Q150 308 62 300 L62 104 L50 130 L8 114 L38 44 Z',
-         'M95 22 Q150 62 205 22', (80, 72, .7)),
+         'M95 22 Q150 62 205 22', (80, 70, .7)),
  "hoodie": ('M70 66 L40 80 L10 258 L48 268 L68 146 L68 306 Q150 314 232 306 L232 146 L252 268 L290 258 L260 80 L230 66 Q150 40 70 66 Z',
-            'M108 64 Q150 96 192 64', (95, 104, .55)),
+            'M108 64 Q150 96 192 64', (95, 96, .55)),
 }
 
 def garment_svg(a, kind, art, pid, col):
@@ -330,11 +390,11 @@ def garment_svg(a, kind, art, pid, col):
     g += f'<path d="{body}" fill="{col}"/>'
     if kind == "hoodie":
         g += '<path d="M112 66 Q150 30 188 66 Q150 88 112 66 Z" fill="#000" opacity=".45"/>'
-        g += '<path d="M138 80 L134 136 M162 80 L166 136" stroke="#ddd" stroke-width="2.4" stroke-linecap="round" opacity=".8"/>'
+        g += '<path d="M138 80 L134 136 M162 80 L166 136" stroke="#e9dfc8" stroke-width="2.4" stroke-linecap="round" opacity=".8"/>'
         g += '<path d="M92 232 L208 232 L222 292 L78 292 Z" fill="none" stroke="#000" stroke-opacity=".35" stroke-width="2"/>'
         g += '<rect x="68" y="294" width="164" height="12" fill="#000" opacity=".18"/>'
     g += f'<path d="{collar}" fill="none" stroke="#000" stroke-opacity=".45" stroke-width="7" stroke-linecap="round"/>'
-    g += f'<g transform="translate({tx} {ty}) scale({sc})">{art}</g>'
+    g += f'<g transform="translate({tx} {ty}) scale({sc})" opacity=".96">{art}</g>'
     g += f'<path d="{body}" fill="url(#{pid}s)"/>'
     g += ('<path d="M90 140 Q110 200 96 280 M210 150 Q190 210 206 286 M140 250 Q150 270 160 300" fill="none" stroke="#000" stroke-opacity=".12" stroke-width="3"/>')
     return g + '</svg>'
@@ -344,33 +404,33 @@ def tote_svg(a, art, pid):
             f'<stop offset=".5" stop-color="#fff" stop-opacity=".05"/><stop offset="1" stop-color="#000" stop-opacity=".22"/></linearGradient></defs>'
             f'<ellipse cx="150" cy="318" rx="110" ry="8" fill="#000" opacity=".4"/>'
             f'<path d="M105 96 Q105 22 150 22 Q195 22 195 96" fill="none" stroke="#cbbd9f" stroke-width="10"/>'
-            f'<path d="M52 92 L248 92 L256 312 L44 312 Z" fill="#e6dac2"/><g transform="translate(60 118) scale(.9)">'
-            + art.replace('fill="#f4efe4"', 'fill="#1b1814"').replace(f'fill="{ "#f4efe4" }"', 'fill="#1b1814"') +
-            f'</g><path d="M52 92 L248 92 L256 312 L44 312 Z" fill="url(#{pid}t)"/></svg>')
+            f'<path d="M52 92 L248 92 L256 312 L44 312 Z" fill="#e6dac2"/><g transform="translate(62 108) scale(.88)">{art}</g>'
+            f'<path d="M52 92 L248 92 L256 312 L44 312 Z" fill="url(#{pid}t)"/></svg>')
 
 def poster_svg(a, pid):
-    words = a["name"].upper().split() if a.get("theme") != "serif" else a["name"].split()
-    acc = a["accent"]
-    return (f'<svg viewBox="0 0 300 330" aria-hidden="true"><defs><filter id="{pid}f"><feColorMatrix type="saturate" values="0"/></filter>'
-            f'<clipPath id="{pid}c"><rect x="52" y="14" width="196" height="290"/></clipPath></defs>'
-            f'<rect x="58" y="20" width="196" height="290" fill="#000" opacity=".45"/>'
-            f'<g clip-path="url(#{pid}c)"><rect x="52" y="14" width="196" height="290" fill="#111"/>'
-            f'<image href="{e(a["about_img"])}" x="52" y="14" width="196" height="230" preserveAspectRatio="xMidYMid slice" filter="url(#{pid}f)" opacity=".85"/>'
-            f'<rect x="52" y="14" width="196" height="230" fill="{acc}" style="mix-blend-mode:multiply"/>'
-            f'<rect x="52" y="200" width="196" height="104" fill="#111"/></g>'
-            + "".join(_txt(150, 236 + i*30, w, 30, "#f4efe4" if i == 0 else acc) for i, w in enumerate(words[:2]))
-            + _txt(150, 292, (a.get("new_label", "").split(": ")[-1] or "ROOTS REGGAE").upper(), 9, "#f4efe4", 'letter-spacing="3" style="font-family:var(--body);font-weight:700"')
-            + '</svg>')
+    """Gig poster: green-to-gold duotone portrait, red header, flag stripes, name block."""
+    origin, _ = _facts(a)
+    x0, y0, W, H = 52, 14, 196, 290
+    g = (f'<svg viewBox="0 0 300 330" aria-hidden="true"><defs>{_duo(pid+"f", "#0f2a17", Y, 1.8)}'
+         f'<clipPath id="{pid}c"><rect x="{x0}" y="{y0+26}" width="{W}" height="176"/></clipPath></defs>'
+         f'<rect x="{x0+6}" y="{y0+6}" width="{W}" height="{H}" fill="#000" opacity=".45"/>'
+         f'<rect x="{x0}" y="{y0}" width="{W}" height="{H}" fill="{INK}"/>'
+         f'<rect x="{x0}" y="{y0}" width="{W}" height="26" fill="{R}"/>'
+         + _small(150, y0 + 17, "LIVE · ROOTS REGGAE", 10, CREAM, 3)
+         + _face(a, pid, x0, y0 + 26, W, 176, pid+"f", pid+"c")
+         + "".join(f'<rect x="{x0}" y="{y0 + 202 + i*7}" width="{W}" height="7" fill="{c}"/>' for i, c in enumerate((R, Y, G)))
+         + _name(150, y0 + 256, a["name"].upper(), 30, Y, 176)
+         + _small(150, y0 + 278, f"{origin.upper()} · TOUR 2027", 9, CREAM, 2)
+         + '</svg>')
+    return g
 
-MERCH_COL = {"poster": ("#141414", "#1d2a40"), "slab": ("#151515", "#2e3b24"), "serif": ("#1a1512", "#4a2f25")}
 MERCH_DEFAULT = [("tee", "T-Shirt"), ("hoodie", "Hoodie"), ("tote", "Tote Bag"), ("poster", "Tour Poster")]
 
 def merch_svg(kind, a):
-    th = a.get("theme", "poster"); tee_c, hood_c = MERCH_COL.get(th, MERCH_COL["poster"])
     pid = f"m{kind}"
-    if kind == "tee": return garment_svg(a, "tee", design(a, "type", pid + "d"), pid, tee_c)
-    if kind == "hoodie": return garment_svg(a, "hoodie", design(a, "seal", pid + "d"), pid, hood_c)
-    if kind == "tote": return tote_svg(a, design(a, "vinyl" if th == "poster" else "seal", pid + "d"), pid)
+    if kind == "tee": return garment_svg(a, "tee", art_badge(a, pid + "d"), pid, "#151515")
+    if kind == "hoodie": return garment_svg(a, "hoodie", art_stripes(a, pid + "d"), pid, "#1d3a25")
+    if kind == "tote": return tote_svg(a, art_tote(a, pid + "d"), pid)
     return poster_svg(a, pid)
 
 def merch_html(a):
