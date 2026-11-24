@@ -417,24 +417,29 @@ document.getElementById('deckImg').src = TRACKS[0].img;
 const nav = document.getElementById('nav'); addEventListener('scroll', () => nav.classList.toggle('solid', scrollY > 60), {passive:true});
 const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.12});
 document.querySelectorAll('.rv').forEach(el => io.observe(el));
-/* hero background video: muted YouTube loop; only visible while it really plays, photos stay as fallback.
-   Whenever YouTube would show its own UI (paused, buffering, ended, play button), the video fades out. */
+/* hero background video: muted YouTube loop; only visible while the picture really moves, photos stay as fallback.
+   A watchdog checks every 250 ms that playback time advances. As soon as it stalls (pause, buffering spinner,
+   play button, end screen) the video is hidden at once; it fades back in after 1.5 s of smooth playback. */
 if (!matchMedia('(prefers-reduced-motion: reduce)').matches && innerWidth > 700) {
   window.onYouTubeIframeAPIReady = () => {
     const v = document.getElementById('vid');
-    let showT = null, loopT = null, p = null;
-    const hide = () => { clearTimeout(showT); showT = null; v.classList.remove('on'); };
-    const show = () => { if (!showT && !v.classList.contains('on')) showT = setTimeout(() => { showT = null; v.classList.add('on'); }, 1200); };
+    let p = null, last = -1, smooth = 0, dog = null;
+    const START = 5;
+    const tick = () => {
+      let t, d, s;
+      try { t = p.getCurrentTime(); d = p.getDuration(); s = p.getPlayerState(); } catch (_) { return; }
+      const moving = s === 1 && t > last + 0.05;
+      last = t;
+      if (d && t > d - 3) { v.classList.remove('on'); smooth = 0; p.seekTo(START, true); last = -1; return; }
+      if (moving) { smooth += 250; if (smooth >= 1500) v.classList.add('on'); }
+      else { smooth = 0; v.classList.remove('on'); if (s !== 1 && s !== 3 && !document.hidden) p.playVideo(); }
+    };
     p = new YT.Player('yt', {videoId: 'aL3uPIj6Ebs',
-      playerVars: {autoplay:1, mute:1, controls:0, loop:1, playlist:'aL3uPIj6Ebs', start:5, playsinline:1, rel:0, origin: location.origin, modestbranding:1, iv_load_policy:3, disablekb:1, fs:0},
+      playerVars: {autoplay:1, mute:1, controls:0, loop:1, playlist:'aL3uPIj6Ebs', start:START, playsinline:1, rel:0, origin: location.origin, modestbranding:1, iv_load_policy:3, disablekb:1, fs:0},
       events: {
-        onReady: e => { e.target.mute(); e.target.playVideo();
-          /* jump back before the end so YouTube never shows its end screen or replay button */
-          loopT = setInterval(() => { try { const d = p.getDuration(), t = p.getCurrentTime();
-            if (d && t > d - 2.5) { hide(); p.seekTo(5, true); } } catch (_) {} }, 500); },
-        onStateChange: e => { if (e.data === 1) show(); else hide(); if (e.data === 0) { p.seekTo(5, true); p.playVideo(); } },
-        onError: () => { clearInterval(loopT); v.remove(); }}});
-    document.addEventListener('visibilitychange', () => { if (!document.hidden && p && p.getPlayerState && p.getPlayerState() !== 1) { hide(); p.playVideo(); } });
+        onReady: e => { e.target.mute(); e.target.playVideo(); dog = setInterval(tick, 250); },
+        onStateChange: e => { if (e.data !== 1) { smooth = 0; v.classList.remove('on'); } },
+        onError: () => { clearInterval(dog); v.remove(); }}});
   };
   const s = document.createElement('script'); s.src = 'https://www.youtube.com/iframe_api'; document.body.appendChild(s);
 }
