@@ -184,6 +184,8 @@ def aff_active():
 
 def pic(u, alt):
     """YouTube sd* stills are 4:3 with black letterbox bars; wrap them so the bars are cropped away."""
+    if u.endswith("#lb"):  # 16:9 frame with letterbox bars burned into the video
+        return f'<span class="lbx lbw"><img src="{e(u[:-3])}" alt="{e(alt)}" loading="lazy"></span>'
     img = f'<img src="{e(u)}" alt="{e(alt)}" loading="lazy">'
     return f'<span class="lbx">{img}</span>' if re.search(r"ytimg\.com/vi/[^/]+/sd", u) else img
 
