@@ -67,6 +67,14 @@ table{{width:100%;border-collapse:collapse;font-size:14px}}td{{padding:6px 8px;b
     d = os.path.join(HERE, "..", slug, "press"); os.makedirs(d, exist_ok=True)
     open(os.path.join(d, "index.html"), "w").write(html_)
 
+def more_shops(artist, title):
+    """Extra record stores per release (search links, so they work for any shop stock)."""
+    clean = title.split(" (")[0]
+    q = quote_plus(f"{artist} {clean}")
+    return [("Discogs", f"https://www.discogs.com/sell/list?q={q}&format=Vinyl"),
+            ("Juno", f"https://www.juno.co.uk/search/?q%5Ball%5D%5B%5D={q}"),
+            ("eBay", f"https://www.ebay.de/sch/i.html?_nkw={q}+vinyl")]
+
 def sample(pid):  # buyreggae preview pattern: /sounds/<id//10000>/<id>A.mp3
     return f"https://www.buyreggae.com/sounds/{pid // 10000}/{pid}A.mp3"
 
@@ -83,7 +91,9 @@ for slug, a in data.items():
                     f'<a class="b" href="{url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">Buy</a></li>')
         cards.append(f'<article class="rel rv"><div class="cv"><img src="{img}" alt="{e(title)}" loading="lazy"><span class="yr">{year}</span>'
                      f'<div class="ov"><button onclick="playId({pid})" aria-label="Preview">{PLAY}</button><a href="{url}" target="_blank" rel="noopener" aria-label="Buy">{CART}</a></div></div>'
-                     f'<h3>{e(title)}</h3><p>{e(meta)}</p><a class="buy" href="{url}" target="_blank" rel="noopener">Buy vinyl</a></article>')
+                     f'<h3>{e(title)}</h3><p>{e(meta)}</p><div class="shops"><a class="buy" href="{url}" target="_blank" rel="noopener">Buyreggae</a>'
+                     + "".join(f'<a href="{e(u)}" target="_blank" rel="noopener">{n}</a>' for n, u in more_shops(a["name"], title))
+                     + '</div></article>')
     words = a["name"].split()
     h1 = e(words[0]) + "".join(f"<span>{e(w)}</span>" for w in words[1:])
     marquee = "".join(f"<span>{e(l)}</span><i>✦</i>" for l in a["labels"])
