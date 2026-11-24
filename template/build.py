@@ -5,12 +5,23 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 data = json.load(open(os.path.join(HERE, "artists.json")))
 tpl = open(os.path.join(HERE, "template.html")).read()
 UI = json.load(open(os.path.join(HERE, "ui.json")))
+AFF = json.load(open(os.path.join(HERE, "affiliate.json")))
 HERO_YT_JS = open(os.path.join(HERE, "hero-youtube.js")).read()
 e = html.escape
 PLAY = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg>'
 CART = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg>'
 
 from urllib.parse import quote_plus, quote
+
+def aff(url, slug=""):
+    """Append partner tracking where an ID is configured (affiliate.json)."""
+    if AFF.get("apple_token") and "music.apple.com" in url:
+        sep = "&" if "?" in url else "?"
+        return f"{url}{sep}at={AFF['apple_token']}&ct={slug or 'rootspages'}"
+    return url
+
+def aff_active():
+    return bool(AFF.get("apple_token") or AFF.get("juno_active"))
 
 def links_for(a):
     """Stream and shop links. Official profile URLs from artists.json win; otherwise a search link (replace before go-live)."""
@@ -26,7 +37,7 @@ def links_for(a):
             ("Juno Records", o.get("juno", f"https://www.juno.co.uk/search/?q%5Ball%5D%5B%5D={q}")),
             ("Bandcamp", o.get("bandcamp", f"https://bandcamp.com/search?q={q}&item_type=b")),
             ("Beatport / Traxsource", o.get("downloads", f"https://www.traxsource.com/search?term={q}"))]
-    fmt = lambda xs: "".join(f'<a href="{e(u)}" target="_blank" rel="noopener">{e(l)}</a>' for l, u in xs)
+    fmt = lambda xs: "".join(f'<a href="{e(aff(u, a.get("_slug", "")))}" target="_blank" rel="noopener">{e(l)}</a>' for l, u in xs)
     return fmt(stream), fmt(shop), [u for _, u in stream + shop if "search" not in u]
 
 def favicon(a):
@@ -75,10 +86,40 @@ def more_shops(artist, title):
             ("Juno", f"https://www.juno.co.uk/search/?q%5Ball%5D%5B%5D={q}"),
             ("eBay", f"https://www.ebay.de/sch/i.html?_nkw={q}+vinyl")]
 
+MERCH_SHAPES = {
+ "tee": '<path d="M70 30 L40 42 L14 78 L40 92 L52 74 L52 190 L148 190 L148 74 L160 92 L186 78 L160 42 L130 30 Q100 52 70 30Z" fill="{bg}" stroke="rgba(255,255,255,.15)"/>',
+ "hoodie": '<path d="M72 34 Q100 14 128 34 L162 46 L188 150 L164 158 L150 92 L150 192 L50 192 L50 92 L36 158 L12 150 L38 46Z" fill="{bg}" stroke="rgba(255,255,255,.15)"/><path d="M78 36 Q100 66 122 36" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="2"/><rect x="74" y="150" width="52" height="26" rx="4" fill="none" stroke="rgba(255,255,255,.18)"/>',
+ "tote": '<path d="M74 60 Q74 18 100 18 Q126 18 126 60" fill="none" stroke="#d8cdb8" stroke-width="6"/><rect x="40" y="58" width="120" height="136" rx="4" fill="#e9dfcc"/>',
+ "poster": '<rect x="42" y="14" width="116" height="174" fill="{bg}" stroke="rgba(255,255,255,.2)"/><circle cx="100" cy="74" r="38" fill="none" stroke="{acc2}" stroke-width="3"/><circle cx="100" cy="74" r="12" fill="{acc2}"/>',
+}
+MERCH_DEFAULT = [("tee", "T-Shirt"), ("hoodie", "Hoodie"), ("tote", "Tote Bag"), ("poster", "Tour Poster")]
+
+def merch_svg(kind, a):
+    words = a["name"].upper().split()
+    bg = "#1b1916"; acc = a["accent"]; acc2 = a["accent2"]
+    ink = "#1b1916" if kind == "tote" else acc
+    y0 = {"tee": 112, "hoodie": 108, "tote": 118, "poster": 140}[kind]
+    fs = 24 if max(len(w) for w in words) <= 6 else 19
+    txt = "".join(f'<text x="100" y="{y0 + i*fs}" text-anchor="middle" font-family="Anton,Impact,sans-serif" font-size="{fs}" fill="{ink}">{e(w)}</text>' for i, w in enumerate(words))
+    return (f'<svg viewBox="0 0 200 206" aria-hidden="true">' + MERCH_SHAPES[kind].format(bg=bg, acc2=acc2) + txt + '</svg>')
+
+def merch_html(a):
+    items = a.get("merch") or []
+    url = a.get("merch_url", "")
+    if items:  # real products from management: [{"name","price","img","url"}]
+        cards = [f'<a class="mi" href="{e(m.get("url") or url)}" target="_blank" rel="noopener"><div class="mp"><img src="{e(m["img"])}" alt="{e(m["name"])}" loading="lazy"></div>'
+                 f'<h3>{e(m["name"])}</h3><p>{e(m.get("price",""))}</p></a>' for m in items]
+    else:      # design concepts until a store exists
+        cards = [f'<div class="mi"><div class="mp">{merch_svg(k, a)}<span class="cn" data-i18n="merch_concept">Design concept</span></div><h3>{n}</h3></div>' for k, n in MERCH_DEFAULT]
+    btn = (f'<a class="btn p" href="{e(url)}" target="_blank" rel="noopener" data-i18n="merch_shop">Shop merch</a>' if url
+           else '<a class="btn g" href="#press" data-i18n="merch_notify">Get notified at launch</a>')
+    return "".join(cards), btn
+
 def sample(pid):  # buyreggae preview pattern: /sounds/<id//10000>/<id>A.mp3
     return f"https://www.buyreggae.com/sounds/{pid // 10000}/{pid}A.mp3"
 
 for slug, a in data.items():
+    a["_slug"] = slug
     tracks, rows, cards = [], [], []
     for pid, title, riddim, label, year, _ in a["releases"]:
         url = f"https://www.buyreggae.com/products/{pid}"
@@ -113,11 +154,14 @@ for slug, a in data.items():
     loc = {"en": {"tagline": a["tagline"], "bio": a["bio"], "facts": a["facts"]}}
     loc.update(a.get("i18n", {}))
     write_press(slug, a)
+    merch_cards, merch_btn = merch_html(a)
     rep = {"HERO_VIDEO_JS": hero_js, "HERO_VIDEO": hero_video,
            "UI_JSON": json.dumps(UI, ensure_ascii=False).replace("</", "<\\/"),
            "LOC_JSON": json.dumps(loc, ensure_ascii=False).replace("</", "<\\/"),
            "SPOTIFY_ID": a.get("spotify_id", ""), "NAME_Q": quote_plus(a["name"]),
            "NEWSLETTER_ENDPOINT": e(a.get("newsletter_endpoint", "")),
+           "AFF_NOTE": ('<p class="aff" data-i18n="aff_note">Some shop links are affiliate links: if you buy through them, the shop pays a small commission. The price stays the same for you.</p>' if aff_active() else ""),
+           "MERCH": merch_cards, "MERCH_BTN": merch_btn,
            "NAME_H1": h1, "STREAM_LINKS": stream_html, "SHOP_LINKS": shop_html, "FAVICON": favicon(a),
            "JSONLD": json.dumps(ld, ensure_ascii=False).replace("</", "<\\/"), "FORM_ENDPOINT": e(a.get("form_endpoint", "")), "NAME": e(a["name"]), "TAGLINE": e(a["tagline"]), "ACCENT2": a["accent2"], "ACCENT": a["accent"],
            "HERO_POS": a["hero_pos"], "HERO": a["hero"], "BAND": a["band_img"], "ABOUT_IMG": a["about_img"],

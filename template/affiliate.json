@@ -1,0 +1,5 @@
+{
+ "_info": "Partner-IDs. Leer = normale Links. Apple: Token aus Apple Performance Partners (Partnerize). Juno: kein Code noetig, Tracking ueber den Referrer; nur rootspages.com bzw. die Kundendomain im Juno-Affiliate-Konto eintragen und juno_active auf true setzen.",
+ "apple_token": "",
+ "juno_active": false
+}
