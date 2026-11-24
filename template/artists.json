@@ -2060,5 +2060,599 @@
       1.7778
     ],
     "merch_img": "https://i.ytimg.com/vi/y9sjdSG0UzU/maxres3.jpg"
+  },
+  "chuck-fenda": {
+    "name": "Chuck Fenda",
+    "theme": "stencil",
+    "layout": "fire",
+    "est": 1996,
+    "accent": "#f08a1c",
+    "accent2": "#d42a20",
+    "tagline": "Conscious reggae from Brooklyn and Jamaica. The Living Fire behind \"Warning\" and \"Gash Dem\".",
+    "bio": [
+      "Chuck Fenda was born Leshorn Dalton Whitehead on 15 June 1972 in Brooklyn, New York, and grew up between New York and Jamaica. Fans know him as \"The Living Fire\" and the \"Poor People Defender\".",
+      "He started out in the late 1990s with King Jammy and then joined the Fifth Element camp. The albums Better Days (2004), The Living Fire (2007), Fulfillment (2009) and Jah Elements (2013) followed. His song \"All About Da Weed\" is on the soundtrack of Grand Theft Auto IV, and \"Warning\" has more than six million plays on Spotify.",
+      "He calls his music conscious reggae. In summer 2026 he headlined the sold-out Lakesplash Festival in Switzerland and played the Turnpike Reggae Festival in Germany. New singles such as \"Wah Gwaan Pon Di Rock\" and \"Take Time\" keep coming."
+    ],
+    "facts": [
+      [
+        "Real name",
+        "Leshorn Dalton Whitehead"
+      ],
+      [
+        "From",
+        "Brooklyn & Jamaica"
+      ],
+      [
+        "Active",
+        "1996 to today"
+      ],
+      [
+        "Known for",
+        "Warning, Gash Dem, Coming Over"
+      ]
+    ],
+    "buyreggae": "https://www.buyreggae.com/artists/31882/chuck-fender",
+    "apple": "https://music.apple.com/artist/81249178",
+    "booking": "",
+    "releases": [
+      [
+        99607,
+        "Big Bad Bently",
+        "Big Bad Bently",
+        "Stone Love",
+        2015,
+        "3.96"
+      ],
+      [
+        51601,
+        "So Many Rivers To Cross",
+        "",
+        "Franc Entertainment",
+        2009,
+        "1.98"
+      ],
+      [
+        49375,
+        "I Care",
+        "Higher Medz",
+        "In The Streetz",
+        2009,
+        "1.98"
+      ],
+      [
+        54877,
+        "I Am For The Poor",
+        "Ghetto",
+        "No Doubt",
+        2009,
+        "1.98"
+      ],
+      [
+        54909,
+        "Survivor",
+        "Rock Steady",
+        "No Doubt",
+        2009,
+        "1.98"
+      ],
+      [
+        100272,
+        "Cleanse My Soul",
+        "Water Drops",
+        "Amplex",
+        2008,
+        "3.16"
+      ],
+      [
+        183871,
+        "Hurry And Come Home",
+        "Dreams",
+        "Birchill Records",
+        2008,
+        "4.76"
+      ],
+      [
+        163787,
+        "Herbalist Farmer",
+        "Drop It",
+        "No Doubt",
+        2008,
+        "4.36"
+      ],
+      [
+        42199,
+        "Bus Pon Dem",
+        "Red Alert",
+        "Rastar",
+        2008,
+        "1.98"
+      ],
+      [
+        161449,
+        "So Many Girls",
+        "Darker Shade Of Black",
+        "Taxi",
+        2007,
+        "4.76"
+      ],
+      [
+        32376,
+        "Rise",
+        "Freedom",
+        "Amplex",
+        2006,
+        "1.98"
+      ],
+      [
+        162832,
+        "Comin Over (with Cherine Anderson)",
+        "Ghetto Blues",
+        "Birchill Records",
+        2006,
+        "3.56"
+      ]
+    ],
+    "hero": "https://i.ytimg.com/vi/zQJH0nirNJM/maxres1.jpg",
+    "hero_pos": "50% 30%",
+    "about_img": "https://i.ytimg.com/vi/uMNUKmEO80I/maxres2.jpg",
+    "gallery": [
+      "https://i.ytimg.com/vi/8QEvkbfOmhg/maxres3.jpg",
+      "https://i.ytimg.com/vi/uMNUKmEO80I/maxres3.jpg#x=62"
+    ],
+    "band_img": "https://i.ytimg.com/vi/8QEvkbfOmhg/maxres1.jpg",
+    "credits": "Images: stills from the artist's official music videos on YouTube. Preview only, to be replaced by press photos",
+    "labels": [
+      "Juke Boxx",
+      "No Doubt",
+      "Birchill Records",
+      "John John Records",
+      "Fifth Element",
+      "King Jammy",
+      "VP Records",
+      "Amplex",
+      "Gargamel Music",
+      "Fireroyal Records"
+    ],
+    "new_label": "New single: Take Time (2026)",
+    "video": "zQJH0nirNJM",
+    "video_start": 12,
+    "video_label": "Watch: It Hard",
+    "slides": [
+      [
+        "https://i.ytimg.com/vi/zQJH0nirNJM/maxres1.jpg",
+        "50% 30%"
+      ],
+      [
+        "https://i.ytimg.com/vi/uMNUKmEO80I/maxres2.jpg",
+        "50% 30%"
+      ],
+      [
+        "https://i.ytimg.com/vi/8QEvkbfOmhg/maxres3.jpg",
+        "50% 30%"
+      ]
+    ],
+    "spotify_id": "44n9LK6fUrDycWTn6E5pAU",
+    "links": {
+      "spotify": "https://open.spotify.com/artist/44n9LK6fUrDycWTn6E5pAU",
+      "deezer": "https://www.deezer.com/artist/2715",
+      "discogs": "https://www.discogs.com/artist/81766"
+    },
+    "social": {
+      "Instagram": "https://www.instagram.com/chuck_fenda",
+      "Facebook": "https://www.facebook.com/chuckfendatothemaxx/",
+      "YouTube": "https://www.youtube.com/@chuckfenda5630"
+    },
+    "video_file": "",
+    "bandsintown": "https://www.bandsintown.com/a/41803-chuck-fenda",
+    "merch_img": "https://i.ytimg.com/vi/zQJH0nirNJM/maxres1.jpg",
+    "merch_crop": [
+      0.5,
+      0.42,
+      1.9,
+      1.7778
+    ],
+    "i18n": {
+      "de": {
+        "tagline": "Conscious Reggae aus Brooklyn und Jamaika. The Living Fire, die Stimme hinter \"Warning\" und \"Gash Dem\".",
+        "bio": [
+          "Chuck Fenda wurde am 15. Juni 1972 als Leshorn Dalton Whitehead in Brooklyn, New York, geboren und wuchs zwischen New York und Jamaika auf. Seine Fans kennen ihn als \"The Living Fire\" und \"Poor People Defender\".",
+          "Er begann Ende der 1990er bei King Jammy und ging dann zum Fifth-Element-Team. Es folgten die Alben Better Days (2004), The Living Fire (2007), Fulfillment (2009) und Jah Elements (2013). Sein Song \"All About Da Weed\" ist im Soundtrack von Grand Theft Auto IV, und \"Warning\" hat auf Spotify mehr als sechs Millionen Plays.",
+          "Er nennt seine Musik Conscious Reggae. Im Sommer 2026 war er Headliner beim ausverkauften Lakesplash Festival in der Schweiz und spielte beim Turnpike Reggae Festival in Deutschland. Neue Singles wie \"Wah Gwaan Pon Di Rock\" und \"Take Time\" erscheinen laufend."
+        ],
+        "facts": [
+          [
+            "Bürgerlicher Name",
+            "Leshorn Dalton Whitehead"
+          ],
+          [
+            "Herkunft",
+            "Brooklyn & Jamaika"
+          ],
+          [
+            "Aktiv",
+            "1996 bis heute"
+          ],
+          [
+            "Bekannt für",
+            "Warning, Gash Dem, Coming Over"
+          ]
+        ]
+      },
+      "fr": {
+        "tagline": "Du reggae conscient entre Brooklyn et la Jamaïque. The Living Fire, la voix de \"Warning\" et \"Gash Dem\".",
+        "bio": [
+          "Chuck Fenda est né Leshorn Dalton Whitehead le 15 juin 1972 à Brooklyn, New York, et a grandi entre New York et la Jamaïque. Ses fans l'appellent \"The Living Fire\" et le \"Poor People Defender\".",
+          "Il a débuté à la fin des années 1990 chez King Jammy, puis a rejoint l'équipe Fifth Element. Suivent les albums Better Days (2004), The Living Fire (2007), Fulfillment (2009) et Jah Elements (2013). Son titre \"All About Da Weed\" figure dans la bande originale de Grand Theft Auto IV, et \"Warning\" compte plus de six millions d'écoutes sur Spotify.",
+          "Il qualifie sa musique de reggae conscient. À l'été 2026, il était la tête d'affiche du Lakesplash Festival en Suisse, complet, et a joué au Turnpike Reggae Festival en Allemagne. De nouveaux singles comme \"Wah Gwaan Pon Di Rock\" et \"Take Time\" continuent de sortir."
+        ],
+        "facts": [
+          [
+            "Nom civil",
+            "Leshorn Dalton Whitehead"
+          ],
+          [
+            "Origine",
+            "Brooklyn & Jamaïque"
+          ],
+          [
+            "Actif",
+            "De 1996 à aujourd'hui"
+          ],
+          [
+            "Connu pour",
+            "Warning, Gash Dem, Coming Over"
+          ]
+        ]
+      },
+      "es": {
+        "tagline": "Reggae consciente entre Brooklyn y Jamaica. The Living Fire, la voz de \"Warning\" y \"Gash Dem\".",
+        "bio": [
+          "Chuck Fenda nació como Leshorn Dalton Whitehead el 15 de junio de 1972 en Brooklyn, Nueva York, y creció entre Nueva York y Jamaica. Sus fans lo conocen como \"The Living Fire\" y el \"Poor People Defender\".",
+          "Empezó a finales de los años 90 con King Jammy y después se unió al equipo de Fifth Element. Siguieron los álbumes Better Days (2004), The Living Fire (2007), Fulfillment (2009) y Jah Elements (2013). Su canción \"All About Da Weed\" forma parte de la banda sonora de Grand Theft Auto IV, y \"Warning\" supera los seis millones de reproducciones en Spotify.",
+          "Él llama a su música reggae consciente. En el verano de 2026 encabezó el Lakesplash Festival en Suiza, con entradas agotadas, y tocó en el Turnpike Reggae Festival en Alemania. Siguen llegando nuevos singles como \"Wah Gwaan Pon Di Rock\" y \"Take Time\"."
+        ],
+        "facts": [
+          [
+            "Nombre real",
+            "Leshorn Dalton Whitehead"
+          ],
+          [
+            "Origen",
+            "Brooklyn y Jamaica"
+          ],
+          [
+            "Activo",
+            "De 1996 a hoy"
+          ],
+          [
+            "Conocido por",
+            "Warning, Gash Dem, Coming Over"
+          ]
+        ]
+      },
+      "pt": {
+        "tagline": "Reggae consciente entre Brooklyn e a Jamaica. The Living Fire, a voz de \"Warning\" e \"Gash Dem\".",
+        "bio": [
+          "Chuck Fenda nasceu Leshorn Dalton Whitehead em 15 de junho de 1972 no Brooklyn, Nova York, e cresceu entre Nova York e a Jamaica. Os fãs o conhecem como \"The Living Fire\" e o \"Poor People Defender\".",
+          "Ele começou no fim dos anos 90 com King Jammy e depois entrou para a equipe Fifth Element. Vieram os álbuns Better Days (2004), The Living Fire (2007), Fulfillment (2009) e Jah Elements (2013). A música \"All About Da Weed\" está na trilha sonora de Grand Theft Auto IV, e \"Warning\" tem mais de seis milhões de reproduções no Spotify.",
+          "Ele chama sua música de reggae consciente. No verão de 2026 foi atração principal do Lakesplash Festival na Suíça, com ingressos esgotados, e tocou no Turnpike Reggae Festival na Alemanha. Novos singles como \"Wah Gwaan Pon Di Rock\" e \"Take Time\" continuam saindo."
+        ],
+        "facts": [
+          [
+            "Nome verdadeiro",
+            "Leshorn Dalton Whitehead"
+          ],
+          [
+            "Origem",
+            "Brooklyn e Jamaica"
+          ],
+          [
+            "Ativo",
+            "De 1996 até hoje"
+          ],
+          [
+            "Conhecido por",
+            "Warning, Gash Dem, Coming Over"
+          ]
+        ]
+      }
+    }
+  },
+  "turbulence": {
+    "name": "Turbulence",
+    "theme": "retro",
+    "layout": "sticker",
+    "est": 1999,
+    "accent": "#f6c21a",
+    "accent2": "#1f8a3b",
+    "tagline": "Roots reggae from Jamaica. The voice behind \"Notorious\" and \"Celebration of Life\".",
+    "bio": [
+      "Turbulence was born Sheldon Campbell on 11 January 1980 in Jamaica. In 1999 the producer Philip \"Fatis\" Burrell discovered him, and his first album Rising followed in 2001.",
+      "His breakthrough came with \"Notorious\" on the Scallawah riddim. In 2005 the song went to number one on reggae charts in Jamaica, New York, London, Toronto and Japan. Since then he has released more than 20 albums, from Songs of Solomon and Notorious to Celebration of Life (2012) and The Remedy (2021). He also appears in the award-winning documentary Rise Up (2007).",
+      "His music comes from old-school roots, inspired by Beres Hammond, Cocoa Tea, Sizzla and Luciano. In 2025 he toured Africa, the Bahamas and Guadeloupe, and in 2026 he released new singles such as \"Rasta Nah Surrender\"."
+    ],
+    "facts": [
+      [
+        "Real name",
+        "Sheldon Campbell"
+      ],
+      [
+        "From",
+        "Jamaica"
+      ],
+      [
+        "Active",
+        "1999 to today"
+      ],
+      [
+        "Latest album",
+        "The Remedy (2021)"
+      ]
+    ],
+    "buyreggae": "https://www.buyreggae.com/artists/31855/turbulence",
+    "apple": "https://music.apple.com/artist/3218524",
+    "booking": "",
+    "releases": [
+      [
+        139137,
+        "Rastafari Livity",
+        "Zion",
+        "Irie Ites Records",
+        2021,
+        "7.16"
+      ],
+      [
+        128504,
+        "Real Ganjaman (with Lutan Fyah & Pressure)",
+        "",
+        "May-B Unity / Diaspora Rockers",
+        2020,
+        "7.16"
+      ],
+      [
+        146224,
+        "Marihuana",
+        "Lili",
+        "Minor 7 Flat 5",
+        2017,
+        "5.56"
+      ],
+      [
+        46985,
+        "Love Always",
+        "Obama",
+        "Hard Drive",
+        2009,
+        "1.98"
+      ],
+      [
+        46306,
+        "Save The Children",
+        "Get Over",
+        "B Sharp",
+        2008,
+        "1.98"
+      ],
+      [
+        41356,
+        "Only An Angel",
+        "Telephone Love",
+        "Fire Ball",
+        2008,
+        "5.81"
+      ],
+      [
+        164363,
+        "That Place",
+        "Movements",
+        "Jamplified Records",
+        2008,
+        "3.96"
+      ],
+      [
+        186000,
+        "They Fight",
+        "First Drop",
+        "M Bass",
+        2008,
+        "3.96"
+      ],
+      [
+        163527,
+        "Bun Bad Mind",
+        "Dutty Rain",
+        "3d I",
+        2007,
+        "4.76"
+      ],
+      [
+        102272,
+        "No Other Girl",
+        "Shining",
+        "A Lustre Kings",
+        2007,
+        "1.98"
+      ],
+      [
+        40016,
+        "Fire Burn",
+        "Fire Burn",
+        "King James",
+        2007,
+        "1.98"
+      ],
+      [
+        38739,
+        "Roll Out",
+        "Supernatural",
+        "Hyperactive Ent.",
+        2007,
+        "1.98"
+      ]
+    ],
+    "hero": "https://i.ytimg.com/vi/dprqtOrD6jk/maxres1.jpg",
+    "hero_pos": "50% 30%",
+    "about_img": "https://i.ytimg.com/vi/ozCfAjI5nZM/maxres1.jpg",
+    "gallery": [
+      "https://i.ytimg.com/vi/DOeZai82HRs/maxres1.jpg",
+      "https://i.ytimg.com/vi/ZPKgyPgWZ-g/maxres1.jpg"
+    ],
+    "band_img": "https://i.ytimg.com/vi/DOeZai82HRs/maxres2.jpg",
+    "credits": "Images: stills from the artist's official music videos on YouTube. Preview only, to be replaced by press photos",
+    "labels": [
+      "Xterminator",
+      "VP Records",
+      "Minor 7 Flat 5",
+      "In The Streetz",
+      "Black Scorpio",
+      "Irie Ites Records",
+      "Charm",
+      "Love Injection",
+      "A Lustre Kings",
+      "Kingston Records"
+    ],
+    "new_label": "New single: Rasta Nah Surrender (2026)",
+    "video": "dprqtOrD6jk",
+    "video_start": 10,
+    "video_label": "Watch: Rasta Dance",
+    "slides": [
+      [
+        "https://i.ytimg.com/vi/dprqtOrD6jk/maxres1.jpg",
+        "50% 30%"
+      ],
+      [
+        "https://i.ytimg.com/vi/DOeZai82HRs/maxres1.jpg",
+        "50% 30%"
+      ],
+      [
+        "https://i.ytimg.com/vi/ozCfAjI5nZM/maxres1.jpg",
+        "50% 30%"
+      ]
+    ],
+    "spotify_id": "071vBgcrWSy5w3RmhMZpOb",
+    "links": {
+      "spotify": "https://open.spotify.com/artist/071vBgcrWSy5w3RmhMZpOb",
+      "deezer": "https://www.deezer.com/artist/62393",
+      "discogs": "https://www.discogs.com/artist/306321"
+    },
+    "social": {
+      "YouTube": "https://www.youtube.com/@TurbulenceMusic"
+    },
+    "video_file": "",
+    "bandsintown": "https://www.bandsintown.com/a/12080-turbulence",
+    "merch_img": "https://i.ytimg.com/vi/ozCfAjI5nZM/maxres1.jpg",
+    "merch_crop": [
+      0.45,
+      0.42,
+      1.9,
+      1.7778
+    ],
+    "i18n": {
+      "de": {
+        "tagline": "Roots Reggae aus Jamaika. Die Stimme hinter \"Notorious\" und \"Celebration of Life\".",
+        "bio": [
+          "Turbulence wurde am 11. Januar 1980 als Sheldon Campbell in Jamaika geboren. 1999 entdeckte ihn der Produzent Philip \"Fatis\" Burrell, 2001 erschien sein erstes Album Rising.",
+          "Der Durchbruch kam mit \"Notorious\" auf dem Scallawah Riddim. 2005 stand der Song auf Platz eins der Reggae-Charts in Jamaika, New York, London, Toronto und Japan. Seitdem hat er mehr als 20 Alben veröffentlicht, von Songs of Solomon und Notorious bis Celebration of Life (2012) und The Remedy (2021). Außerdem ist er im preisgekrönten Dokumentarfilm Rise Up (2007) zu sehen.",
+          "Seine Musik kommt aus den Roots der alten Schule, inspiriert von Beres Hammond, Cocoa Tea, Sizzla und Luciano. 2025 tourte er durch Afrika, die Bahamas und Guadeloupe, 2026 erschienen neue Singles wie \"Rasta Nah Surrender\"."
+        ],
+        "facts": [
+          [
+            "Bürgerlicher Name",
+            "Sheldon Campbell"
+          ],
+          [
+            "Herkunft",
+            "Jamaika"
+          ],
+          [
+            "Aktiv",
+            "1999 bis heute"
+          ],
+          [
+            "Neuestes Album",
+            "The Remedy (2021)"
+          ]
+        ]
+      },
+      "fr": {
+        "tagline": "Du roots reggae de Jamaïque. La voix de \"Notorious\" et \"Celebration of Life\".",
+        "bio": [
+          "Turbulence est né Sheldon Campbell le 11 janvier 1980 en Jamaïque. En 1999, le producteur Philip \"Fatis\" Burrell le découvre, et son premier album Rising sort en 2001.",
+          "La percée arrive avec \"Notorious\" sur le riddim Scallawah. En 2005, le titre est numéro un des classements reggae en Jamaïque, à New York, Londres, Toronto et au Japon. Depuis, il a sorti plus de 20 albums, de Songs of Solomon et Notorious à Celebration of Life (2012) et The Remedy (2021). On le voit aussi dans le documentaire primé Rise Up (2007).",
+          "Sa musique puise dans les racines de la vieille école, inspirée par Beres Hammond, Cocoa Tea, Sizzla et Luciano. En 2025, il a tourné en Afrique, aux Bahamas et en Guadeloupe, et en 2026 il a sorti de nouveaux singles comme \"Rasta Nah Surrender\"."
+        ],
+        "facts": [
+          [
+            "Nom civil",
+            "Sheldon Campbell"
+          ],
+          [
+            "Origine",
+            "Jamaïque"
+          ],
+          [
+            "Actif",
+            "De 1999 à aujourd'hui"
+          ],
+          [
+            "Dernier album",
+            "The Remedy (2021)"
+          ]
+        ]
+      },
+      "es": {
+        "tagline": "Roots reggae de Jamaica. La voz de \"Notorious\" y \"Celebration of Life\".",
+        "bio": [
+          "Turbulence nació como Sheldon Campbell el 11 de enero de 1980 en Jamaica. En 1999 lo descubrió el productor Philip \"Fatis\" Burrell, y en 2001 salió su primer álbum, Rising.",
+          "El gran salto llegó con \"Notorious\" sobre el riddim Scallawah. En 2005 la canción fue número uno en las listas de reggae de Jamaica, Nueva York, Londres, Toronto y Japón. Desde entonces ha publicado más de 20 álbumes, de Songs of Solomon y Notorious a Celebration of Life (2012) y The Remedy (2021). También aparece en el premiado documental Rise Up (2007).",
+          "Su música viene de las raíces de la vieja escuela, inspirada en Beres Hammond, Cocoa Tea, Sizzla y Luciano. En 2025 estuvo de gira por África, las Bahamas y Guadalupe, y en 2026 publicó nuevos singles como \"Rasta Nah Surrender\"."
+        ],
+        "facts": [
+          [
+            "Nombre real",
+            "Sheldon Campbell"
+          ],
+          [
+            "Origen",
+            "Jamaica"
+          ],
+          [
+            "Activo",
+            "De 1999 a hoy"
+          ],
+          [
+            "Último álbum",
+            "The Remedy (2021)"
+          ]
+        ]
+      },
+      "pt": {
+        "tagline": "Roots reggae da Jamaica. A voz de \"Notorious\" e \"Celebration of Life\".",
+        "bio": [
+          "Turbulence nasceu Sheldon Campbell em 11 de janeiro de 1980 na Jamaica. Em 1999 o produtor Philip \"Fatis\" Burrell o descobriu, e em 2001 saiu seu primeiro álbum, Rising.",
+          "O grande salto veio com \"Notorious\" no riddim Scallawah. Em 2005 a música chegou ao primeiro lugar das paradas de reggae na Jamaica, em Nova York, Londres, Toronto e no Japão. Desde então lançou mais de 20 álbuns, de Songs of Solomon e Notorious a Celebration of Life (2012) e The Remedy (2021). Ele também aparece no premiado documentário Rise Up (2007).",
+          "Sua música vem das raízes da velha escola, inspirada em Beres Hammond, Cocoa Tea, Sizzla e Luciano. Em 2025 fez turnê pela África, Bahamas e Guadalupe, e em 2026 lançou novos singles como \"Rasta Nah Surrender\"."
+        ],
+        "facts": [
+          [
+            "Nome verdadeiro",
+            "Sheldon Campbell"
+          ],
+          [
+            "Origem",
+            "Jamaica"
+          ],
+          [
+            "Ativo",
+            "De 1999 até hoje"
+          ],
+          [
+            "Último álbum",
+            "The Remedy (2021)"
+          ]
+        ]
+      }
+    }
   }
 }

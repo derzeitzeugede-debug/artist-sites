@@ -72,6 +72,22 @@ THEMES = {
 .h2{font-size:clamp(48px,6.4vw,96px);line-height:.92;letter-spacing:.01em}
 .marquee{background:linear-gradient(90deg,#3fae5a,#f2c230,#d2402f)}.marquee div{color:#0c0f0b}
 """},
+ "stencil": {"preload": "black-ops-one-latin-400-normal.woff2", "css": """
+@font-face{font-family:"Black Ops One";font-style:normal;font-weight:400;font-display:swap;src:url("../assets/fonts/black-ops-one-latin-400-normal.woff2") format("woff2")}
+:root{--display:"Black Ops One",Impact,sans-serif;--bg:#0d0a08;--panel:#17110d;--ink:#f6eee2;--mute:#b8a894}
+.hero h1 span{-webkit-text-stroke:0;color:var(--ink)}
+.h2{font-size:clamp(34px,4.6vw,66px);line-height:1}
+.btn,.rel .shops a,.lang button{border-radius:3px}
+.marquee{background:linear-gradient(90deg,#d42a20,#f08a1c,#f6c21a)}.marquee div{color:#0d0a08}
+"""},
+ "retro": {"preload": "righteous-latin-400-normal.woff2", "css": """
+@font-face{font-family:"Righteous";font-style:normal;font-weight:400;font-display:swap;src:url("../assets/fonts/righteous-latin-400-normal.woff2") format("woff2")}
+:root{--display:"Righteous","Arial Rounded MT Bold",sans-serif;--bg:#0b0d0a;--panel:#131711;--ink:#f5f0de;--mute:#aeb3a2}
+.hero h1 span{-webkit-text-stroke:0;color:var(--ink)}
+.h2{font-size:clamp(38px,5.2vw,76px);line-height:1}
+.btn{border-radius:99px}.rel .shops a,.lang button{border-radius:8px}
+.marquee{background:#f6c21a}.marquee div{color:#0b0d0a}
+"""},
 }
 
 # Hero layouts: position and line breaks of the artist name (independent of the font theme)
@@ -124,10 +140,25 @@ LAYOUTS = {
 .hero .chip{grid-row:2}.hero p.lead{grid-row:3}.hero .cta{grid-row:4}.hero .soc{grid-row:5}
 }
 """,
+ "fire": """
+.hero{align-items:stretch}
+.hero .wrap{display:flex;flex-direction:column;justify-content:flex-end;min-height:100vh;padding-top:130px;padding-bottom:70px}
+.hero h1{order:9;font-size:clamp(56px,11vw,176px);line-height:.9;margin:34px 0 0;white-space:nowrap;background:linear-gradient(90deg,#f6c21a 0%,#f08a1c 45%,#d42a20 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h1 i,.hero h1 span{display:inline;color:transparent;-webkit-text-stroke:0}
+.hero h1:after{content:"";display:block;height:8px;margin-top:14px;background:linear-gradient(90deg,#d42a20 0 33.3%,#f6c21a 33.3% 66.6%,#1f8a3b 66.6%)}
+.hero:after{background:linear-gradient(0deg,rgba(13,10,8,.96) 0%,rgba(13,10,8,.62) 45%,rgba(13,10,8,.25) 100%)}
+@media(max-width:700px){.hero h1{white-space:normal}.hero h1 span{display:block}}
+""",
+ "sticker": """
+.hero{align-items:center}
+.hero .wrap{padding-top:130px;padding-bottom:90px}
+.hero h1{display:inline-block;font-size:clamp(56px,11.5vw,180px);line-height:1;margin:30px 0 34px -6px;padding:.08em .28em .12em;background:var(--acc);color:#0b0d0a;transform:rotate(-3deg);box-shadow:12px 12px 0 #d42a20,24px 24px 0 #1f8a3b}
+.hero h1 i,.hero h1 span{display:inline;color:#0b0d0a;-webkit-text-stroke:0}
+""",
 }
 
 DISCO_ALL = json.load(open(os.path.join(HERE, "discography.json")))
-DISCOGS_IDS = {"jah-mason": 154711, "glen-washington": 166268, "lutan-fyah": 413695, "natural-black": 187305, "ras-shiloh": 215529, "bugle": 828489, "natty-king": 232740}
+DISCOGS_IDS = {"chuck-fenda": 81766, "turbulence": 306321, "jah-mason": 154711, "glen-washington": 166268, "lutan-fyah": 413695, "natural-black": 187305, "ras-shiloh": 215529, "bugle": 828489, "natty-king": 232740}
 def disco_html(slug):
     items = DISCO_ALL.get(slug, [])
     out = []
