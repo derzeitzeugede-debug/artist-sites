@@ -431,9 +431,9 @@ setLang(LANG);
 
 (()=>{const box=document.getElementById('singles');if(!box||!box.dataset.discogs)return;const btn=document.getElementById('loadSingles'),ol=box.querySelector('ol');
 const albumish=/Album|LP\b|\bEP\b|Mini-Album|Comp|DVD/;
-btn.onclick=async()=>{btn.disabled=true;btn.textContent='…';const seen=new Set();let rows=[];
+btn.onclick=async()=>{btn.disabled=true;btn.textContent='…';const nk=s=>(s||'').toLowerCase().replace(/\(ep\)|vol\.? ?one|\.\.\./g,'').replace(/&/g,'and').replace(/[^a-z0-9]/g,'');const seen=new Set([...document.querySelectorAll('.dgrid b')].map(b=>nk(b.textContent)));let rows=[];
  try{for(let p=1;p<=8;p++){const r=await fetch('https://api.discogs.com/artists/'+box.dataset.discogs+'/releases?sort=year&sort_order=desc&per_page=100&page='+p);if(!r.ok)break;const j=await r.json();
-  for(const x of j.releases){if(x.role!=='Main'||albumish.test(x.format||''))continue;const k=(x.title||'').toLowerCase().replace(/[^a-z0-9]/g,'');if(seen.has(k))continue;seen.add(k);rows.push(x);}
+  for(const x of j.releases){if(x.role!=='Main'||albumish.test(x.format||''))continue;const k=nk(x.title);if(seen.has(k))continue;seen.add(k);rows.push(x);}
   if(p>=j.pagination.pages)break;}}catch(_){}
  rows.sort((a,b)=>(b.year||0)-(a.year||0));
  ol.innerHTML=rows.map(x=>'<li><span>'+(x.year||'')+'</span><div><a href="https://www.discogs.com/'+(x.type==='master'?'master/':'release/')+x.id+'" target="_blank" rel="noopener">'+x.title.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</a><em>'+[(x.label||''),(x.format||'')].filter(Boolean).join(' · ').replace(/</g,'&lt;')+'</em></div></li>').join('');
