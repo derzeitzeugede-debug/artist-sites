@@ -144,6 +144,7 @@ LAYOUTS = {
 .hero{align-items:stretch}
 .hero .wrap{display:flex;flex-direction:column;justify-content:flex-end;min-height:100vh;padding-top:130px;padding-bottom:70px}
 .hero .wrap>*:not(h1){align-self:flex-start}
+.hero .watch{bottom:auto;top:120px}
 .hero h1{order:9;font-size:clamp(56px,11vw,176px);line-height:.9;margin:34px 0 0;white-space:nowrap;background:linear-gradient(90deg,#f6c21a 0%,#f08a1c 45%,#d42a20 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero h1 i,.hero h1 span{display:inline;color:transparent;-webkit-text-stroke:0}
 .hero h1:after{content:"";display:block;height:8px;margin-top:14px;background:linear-gradient(90deg,#d42a20 0 33.3%,#f6c21a 33.3% 66.6%,#1f8a3b 66.6%)}
