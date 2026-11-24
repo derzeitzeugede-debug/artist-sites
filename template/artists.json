@@ -292,7 +292,13 @@
     "theme": "slab",
     "est": 1991,
     "layout": "center",
-    "bandsintown": "https://www.bandsintown.com/a/25910-jah-mason"
+    "bandsintown": "https://www.bandsintown.com/a/25910-jah-mason",
+    "merch_crop": [
+      0.36,
+      0.3,
+      1.9,
+      0.6671
+    ]
   },
   "lutan-fyah": {
     "name": "Lutan Fyah",
@@ -588,7 +594,13 @@
     "theme": "poster",
     "est": 1999,
     "layout": "stack",
-    "bandsintown": "https://www.bandsintown.com/a/25913-lutan-fyah"
+    "bandsintown": "https://www.bandsintown.com/a/25913-lutan-fyah",
+    "merch_crop": [
+      0.58,
+      0.33,
+      1.6,
+      0.6667
+    ]
   },
   "glen-washington": {
     "name": "Glen Washington",
@@ -882,7 +894,13 @@
     "theme": "serif",
     "est": 1976,
     "layout": "right",
-    "bandsintown": "https://www.bandsintown.com/a/25934-glen-washington"
+    "bandsintown": "https://www.bandsintown.com/a/25934-glen-washington",
+    "merch_crop": [
+      0.5,
+      0.5,
+      2.1,
+      0.75
+    ]
   },
   "natural-black": {
     "name": "Natural Black",
@@ -1165,7 +1183,13 @@
         ]
       }
     },
-    "bandsintown": "https://www.bandsintown.com/a/21623-natural-black"
+    "bandsintown": "https://www.bandsintown.com/a/21623-natural-black",
+    "merch_crop": [
+      0.46,
+      0.27,
+      2.8,
+      1.7778
+    ]
   },
   "ras-shiloh": {
     "name": "Ras Shiloh",
@@ -1448,7 +1472,13 @@
         ]
       }
     },
-    "bandsintown": "https://www.bandsintown.com/a/25938-ras-shiloh"
+    "bandsintown": "https://www.bandsintown.com/a/25938-ras-shiloh",
+    "merch_crop": [
+      0.74,
+      0.4,
+      1.5,
+      0.9259
+    ]
   },
   "bugle": {
     "name": "Bugle",
@@ -1726,7 +1756,13 @@
         ]
       }
     },
-    "bandsintown": "https://www.bandsintown.com/a/54750-bugle"
+    "bandsintown": "https://www.bandsintown.com/a/54750-bugle",
+    "merch_crop": [
+      0.48,
+      0.42,
+      2.2,
+      1.7778
+    ]
   },
   "natty-king": {
     "name": "Natty King",
@@ -2017,6 +2053,13 @@
         ]
       }
     },
-    "bandsintown": "https://www.bandsintown.com/a/25950-natty-king"
+    "bandsintown": "https://www.bandsintown.com/a/25950-natty-king",
+    "merch_crop": [
+      0.35,
+      0.5,
+      1.8,
+      1.7778
+    ],
+    "merch_img": "https://i.ytimg.com/vi/y9sjdSG0UzU/maxres3.jpg"
   }
 }

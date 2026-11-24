@@ -324,12 +324,13 @@ def _duo(pid, dark, light, contrast=1.9):
             f'<feComponentTransfer><feFuncR type="table" tableValues="{ch(0)}"/><feFuncG type="table" tableValues="{ch(1)}"/><feFuncB type="table" tableValues="{ch(2)}"/></feComponentTransfer></filter>')
 
 def _face(a, pid, x, y, w, h, filt, clip):
-    """Artist photo cropped on the face. merch_crop = [focus x 0..1, focus y 0..1, zoom] in artists.json."""
-    fx, fy, z = a.get("merch_crop", [.5, .5, 1])
-    iw, ih = w * z, h * z   # slice keeps the photo's aspect ratio, whatever its format
-    ix, iy = x + w / 2 - iw * fx, y + h / 2 - ih * fy
+    """Artist photo cropped on the face. merch_crop = [focus x, focus y (0..1 of the photo), zoom, photo width/height]."""
+    fx, fy, z, ar = a.get("merch_crop", [.5, .4, 1, 16 / 9])
+    ih = h * z; iw = ih * ar
+    if iw < w * z: iw = w * z; ih = iw / ar
+    ix = min(x, max(x + w - iw, x + w / 2 - iw * fx)); iy = min(y, max(y + h - ih, y + h / 2 - ih * fy))
     return (f'<g clip-path="url(#{clip})"><image href="{e(a.get("merch_img") or a["about_img"])}" x="{ix:.1f}" y="{iy:.1f}" width="{iw:.1f}" height="{ih:.1f}" '
-            f'preserveAspectRatio="xMidYMid slice" filter="url(#{filt})"/></g>')
+            f'preserveAspectRatio="none" filter="url(#{filt})"/></g>')
 
 def _name(x, y, s, size, fill, maxw, extra=""):
     fit = f' textLength="{maxw}" lengthAdjust="spacingAndGlyphs"' if len(s) * size * .62 > maxw else ""
@@ -420,7 +421,7 @@ def poster_svg(a, pid):
          + _face(a, pid, x0, y0 + 26, W, 176, pid+"f", pid+"c")
          + "".join(f'<rect x="{x0}" y="{y0 + 202 + i*7}" width="{W}" height="7" fill="{c}"/>' for i, c in enumerate((R, Y, G)))
          + _name(150, y0 + 256, a["name"].upper(), 30, Y, 176)
-         + _small(150, y0 + 278, f"{origin.upper()} · TOUR 2027", 9, CREAM, 2)
+         + _small(150, y0 + 278, f"{origin.upper()} · TOUR 2027", 8, CREAM, 1)
          + '</svg>')
     return g
 
