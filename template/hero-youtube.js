@@ -15,7 +15,7 @@ if (!matchMedia('(prefers-reduced-motion: reduce)').matches && innerWidth > 700)
             if (d && t > d - 2.5) { hide(); p.seekTo({{VIDEO_START}}, true); } } catch (_) {} }, 500); },
         onStateChange: e => { if (e.data === 1) show(); else hide(); if (e.data === 0) { p.seekTo({{VIDEO_START}}, true); p.playVideo(); } },
         onError: () => { clearInterval(loopT); v.remove(); }}});
-    document.addEventListener('visibilitychange', () => { if (!document.hidden && p && p.playVideo) p.playVideo(); });
+    document.addEventListener('visibilitychange', () => { if (!document.hidden && p && p.getPlayerState && p.getPlayerState() !== 1) { hide(); p.playVideo(); } });
   };
   const s = document.createElement('script'); s.src = 'https://www.youtube.com/iframe_api'; document.body.appendChild(s);
 }
