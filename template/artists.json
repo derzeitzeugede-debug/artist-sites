@@ -233,7 +233,8 @@
   "social": {
    "SoundCloud": "https://soundcloud.com/jah-mason"
   },
-  "theme": "slab"
+  "theme": "slab",
+  "est": 1991
  },
  "lutan-fyah": {
   "name": "Lutan Fyah",
@@ -474,7 +475,8 @@
    "SoundCloud": "https://soundcloud.com/lutanfyahofficial",
    "YouTube": "https://www.youtube.com/channel/UCjApOIU9t56OatLUzlVnl0g"
   },
-  "theme": "poster"
+  "theme": "poster",
+  "est": 1999
  },
  "glen-washington": {
   "name": "Glen Washington",
@@ -713,6 +715,7 @@
     ]
    }
   },
-  "theme": "serif"
+  "theme": "serif",
+  "est": 1976
  }
 }

@@ -112,22 +112,126 @@ def more_shops(artist, title):
             ("Juno", f"https://www.juno.co.uk/search/?q%5Ball%5D%5B%5D={q}"),
             ("eBay", f"https://www.ebay.de/sch/i.html?_nkw={q}+vinyl")]
 
-MERCH_SHAPES = {
- "tee": '<path d="M70 30 L40 42 L14 78 L40 92 L52 74 L52 190 L148 190 L148 74 L160 92 L186 78 L160 42 L130 30 Q100 52 70 30Z" fill="{bg}" stroke="rgba(255,255,255,.15)"/>',
- "hoodie": '<path d="M72 34 Q100 14 128 34 L162 46 L188 150 L164 158 L150 92 L150 192 L50 192 L50 92 L36 158 L12 150 L38 46Z" fill="{bg}" stroke="rgba(255,255,255,.15)"/><path d="M78 36 Q100 66 122 36" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="2"/><rect x="74" y="150" width="52" height="26" rx="4" fill="none" stroke="rgba(255,255,255,.18)"/>',
- "tote": '<path d="M74 60 Q74 18 100 18 Q126 18 126 60" fill="none" stroke="#d8cdb8" stroke-width="6"/><rect x="40" y="58" width="120" height="136" rx="4" fill="#e9dfcc"/>',
- "poster": '<rect x="42" y="14" width="116" height="174" fill="{bg}" stroke="rgba(255,255,255,.2)"/><circle cx="100" cy="74" r="38" fill="none" stroke="{acc2}" stroke-width="3"/><circle cx="100" cy="74" r="12" fill="{acc2}"/>',
+import re as _re
+RASTA = ("#2f8f3a", "#f2b632", "#d9452b")
+
+def _facts(a):
+    f = dict(a["facts"])
+    origin = f.get("From", "Jamaica")
+    return origin, str(a.get("est", ""))
+
+def _txt(x, y, s, size, fill, extra="", anchor="middle"):
+    return f'<text x="{x}" y="{y}" text-anchor="{anchor}" font-size="{size}" fill="{fill}" style="font-family:var(--display)" {extra}>{e(s)}</text>'
+
+def design(a, kind, pid):
+    """Print artwork in a 200x200 box. kind: seal | type | vinyl"""
+    th = a.get("theme", "poster"); acc, acc2 = a["accent"], a["accent2"]
+    name = a["name"]; words = name.split(); origin, yr = _facts(a)
+    up = (lambda s: s) if th == "serif" else str.upper
+    ink = "#f4efe4"
+    if kind == "seal":
+        ring = f"{up(name)} ★ {up(origin)} ★ "
+        g = (f'<defs><path id="{pid}c" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/></defs>'
+             f'<circle cx="100" cy="100" r="96" fill="none" stroke="{acc}" stroke-width="3"/>'
+             f'<circle cx="100" cy="100" r="60" fill="none" stroke="{acc}" stroke-width="1.5" stroke-dasharray="2 4"/>'
+             f'<text font-size="15" fill="{ink}" letter-spacing="3" style="font-family:var(--body);font-weight:700">'
+             f'<textPath href="#{pid}c" startOffset="0" textLength="458" lengthAdjust="spacing">{e(ring)}</textPath></text>')
+        mid = words[0] if len(words) > 1 else name
+        g += _txt(100, 104, up(mid), 30 if len(mid) < 6 else 24, acc)
+        g += _txt(100, 130, up(" ".join(words[1:])), 20 if len(" ".join(words[1:])) < 9 else 16, ink)
+        if yr: g += _txt(100, 76, f"EST. {yr}", 10, ink, 'letter-spacing="3" style="font-family:var(--body);font-weight:700"')
+        return g
+    if kind == "type":
+        if th == "slab":
+            g = "".join(f'<rect x="20" y="{18 + i*9}" width="160" height="6" fill="{c}"/>' for i, c in enumerate(RASTA))
+            g += "".join(_txt(100, 92 + i*46, up(w), 44, acc if i else ink) for i, w in enumerate(words[:2]))
+            g += _txt(100, 178, "ROOTS · CULTURE · REALITY", 10, ink, 'letter-spacing="2" style="font-family:var(--body);font-weight:700"')
+            g += "".join(f'<rect x="20" y="{184 + i*0}" width="0" height="0"/>' for i in range(0))
+            return g
+        if th == "serif":
+            g = _txt(100, 78, words[0], 46, ink, 'font-weight="700"')
+            g += _txt(100, 128, " ".join(words[1:]), 40, acc, 'font-weight="700" font-style="italic"')
+            g += f'<path d="M40 142 Q100 160 160 142" fill="none" stroke="{acc}" stroke-width="2"/>'
+            g += _txt(100, 176, "LOVERS ROCK · ROOTS", 10, ink, 'letter-spacing="4" style="font-family:var(--body);font-weight:600"')
+            return g
+        # poster: echo outline effect
+        g = ""
+        for i, w in enumerate(words[:2]):
+            y = 88 + i*62
+            g += _txt(104, y + 4, up(w), 64, acc2)
+            g += _txt(100, y, up(w), 64, ink if i == 0 else acc)
+        return g
+    if kind == "vinyl":
+        g = f'<circle cx="100" cy="100" r="92" fill="#0b0b0b" stroke="#333" stroke-width="1"/>'
+        g += "".join(f'<circle cx="100" cy="100" r="{r}" fill="none" stroke="#262626" stroke-width=".8"/>' for r in range(48, 90, 5))
+        g += f'<path d="M40 60 A70 70 0 0 1 100 30" fill="none" stroke="rgba(255,255,255,.18)" stroke-width="4"/>'
+        g += f'<circle cx="100" cy="100" r="40" fill="{acc}"/><circle cx="100" cy="100" r="4" fill="#0b0b0b"/>'
+        g += _txt(100, 92, up(words[0]), 13, "#111")
+        g += _txt(100, 118, up(" ".join(words[1:])), 11, "#111")
+        return g
+    return ""
+
+GARMENT = {
+ "tee": ('M95 22 Q150 50 205 22 L262 44 L292 114 L250 130 L238 104 L238 300 Q150 308 62 300 L62 104 L50 130 L8 114 L38 44 Z',
+         'M95 22 Q150 62 205 22', (80, 72, .7)),
+ "hoodie": ('M70 66 L40 80 L10 258 L48 268 L68 146 L68 306 Q150 314 232 306 L232 146 L252 268 L290 258 L260 80 L230 66 Q150 40 70 66 Z',
+            'M108 64 Q150 96 192 64', (95, 104, .55)),
 }
+
+def garment_svg(a, kind, art, pid, col):
+    body, collar, (tx, ty, sc) = GARMENT[kind]
+    g = (f'<svg viewBox="0 0 300 330" aria-hidden="true"><defs>'
+         f'<linearGradient id="{pid}s" x1="0" x2="1"><stop offset="0" stop-color="#000" stop-opacity=".35"/><stop offset=".3" stop-color="#fff" stop-opacity=".06"/>'
+         f'<stop offset=".55" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".4"/></linearGradient>'
+         f'<radialGradient id="{pid}g" cx=".5" cy=".95" r=".5"><stop offset="0" stop-color="#000" stop-opacity=".55"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient></defs>'
+         f'<ellipse cx="150" cy="316" rx="120" ry="10" fill="url(#{pid}g)"/>')
+    if kind == "hoodie":
+        g += f'<path d="M96 70 Q98 12 150 10 Q202 12 204 70 Q150 98 96 70 Z" fill="{col}"/><path d="M96 70 Q98 12 150 10 Q202 12 204 70 Q150 98 96 70 Z" fill="url(#{pid}s)"/>'
+    g += f'<path d="{body}" fill="{col}"/>'
+    if kind == "hoodie":
+        g += '<path d="M112 66 Q150 30 188 66 Q150 88 112 66 Z" fill="#000" opacity=".45"/>'
+        g += '<path d="M138 80 L134 136 M162 80 L166 136" stroke="#ddd" stroke-width="2.4" stroke-linecap="round" opacity=".8"/>'
+        g += '<path d="M92 232 L208 232 L222 292 L78 292 Z" fill="none" stroke="#000" stroke-opacity=".35" stroke-width="2"/>'
+        g += '<rect x="68" y="294" width="164" height="12" fill="#000" opacity=".18"/>'
+    g += f'<path d="{collar}" fill="none" stroke="#000" stroke-opacity=".45" stroke-width="7" stroke-linecap="round"/>'
+    g += f'<g transform="translate({tx} {ty}) scale({sc})">{art}</g>'
+    g += f'<path d="{body}" fill="url(#{pid}s)"/>'
+    g += ('<path d="M90 140 Q110 200 96 280 M210 150 Q190 210 206 286 M140 250 Q150 270 160 300" fill="none" stroke="#000" stroke-opacity=".12" stroke-width="3"/>')
+    return g + '</svg>'
+
+def tote_svg(a, art, pid):
+    return (f'<svg viewBox="0 0 300 330" aria-hidden="true"><defs><linearGradient id="{pid}t" x1="0" x2="1"><stop offset="0" stop-color="#000" stop-opacity=".18"/>'
+            f'<stop offset=".5" stop-color="#fff" stop-opacity=".05"/><stop offset="1" stop-color="#000" stop-opacity=".22"/></linearGradient></defs>'
+            f'<ellipse cx="150" cy="318" rx="110" ry="8" fill="#000" opacity=".4"/>'
+            f'<path d="M105 96 Q105 22 150 22 Q195 22 195 96" fill="none" stroke="#cbbd9f" stroke-width="10"/>'
+            f'<path d="M52 92 L248 92 L256 312 L44 312 Z" fill="#e6dac2"/><g transform="translate(60 118) scale(.9)">'
+            + art.replace('fill="#f4efe4"', 'fill="#1b1814"').replace(f'fill="{ "#f4efe4" }"', 'fill="#1b1814"') +
+            f'</g><path d="M52 92 L248 92 L256 312 L44 312 Z" fill="url(#{pid}t)"/></svg>')
+
+def poster_svg(a, pid):
+    words = a["name"].upper().split() if a.get("theme") != "serif" else a["name"].split()
+    acc = a["accent"]
+    return (f'<svg viewBox="0 0 300 330" aria-hidden="true"><defs><filter id="{pid}f"><feColorMatrix type="saturate" values="0"/></filter>'
+            f'<clipPath id="{pid}c"><rect x="52" y="14" width="196" height="290"/></clipPath></defs>'
+            f'<rect x="58" y="20" width="196" height="290" fill="#000" opacity=".45"/>'
+            f'<g clip-path="url(#{pid}c)"><rect x="52" y="14" width="196" height="290" fill="#111"/>'
+            f'<image href="{e(a["about_img"])}" x="52" y="14" width="196" height="230" preserveAspectRatio="xMidYMid slice" filter="url(#{pid}f)" opacity=".85"/>'
+            f'<rect x="52" y="14" width="196" height="230" fill="{acc}" style="mix-blend-mode:multiply"/>'
+            f'<rect x="52" y="200" width="196" height="104" fill="#111"/></g>'
+            + "".join(_txt(150, 236 + i*30, w, 30, "#f4efe4" if i == 0 else acc) for i, w in enumerate(words[:2]))
+            + _txt(150, 292, (a.get("new_label", "").split(": ")[-1] or "ROOTS REGGAE").upper(), 9, "#f4efe4", 'letter-spacing="3" style="font-family:var(--body);font-weight:700"')
+            + '</svg>')
+
+MERCH_COL = {"poster": ("#141414", "#1d2a40"), "slab": ("#151515", "#2e3b24"), "serif": ("#1a1512", "#4a2f25")}
 MERCH_DEFAULT = [("tee", "T-Shirt"), ("hoodie", "Hoodie"), ("tote", "Tote Bag"), ("poster", "Tour Poster")]
 
 def merch_svg(kind, a):
-    words = a["name"].upper().split()
-    bg = "#1b1916"; acc = a["accent"]; acc2 = a["accent2"]
-    ink = "#1b1916" if kind == "tote" else acc
-    y0 = {"tee": 112, "hoodie": 108, "tote": 118, "poster": 140}[kind]
-    fs = 24 if max(len(w) for w in words) <= 6 else 19
-    txt = "".join(f'<text x="100" y="{y0 + i*fs}" text-anchor="middle" font-family="Anton,Impact,sans-serif" font-size="{fs}" fill="{ink}">{e(w)}</text>' for i, w in enumerate(words))
-    return (f'<svg viewBox="0 0 200 206" aria-hidden="true">' + MERCH_SHAPES[kind].format(bg=bg, acc2=acc2) + txt + '</svg>')
+    th = a.get("theme", "poster"); tee_c, hood_c = MERCH_COL.get(th, MERCH_COL["poster"])
+    pid = f"m{kind}"
+    if kind == "tee": return garment_svg(a, "tee", design(a, "type", pid + "d"), pid, tee_c)
+    if kind == "hoodie": return garment_svg(a, "hoodie", design(a, "seal", pid + "d"), pid, hood_c)
+    if kind == "tote": return tote_svg(a, design(a, "vinyl" if th == "poster" else "seal", pid + "d"), pid)
+    return poster_svg(a, pid)
 
 def merch_html(a):
     items = a.get("merch") or []
