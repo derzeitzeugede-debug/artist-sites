@@ -228,7 +228,7 @@ footer .aff{font-size:12px;color:var(--mute);margin-top:8px}
   <div class="grain"></div>
   <a class="watch" href="https://www.youtube.com/watch?v={{VIDEO}}" target="_blank" rel="noopener"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></span>{{VIDEO_LABEL}}</a>
   <div class="wrap">
-    <a class="chip" href="#listen"><b>NEW</b>{{NEW_LABEL}}</a>
+    <a class="chip" href="#listen"><b data-i18n="new">NEW</b>{{NEW_LABEL}}</a>
     <h1>{{NAME_H1}}</h1>
     <p class="lead" id="tagline">{{TAGLINE}}</p>
     <div class="cta">
@@ -252,12 +252,12 @@ footer .aff{font-size:12px;color:var(--mute);margin-top:8px}
 <section class="shop" id="vinyl"><div class="wrap">
   <div class="head rv"><div><div class="eyebrow" data-i18n="vinyl_shop">Vinyl shop</div><h2 class="h2" data-i18n-html="on_wax">On wax<br>right now</h2></div><p><span>{{COUNT}}</span> <span data-i18n="vinyl_p">hand-picked records, in stock and ready to ship. Hover to preview, click to buy.</span></p></div>
   <div class="grid">{{RELEASES}}</div>
-  <div class="more rv"><a class="btn g" href="{{SHOP}}" target="_blank" rel="noopener">Full catalogue on Buyreggae &rarr;</a></div>
+  <div class="more rv"><a class="btn g" href="{{SHOP}}" target="_blank" rel="noopener"><span data-i18n="full_cat">Full catalogue on Buyreggae</span> &rarr;</a></div>
 </div></section>
 
 <section class="everywhere" id="links"><div class="wrap rv">
   <div class="eyebrow" data-i18n="everywhere">Listen &amp; buy everywhere</div><h2 class="h2" data-i18n="find">Find the music</h2>
-  <div class="cols"><div><h3>Stream</h3><div class="links">{{STREAM_LINKS}}</div></div><div><h3>Vinyl &amp; downloads</h3><div class="links">{{SHOP_LINKS}}</div></div>{{SOCIAL}}</div>
+  <div class="cols"><div><h3 data-i18n="stream_h">Stream</h3><div class="links">{{STREAM_LINKS}}</div></div><div><h3 data-i18n="dl_h">Vinyl &amp; downloads</h3><div class="links">{{SHOP_LINKS}}</div></div>{{SOCIAL}}</div>
 </div></section>
 
 <section id="watch"><div class="wrap">
@@ -282,24 +282,24 @@ footer .aff{font-size:12px;color:var(--mute);margin-top:8px}
 </div></section>
 
 <section class="merch" id="merch"><div class="wrap rv">
-  <div class="head"><div><div class="eyebrow" data-i18n="merch">Merch</div><h2 class="h2" data-i18n-html="merch_h">Wear the<br>message</h2></div><p data-i18n="merch_p">Official shirts, hoodies, bags and posters, printed on demand and shipped worldwide.</p></div>
+  <div class="head"><div><div class="eyebrow" data-i18n="merch">Merch</div><h2 class="h2" data-i18n-html="merch_h">Wear the<br>message</h2></div><p data-i18n="merch_p">Shirts, hoodies, bags and posters, printed on demand and shipped worldwide.</p></div>
   <div class="grid4">{{MERCH}}</div>
   <div class="more">{{MERCH_BTN}}</div>
 </div></section>
 
 <section class="band" id="booking"><div class="bg"></div><div class="wrap rv">
   <div class="eyebrow" data-i18n="booking">Live &amp; booking</div>
-  <h2 class="h2">Bring {{NAME}}<br>to your stage</h2>
+  <h2 class="h2"><span data-i18n="bring">Bring</span> {{NAME}}<br><span data-i18n="to_stage">to your stage</span></h2>
   <p data-i18n="booking_p">Festivals, club shows and sound system dates worldwide. Your enquiry goes straight to the management.</p>
   <form class="form" id="bookForm" data-endpoint="{{FORM_ENDPOINT}}">
-    <div><label for="f-name">Name</label><input id="f-name" name="name" required autocomplete="name"></div>
-    <div><label for="f-mail">Email</label><input id="f-mail" name="email" type="email" required autocomplete="email"></div>
-    <div><label for="f-type">Event type</label><select id="f-type" name="type"><option>Festival</option><option>Club show</option><option>Sound system</option><option>Studio / feature</option><option>Press / interview</option><option>Other</option></select></div>
-    <div><label for="f-date">Date &amp; city</label><input id="f-date" name="date_city" placeholder="e.g. 12 July 2027, Berlin"></div>
-    <div class="full"><label for="f-msg">Message</label><textarea id="f-msg" name="message" required></textarea></div>
-    <label class="ok full"><input type="checkbox" required> I agree that my details are used to answer this enquiry (see privacy policy).</label>
+    <div><label for="f-name" data-i18n="f_name">Name</label><input id="f-name" name="name" required autocomplete="name"></div>
+    <div><label for="f-mail" data-i18n="f_mail">Email</label><input id="f-mail" name="email" type="email" required autocomplete="email"></div>
+    <div><label for="f-type" data-i18n="f_type">Event type</label><select id="f-type" name="type"><option value="Festival" data-i18n="o_fest">Festival</option><option value="Club show" data-i18n="o_club">Club show</option><option value="Sound system" data-i18n="o_sound">Sound system</option><option value="Studio / feature" data-i18n="o_studio">Studio / feature</option><option value="Press / interview" data-i18n="o_press">Press / interview</option><option value="Other" data-i18n="o_other">Other</option></select></div>
+    <div><label for="f-date" data-i18n="f_date">Date &amp; city</label><input id="f-date" name="date_city" data-i18n-ph="f_date_ph" placeholder="e.g. 12 July 2027, Berlin"></div>
+    <div class="full"><label for="f-msg" data-i18n="f_msg">Message</label><textarea id="f-msg" name="message" required></textarea></div>
+    <label class="ok full"><input type="checkbox" required> <span data-i18n="f_ok">I agree that my details are used to answer this enquiry (see privacy policy).</span></label>
     <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-    <div class="send full"><button class="btn p" type="submit" data-i18n="send">Send booking enquiry</button><a class="btn g" href="{{BOOKING}}" target="_blank" rel="noopener">Management page</a><span class="msg" id="formMsg" role="status"></span></div>
+    <div class="send full"><button class="btn p" type="submit" data-i18n="send">Send booking enquiry</button><a class="btn g" href="{{BOOKING}}" target="_blank" rel="noopener" data-i18n="mgmt">Management page</a><span class="msg" id="formMsg" role="status"></span></div>
   </form>
 </div></section>
 
@@ -361,6 +361,7 @@ let LANG=(new URLSearchParams(location.search).get('lang')||localStorage.getItem
 function T(k){return (UI[LANG]&&UI[LANG][k])||UI.en[k]||k;}
 function setLang(l){LANG=UI[l]?l:'en';localStorage.setItem('lang',LANG);document.documentElement.lang=LANG;
   document.querySelectorAll('[data-i18n]').forEach(e=>{const v=T(e.dataset.i18n);if(v)e.textContent=v;});
+  document.querySelectorAll('[data-i18n-ph]').forEach(e=>{e.placeholder=T(e.dataset.i18nPh);});
   document.querySelectorAll('[data-i18n-html]').forEach(e=>{e.innerHTML=T(e.dataset.i18nHtml);});
   const L=LOC[LANG]||LOC.en;document.getElementById('tagline').textContent=L.tagline;
   document.getElementById('bio').innerHTML=L.bio.map(p=>'<p>'+p.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</p>').join('');
@@ -371,9 +372,9 @@ setLang(LANG);
 const bf=document.getElementById('bookForm');
 bf.addEventListener('submit',async ev=>{ev.preventDefault();const m=document.getElementById('formMsg');const ep=bf.dataset.endpoint;
   if(!ep){m.textContent=T('form_preview');return;}
-  m.textContent='Sending…';
-  try{const r=await fetch(ep,{method:'POST',body:new FormData(bf),headers:{Accept:'application/json'}});m.textContent=r.ok?'Thank you, the management will get back to you.':'Sorry, that did not work. Please use the management page.';if(r.ok)bf.reset();}
-  catch(_){m.textContent='Sorry, that did not work. Please use the management page.';}
+  m.textContent=T('f_sending');
+  try{const r=await fetch(ep,{method:'POST',body:new FormData(bf),headers:{Accept:'application/json'}});m.textContent=r.ok?T('f_thanks'):T('f_err');if(r.ok)bf.reset();}
+  catch(_){m.textContent=T('f_err');}
 });
 </script>
 </body>

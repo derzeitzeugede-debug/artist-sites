@@ -126,6 +126,15 @@ LAYOUTS = {
 """,
 }
 
+PREFIX_KEYS = {"Watch live at": "lbl_watch_live", "Watch": "lbl_watch", "Latest album": "lbl_album", "New single": "lbl_single", 'New 7"': "lbl_7inch", "Classic": "lbl_classic"}
+def lbl(s):
+    """translate a known English prefix of a hero label, keep the title as is"""
+    for p, k in PREFIX_KEYS.items():
+        if s.startswith(p + ": ") or s.startswith(p + " "):
+            sep = ": " if s.startswith(p + ": ") else " "
+            return f'<span data-i18n="{k}">{e(p)}</span>{e(sep)}{e(s[len(p) + len(sep):])}'
+    return e(s)
+
 def aff(url, slug=""):
     """Append partner tracking where an ID is configured (affiliate.json)."""
     if AFF.get("apple_token") and "music.apple.com" in url:
@@ -346,7 +355,7 @@ for slug, a in data.items():
         i = len(tracks) - 1
         rows.append(f'<li onclick="playIdx({i})"><span class="pb"><span class="ic">{PLAY}</span><span class="eq"><i></i><i></i><i></i></span></span>'
                     f'<span class="t">{e(title)}<span class="s">{e(meta)}</span></span><span class="y">{year}</span>'
-                    f'<a class="b" href="{url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">Buy</a></li>')
+                    f'<a class="b" href="{url}" target="_blank" rel="noopener" onclick="event.stopPropagation()" data-i18n="buy">Buy</a></li>')
         cards.append(f'<article class="rel rv"><div class="cv"><img src="{img}" alt="{e(title)}" loading="lazy"><span class="yr">{year}</span>'
                      f'<div class="ov"><button onclick="playId({pid})" aria-label="Preview">{PLAY}</button><a href="{url}" target="_blank" rel="noopener" aria-label="Buy">{CART}</a></div></div>'
                      f'<h3>{e(title)}</h3><p>{e(meta)}</p><div class="shops"><a class="buy" href="{url}" target="_blank" rel="noopener">Buyreggae</a>'
@@ -378,7 +387,7 @@ for slug, a in data.items():
            "SPOTIFY_ID": a.get("spotify_id", ""), "NAME_Q": quote_plus(a["name"]),
            "NEWSLETTER_ENDPOINT": e(a.get("newsletter_endpoint", "")),
            "AFF_NOTE": ('<p class="aff" data-i18n="aff_note">Some shop links are affiliate links: if you buy through them, the shop pays a small commission. The price stays the same for you.</p>' if aff_active() else ""),
-           "SOCIAL": ('<div><h3>Follow</h3><div class="links">' + "".join(f'<a href="{e(u)}" target="_blank" rel="noopener">{e(n)}</a>' for n, u in a.get("social", {}).items()) + '</div></div>') if a.get("social") else "",
+           "SOCIAL": ('<div><h3 data-i18n="follow">Follow</h3><div class="links">' + "".join(f'<a href="{e(u)}" target="_blank" rel="noopener">{e(n)}</a>' for n, u in a.get("social", {}).items()) + '</div></div>') if a.get("social") else "",
            "THEME_CSS": THEMES[a.get("theme", "poster")]["css"] + LAYOUTS[a.get("layout", "stack")], "FONT_PRELOAD": THEMES[a.get("theme", "poster")]["preload"],
            "MERCH": merch_cards, "MERCH_BTN": merch_btn,
            "NAME_H1": h1, "STREAM_LINKS": stream_html, "SHOP_LINKS": shop_html, "FAVICON": favicon(a),
@@ -387,9 +396,9 @@ for slug, a in data.items():
            "MARQUEE": marquee, "TRACKS_JSON": json.dumps(tracks, ensure_ascii=False), "TRACKS": "\n".join(rows),
            "RELEASES": "\n".join(cards), "GALLERY": gallery, "FACTS": facts, "BIO": bio, "SHOP": a["buyreggae"],
            "APPLE": a["apple"], "BOOKING": a["booking"], "COUNT": str(len(cards)), "CREDITS": e(a["credits"]),
-           "NEW_LABEL": e(a["new_label"]),
+           "NEW_LABEL": lbl(a["new_label"]),
            "SLIDES": "".join(f'<div style="background-image:url(\'{u}\');background-position:{p}"></div>' for u, p in a["slides"]),
-           "VIDEO": a["video"], "VIDEO_START": str(a["video_start"]), "VIDEO_LABEL": e(a["video_label"])}
+           "VIDEO": a["video"], "VIDEO_START": str(a["video_start"]), "VIDEO_LABEL": lbl(a["video_label"])}
     out = tpl
     for k, v in rep.items():
         out = out.replace("{{" + k + "}}", v)
