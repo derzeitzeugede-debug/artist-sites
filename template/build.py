@@ -183,10 +183,13 @@ def aff_active():
     return bool(AFF.get("apple_token") or AFF.get("juno_active"))
 
 def pic(u, alt):
-    """YouTube sd* stills are 4:3 with black letterbox bars; wrap them so the bars are cropped away."""
-    if u.endswith("#lb"):  # 16:9 frame with letterbox bars burned into the video
-        return f'<span class="lbx lbw"><img src="{e(u[:-3])}" alt="{e(alt)}" loading="lazy"></span>'
-    img = f'<img src="{e(u)}" alt="{e(alt)}" loading="lazy">'
+    """Gallery/bio image. URL suffix #lb crops letterbox bars burned into a 16:9 frame, #x=NN sets the horizontal focus in %.
+    YouTube sd* stills are 4:3 with black bars and are wrapped automatically."""
+    u, _, frag = u.partition("#")
+    opts = dict(p.split("=") if "=" in p else (p, "1") for p in frag.split("&") if p)
+    st = f' style="object-position:{opts["x"]}% 22%"' if "x" in opts else ""
+    img = f'<img src="{e(u)}" alt="{e(alt)}" loading="lazy"{st}>'
+    if "lb" in opts: return f'<span class="lbx lbw">{img}</span>'
     return f'<span class="lbx">{img}</span>' if re.search(r"ytimg\.com/vi/[^/]+/sd", u) else img
 
 def links_for(a):
