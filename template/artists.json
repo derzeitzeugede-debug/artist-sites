@@ -231,6 +231,10 @@
    }
   },
   "social": {
+   "Instagram": "https://www.instagram.com/jahmasonmusic/",
+   "Facebook": "https://www.facebook.com/jahmasonmusic",
+   "YouTube": "https://www.youtube.com/@JahmasonJOHNSON",
+   "X / Twitter": "https://twitter.com/jahmasonmusic9",
    "SoundCloud": "https://soundcloud.com/jah-mason"
   },
   "theme": "slab",
@@ -472,9 +476,9 @@
   "social": {
    "Instagram": "https://www.instagram.com/lutanfyahmusic/",
    "Facebook": "https://www.facebook.com/lutanfyahofficial",
+   "YouTube": "https://www.youtube.com/@LutanFyah",
    "X / Twitter": "https://twitter.com/lutanfyah1",
-   "SoundCloud": "https://soundcloud.com/lutanfyahofficial",
-   "YouTube": "https://www.youtube.com/channel/UCjApOIU9t56OatLUzlVnl0g"
+   "SoundCloud": "https://soundcloud.com/lutanfyahofficial"
   },
   "theme": "poster",
   "est": 1999,
@@ -892,7 +896,8 @@
    "discogs": "https://www.discogs.com/artist/187305"
   },
   "social": {
-   "Facebook": "https://www.facebook.com/naturallblack"
+   "Facebook": "https://www.facebook.com/naturallblack",
+   "YouTube": "https://www.youtube.com/@NaturalBlackReggae"
   },
   "video_file": "",
   "i18n": {
@@ -1120,7 +1125,10 @@
    "deezer": "https://www.deezer.com/artist/62433",
    "discogs": "https://www.discogs.com/artist/215529"
   },
-  "social": {},
+  "social": {
+   "Instagram": "https://www.instagram.com/rasshilohmusic/",
+   "YouTube": "https://www.youtube.com/@therealrasshiloh"
+  },
   "video_file": "",
   "i18n": {
    "de": {
@@ -1340,7 +1348,13 @@
    "tidal": "https://tidal.com/artist/16824",
    "discogs": "https://www.discogs.com/artist/828489"
   },
-  "social": {},
+  "social": {
+   "Instagram": "https://www.instagram.com/buglean9ted/",
+   "Facebook": "https://www.facebook.com/BugleAn9ted",
+   "YouTube": "https://www.youtube.com/@buglean9tedofficial617",
+   "X / Twitter": "https://twitter.com/BugleAn9ted",
+   "SoundCloud": "https://soundcloud.com/buglean9ted"
+  },
   "video_file": "",
   "i18n": {
    "de": {
@@ -1575,7 +1589,10 @@
    "deezer": "https://www.deezer.com/artist/171642",
    "discogs": "https://www.discogs.com/artist/232740"
   },
-  "social": {},
+  "social": {
+   "Instagram": "https://www.instagram.com/nattykingofficially/",
+   "YouTube": "https://www.youtube.com/@NattyKingMusic"
+  },
   "video_file": "",
   "i18n": {
    "de": {

@@ -144,6 +144,25 @@ def disco_html(slug):
     more = (f'<div class="more"><button class="btn g" type="button" onclick="this.closest(\'.disco\').classList.add(\'all\')"><span data-i18n="show_all">Show all</span> ({len(items)})</button></div>' if len(items) > 12 else "")
     return "".join(out), more, str(len(items))
 
+SOCIAL_ICONS = {
+ "Instagram": '<path d="M12 7.2A4.8 4.8 0 1 0 12 16.8 4.8 4.8 0 0 0 12 7.2zm0 7.9a3.1 3.1 0 1 1 0-6.2 3.1 3.1 0 0 1 0 6.2zM17 5.8a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2zM12 2c-2.7 0-3 0-4.1.1C4.3 2.2 2.2 4.3 2.1 7.9 2 9 2 9.3 2 12s0 3 .1 4.1c.1 3.6 2.2 5.7 5.8 5.8 1.1.1 1.4.1 4.1.1s3 0 4.1-.1c3.6-.1 5.7-2.2 5.8-5.8.1-1.1.1-1.4.1-4.1s0-3-.1-4.1c-.1-3.6-2.2-5.7-5.8-5.8C15 2 14.7 2 12 2zm0 1.8c2.7 0 3 0 4 .1 2.6.1 3.9 1.4 4 4 .1 1 .1 1.3.1 4s0 3-.1 4c-.1 2.6-1.4 3.9-4 4-1 .1-1.3.1-4 .1s-3 0-4-.1c-2.6-.1-3.9-1.4-4-4-.1-1-.1-1.3-.1-4s0-3 .1-4c.1-2.6 1.4-3.9 4-4 1-.1 1.3-.1 4-.1z"/>',
+ "Facebook": '<path d="M14 8.5V6.8c0-.8.2-1.3 1.4-1.3H17V2.3c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2H7.5v3.6h2.8V22H14v-9.9h2.8l.4-3.6H14z"/>',
+ "YouTube": '<path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.8 15V9l5.8 3-5.8 3z"/>',
+ "X / Twitter": '<path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.2-8.3L1.8 3h6.4l4.4 5.8L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/>',
+ "SoundCloud": '<path d="M1 14.5c0 1.4.8 2.5 1.8 2.5V12c-1 0-1.8 1.1-1.8 2.5zm2.7-3.4v6h1.1v-6.3l-1.1.3zm2-.6v6.6h1.1v-7l-1.1.4zm2-.3v6.9h1.1V9.6c-.4.1-.8.1-1.1.1zm2-.9v7.8h1.1V8.1c-.4.2-.8.4-1.1.7zM19.6 11c-.3 0-.6 0-.9.1A5.3 5.3 0 0 0 13.4 6c-.6 0-1.2.1-1.7.3v10.8h7.9a3.1 3.1 0 0 0 0-6.1z"/>',
+ "Spotify": '<path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.6 14.4a.6.6 0 0 1-.9.2c-2.4-1.5-5.4-1.8-8.9-1a.6.6 0 1 1-.3-1.2c3.9-.9 7.2-.5 9.9 1.1.3.2.4.6.2.9zm1.2-2.7a.8.8 0 0 1-1.1.3c-2.7-1.7-6.9-2.2-10.1-1.2a.8.8 0 1 1-.5-1.5c3.7-1.1 8.3-.6 11.4 1.3.4.2.5.7.3 1.1zm.1-2.8C14.7 9 9.4 8.8 6.3 9.7a1 1 0 1 1-.6-1.8c3.5-1.1 9.4-.9 13.2 1.4a1 1 0 0 1-1 1.6z"/>',
+ "TikTok": '<path d="M16.6 2h-3.3v13.4a2.9 2.9 0 1 1-2-2.8V9.2a6.3 6.3 0 1 0 5.3 6.2V8.6a8 8 0 0 0 4.7 1.5V6.8a4.7 4.7 0 0 1-4.7-4.8z"/>',
+}
+def social_icons(a):
+    items = []
+    if a.get("spotify_id"):
+        items.append(("Spotify", "https://open.spotify.com/artist/" + a["spotify_id"]))
+    order = ["Instagram", "Facebook", "YouTube", "TikTok", "X / Twitter", "SoundCloud"]
+    soc = a.get("social", {})
+    for n in order:
+        if soc.get(n): items.append((n, soc[n]))
+    return "".join(f'<a href="{e(u)}" target="_blank" rel="noopener" aria-label="{e(n)}" title="{e(n)}"><svg viewBox="0 0 24 24" fill="currentColor">{SOCIAL_ICONS[n]}</svg></a>' for n, u in items)
+
 PREFIX_KEYS = {"Watch live at": "lbl_watch_live", "Watch": "lbl_watch", "Latest album": "lbl_album", "New single": "lbl_single", 'New 7"': "lbl_7inch", "Classic": "lbl_classic"}
 def lbl(s):
     """translate a known English prefix of a hero label, keep the title as is"""
@@ -414,7 +433,7 @@ for slug, a in data.items():
            "MARQUEE": marquee, "TRACKS_JSON": json.dumps(tracks, ensure_ascii=False), "TRACKS": "\n".join(rows),
            "RELEASES": "\n".join(cards), "GALLERY": gallery, "FACTS": facts, "BIO": bio, "SHOP": a["buyreggae"],
            "APPLE": a["apple"], "BOOKING": a["booking"], "MGMT_BTN": (f'<a class="btn g" href="{e(a["booking"])}" target="_blank" rel="noopener" data-i18n="mgmt">Management page</a>' if a["booking"] else ""), "COUNT": str(len(cards)), "CREDITS": e(a["credits"]),
-           "NEW_LABEL": lbl(a["new_label"]), "DISCO": disco_html(slug)[0], "DISCO_MORE": disco_html(slug)[1], "DISCO_COUNT": disco_html(slug)[2], "DISCOGS_ID": str(DISCOGS_IDS.get(slug, "")),
+           "NEW_LABEL": lbl(a["new_label"]), "DISCO": disco_html(slug)[0], "DISCO_MORE": disco_html(slug)[1], "DISCO_COUNT": disco_html(slug)[2], "DISCOGS_ID": str(DISCOGS_IDS.get(slug, "")), "SOCIAL_ICONS": social_icons(a),
            "SLIDES": "".join(f'<div style="background-image:url(\'{u}\');background-position:{p}"></div>' for u, p in a["slides"]),
            "VIDEO": a["video"], "VIDEO_START": str(a["video_start"]), "VIDEO_LABEL": lbl(a["video_label"])}
     out = tpl

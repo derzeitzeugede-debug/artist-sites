@@ -59,6 +59,11 @@ img{display:block;max-width:100%}
 .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,11,10,.92) 0%,rgba(12,11,10,.55) 45%,rgba(12,11,10,.1) 100%),linear-gradient(0deg,var(--bg) 0%,transparent 40%)}
 .hero .wrap{position:relative;z-index:2;padding-bottom:110px;width:100%}
 .lb,.lb em{font-style:normal}
+.soc{display:flex;gap:10px;margin-top:26px;flex-wrap:wrap}
+.soc a{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;color:var(--ink);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(8px);transition:background .2s,color .2s,transform .2s}
+.soc a:hover{background:var(--acc);color:#0c0b0a;transform:translateY(-2px)}
+.soc svg{width:19px;height:19px}
+.soc.foot{margin-top:16px}.soc.foot a{width:36px;height:36px}.soc.foot svg{width:16px;height:16px}
 .chip{display:inline-flex;align-items:center;gap:10px;padding:8px 16px 8px 8px;border-radius:99px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);font-size:13px;font-weight:600;backdrop-filter:blur(8px)}
 .chip b{background:var(--acc);color:#0c0b0a;border-radius:99px;padding:3px 10px;font-size:11px;letter-spacing:.1em}
 .hero h1{font:400 clamp(84px,15vw,220px)/.84 var(--display);text-transform:uppercase;margin:26px 0 22px;letter-spacing:-.005em}
@@ -253,6 +258,7 @@ footer .aff{font-size:12px;color:var(--mute);margin-top:8px}
       <button class="btn p" onclick="playIdx(0)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg><span data-i18n="play_latest">Play latest</span></button>
       <a class="btn g" href="#vinyl" data-i18n="shop_the_vinyl">Shop the vinyl</a>
     </div>
+    <div class="soc" aria-label="Social media">{{SOCIAL_ICONS}}</div>
   </div>
   <div class="scroll">Scroll</div>
 </header>
@@ -335,7 +341,7 @@ footer .aff{font-size:12px;color:var(--mute);margin-top:8px}
 </div></section>
 
 <footer><div class="wrap">
-  <div><div class="logo">{{NAME}}</div><p style="margin-top:8px">&copy; 2026 · Vinyl via Buyreggae.com and other shops</p><p class="legal"><a href="../impressum.html">Impressum</a><a href="../datenschutz.html">Datenschutz / Privacy</a></p></div>
+  <div><div class="logo">{{NAME}}</div><div class="soc foot">{{SOCIAL_ICONS}}</div><p style="margin-top:8px">&copy; 2026 · Vinyl via Buyreggae.com and other shops</p><p class="legal"><a href="../impressum.html">Impressum</a><a href="../datenschutz.html">Datenschutz / Privacy</a></p></div>
   <p class="cr">{{CREDITS}}. Audio previews and cover images: Buyreggae.com. Design preview by Roots Pages, not an official website.</p>
 {{AFF_NOTE}}
 </div></footer>
