@@ -142,7 +142,9 @@ section{padding:130px 0}
 .shop .more{text-align:center;margin-top:60px}
 .about{display:grid;grid-template-columns:1fr 1.1fr;gap:90px;align-items:center}
 .about .ph{position:relative;z-index:1}
-.about .ph img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px}
+.about .ph>img,.about .ph>.lbx{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px}
+.lbx{position:relative;overflow:hidden;display:block}.lbx img{position:absolute;left:0;top:-16.67%;width:100%;height:133.34%!important;object-fit:cover;border-radius:0!important}
+.gal>.lbx{height:520px;border-radius:4px}
 .about .ph:before{content:"";position:absolute;inset:26px -26px -26px 26px;border:1px solid var(--acc);border-radius:6px;z-index:-1}
 .about .txt p{color:#d8d1c3;margin-top:20px;font-size:17px}
 .about .txt p:first-of-type{font-size:21px;color:var(--ink);line-height:1.5}
@@ -229,7 +231,7 @@ footer .aff{font-size:12px;color:var(--mute);margin-top:8px}
   .embeds,.extra{grid-template-columns:1fr}.merch .grid4{grid-template-columns:1fr 1fr}
   .everywhere .cols,.form{grid-template-columns:1fr}
   .nav ul{display:none}.listen,.about{grid-template-columns:1fr;gap:50px}.grid{grid-template-columns:repeat(2,1fr);gap:20px}
-  .gal{grid-template-columns:1fr 1fr}.gal img{height:320px}.gal img:first-child{grid-column:1/-1}
+  .gal{grid-template-columns:1fr 1fr}.gal img,.gal>.lbx{height:320px}.gal>:first-child{grid-column:1/-1}
   section{padding:90px 0}.band{margin-top:90px}.scroll{display:none}.tracks li{grid-template-columns:40px 1fr auto}.tracks .y{display:none}
   .bar{grid-template-columns:auto 1fr}.bar .ctl .sec,.bar .btn,.bar img{display:none}
   .hero .wrap{padding-bottom:70px}.demo{display:none}.nav .btn{display:none}
@@ -338,11 +340,11 @@ footer .aff{font-size:12px;color:var(--mute);margin-top:8px}
 </div></section>
 
 <section id="about"><div class="wrap about">
-  <div class="ph rv"><img src="https://i.ytimg.com/vi/nk3RzV5MB5w/sddefault.jpg" alt="Natty King live"></div>
+  <div class="ph rv"><span class="lbx"><img src="https://i.ytimg.com/vi/nk3RzV5MB5w/sddefault.jpg" alt="Natty King live" loading="lazy"></span></div>
   <div class="txt rv"><div class="eyebrow" data-i18n="bio">Biography</div><h2 class="h2" data-i18n="story">The story</h2><div id="bio"><p>Natty King was born Kevin Christopher Roberts in 1977 and grew up in the countryside of St. Thomas, in the southeast of Jamaica. His heroes are The Wailers, Burning Spear and Luciano.</p><p>In the early 2000s &quot;Mr. Greedy&quot; and &quot;No Guns To Town&quot; went to number one in Jamaica, on the charts and on the video charts. In 2003 he won Best New Entertainer at the IRAWMA awards in New York. He has played Sting, Rebel Salute, Reggae Sumfest and Rototom Sunsplash.</p><p>His albums include No Guns To Town (2003), Born To Be Free (2010) and Rebellution (2022). His songs speak about faith, the environment and the youths.</p></div><dl class="facts" id="facts"><div><dt>Real name</dt><dd>Kevin Christopher Roberts</dd></div><div><dt>From</dt><dd>St. Thomas, Jamaica</dd></div><div><dt>Active</dt><dd>Early 2000s to today</dd></div><div><dt>Latest album</dt><dd>Rebellution (2022)</dd></div></dl></div>
 </div></section>
 
-<div class="gal rv"><img src="https://i.ytimg.com/vi/IkLjVHPr68g/maxresdefault.jpg" alt="Natty King live"><img src="https://i.ytimg.com/vi/NPacVX8o4Ck/maxresdefault.jpg" alt="Natty King live"><img src="https://i.ytimg.com/vi/nk3RzV5MB5w/sddefault.jpg" alt="Natty King live"></div>
+<div class="gal rv"><img src="https://i.ytimg.com/vi/IkLjVHPr68g/maxresdefault.jpg" alt="Natty King live" loading="lazy"><img src="https://i.ytimg.com/vi/NPacVX8o4Ck/maxresdefault.jpg" alt="Natty King live" loading="lazy"><span class="lbx"><img src="https://i.ytimg.com/vi/nk3RzV5MB5w/sddefault.jpg" alt="Natty King live" loading="lazy"></span></div>
 
 <section class="tour" id="tour"><div class="wrap rv">
   <div class="eyebrow" data-i18n="tour">Tour dates</div><h2 class="h2" data-i18n="on_tour">On tour</h2>

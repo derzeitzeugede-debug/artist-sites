@@ -1,6 +1,6 @@
 """Builds one static artist site per entry in artists.json.
 Usage: python3 build.py  -> writes ../<slug>/index.html"""
-import json, html, os
+import json, html, os, re
 HERE = os.path.dirname(os.path.abspath(__file__))
 data = json.load(open(os.path.join(HERE, "artists.json")))
 tpl = open(os.path.join(HERE, "template.html")).read()
@@ -181,6 +181,11 @@ def aff(url, slug=""):
 
 def aff_active():
     return bool(AFF.get("apple_token") or AFF.get("juno_active"))
+
+def pic(u, alt):
+    """YouTube sd* stills are 4:3 with black letterbox bars; wrap them so the bars are cropped away."""
+    img = f'<img src="{e(u)}" alt="{e(alt)}" loading="lazy">'
+    return f'<span class="lbx">{img}</span>' if re.search(r"ytimg\.com/vi/[^/]+/sd", u) else img
 
 def links_for(a):
     """Stream and shop links. Official profile URLs from artists.json win; otherwise a search link (replace before go-live)."""
@@ -401,7 +406,7 @@ for slug, a in data.items():
     words = a["name"].split()
     h1 = f"<i>{e(words[0])}</i>" + "".join(f" <span>{e(w)}</span>" for w in words[1:])
     marquee = "".join(f"<span>{e(l)}</span><i>✦</i>" for l in a["labels"])
-    gallery = "".join(f'<img src="{u}" alt="{e(a["name"])} live">' for u in a["gallery"])
+    gallery = "".join(pic(u, a["name"] + " live") for u in a["gallery"])
     facts = "".join(f"<div><dt>{e(k)}</dt><dd>{e(v)}</dd></div>" for k, v in a["facts"])
     bio = "".join(f"<p>{e(p)}</p>" for p in a["bio"])
     stream_html, shop_html, same_as = links_for(a)
@@ -429,7 +434,7 @@ for slug, a in data.items():
            "MERCH": merch_cards, "MERCH_BTN": merch_btn,
            "NAME_H1": h1, "STREAM_LINKS": stream_html, "SHOP_LINKS": shop_html, "FAVICON": favicon(a),
            "JSONLD": json.dumps(ld, ensure_ascii=False).replace("</", "<\\/"), "FORM_ENDPOINT": e(a.get("form_endpoint", "")), "NAME": e(a["name"]), "TAGLINE": e(a["tagline"]), "ACCENT2": a["accent2"], "ACCENT": a["accent"],
-           "HERO_POS": a["hero_pos"], "HERO": a["hero"], "BAND": a["band_img"], "ABOUT_IMG": a["about_img"],
+           "HERO_POS": a["hero_pos"], "HERO": a["hero"], "BAND": a["band_img"], "ABOUT_IMG": a["about_img"], "ABOUT_PIC": pic(a["about_img"], a["name"] + " live"),
            "MARQUEE": marquee, "TRACKS_JSON": json.dumps(tracks, ensure_ascii=False), "TRACKS": "\n".join(rows),
            "RELEASES": "\n".join(cards), "GALLERY": gallery, "FACTS": facts, "BIO": bio, "SHOP": a["buyreggae"],
            "APPLE": a["apple"], "BOOKING": a["booking"], "MGMT_BTN": (f'<a class="btn g" href="{e(a["booking"])}" target="_blank" rel="noopener" data-i18n="mgmt">Management page</a>' if a["booking"] else ""), "COUNT": str(len(cards)), "CREDITS": e(a["credits"]),

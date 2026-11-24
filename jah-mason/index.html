@@ -142,7 +142,9 @@ section{padding:130px 0}
 .shop .more{text-align:center;margin-top:60px}
 .about{display:grid;grid-template-columns:1fr 1.1fr;gap:90px;align-items:center}
 .about .ph{position:relative;z-index:1}
-.about .ph img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px}
+.about .ph>img,.about .ph>.lbx{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px}
+.lbx{position:relative;overflow:hidden;display:block}.lbx img{position:absolute;left:0;top:-16.67%;width:100%;height:133.34%!important;object-fit:cover;border-radius:0!important}
+.gal>.lbx{height:520px;border-radius:4px}
 .about .ph:before{content:"";position:absolute;inset:26px -26px -26px 26px;border:1px solid var(--acc);border-radius:6px;z-index:-1}
 .about .txt p{color:#d8d1c3;margin-top:20px;font-size:17px}
 .about .txt p:first-of-type{font-size:21px;color:var(--ink);line-height:1.5}
@@ -229,7 +231,7 @@ footer .aff{font-size:12px;color:var(--mute);margin-top:8px}
   .embeds,.extra{grid-template-columns:1fr}.merch .grid4{grid-template-columns:1fr 1fr}
   .everywhere .cols,.form{grid-template-columns:1fr}
   .nav ul{display:none}.listen,.about{grid-template-columns:1fr;gap:50px}.grid{grid-template-columns:repeat(2,1fr);gap:20px}
-  .gal{grid-template-columns:1fr 1fr}.gal img{height:320px}.gal img:first-child{grid-column:1/-1}
+  .gal{grid-template-columns:1fr 1fr}.gal img,.gal>.lbx{height:320px}.gal>:first-child{grid-column:1/-1}
   section{padding:90px 0}.band{margin-top:90px}.scroll{display:none}.tracks li{grid-template-columns:40px 1fr auto}.tracks .y{display:none}
   .bar{grid-template-columns:auto 1fr}.bar .ctl .sec,.bar .btn,.bar img{display:none}
   .hero .wrap{padding-bottom:70px}.demo{display:none}.nav .btn{display:none}
@@ -340,11 +342,11 @@ footer .aff{font-size:12px;color:var(--mute);margin-top:8px}
 </div></section>
 
 <section id="about"><div class="wrap about">
-  <div class="ph rv"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Ruhr_Reggae_Summer_2013_-_Jah_Mason_01.jpg/960px-Ruhr_Reggae_Summer_2013_-_Jah_Mason_01.jpg" alt="Jah Mason live"></div>
+  <div class="ph rv"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Ruhr_Reggae_Summer_2013_-_Jah_Mason_01.jpg/960px-Ruhr_Reggae_Summer_2013_-_Jah_Mason_01.jpg" alt="Jah Mason live" loading="lazy"></div>
   <div class="txt rv"><div class="eyebrow" data-i18n="bio">Biography</div><h2 class="h2" data-i18n="story">The story</h2><div id="bio"><p>Jah Mason, born Andre Johnson in Manchester Parish, Jamaica, has been recording since 1991, when his first single came out under the name Perry Mason. Known to many as Fire Mason, he moves easily between singing and deejaying.</p><p>His catalogue runs to nearly twenty studio albums, among them Keep Your Joy and Working So Hard (2002), Wheat and Tears (2006, Greensleeves), Princess Gone... The Saga Bed (2006, VP) and Love &amp; Wisdom (2015). He also cut The Pow Pow Trilogy (2008) together with Anthony B and Turbulence.</p><p>From early Jah Cure combinations on Henfield to his 2026 seven inch on Five Disciples Crew Records, his music has been pressed on vinyl by labels across Jamaica and Europe.</p></div><dl class="facts" id="facts"><div><dt>Real name</dt><dd>Andre Johnson</dd></div><div><dt>From</dt><dd>Manchester, Jamaica</dd></div><div><dt>Active</dt><dd>1991 to today</dd></div><div><dt>Labels</dt><dd>Greensleeves, VP, Jah Warrior, Pow Pow, Kickin</dd></div></dl></div>
 </div></section>
 
-<div class="gal rv"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Ruhr_Reggae_Summer_2013_-_Jah_Mason_03.jpg/960px-Ruhr_Reggae_Summer_2013_-_Jah_Mason_03.jpg" alt="Jah Mason live"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Ruhr_Reggae_Summer_2013_-_Jah_Mason_08.jpg/960px-Ruhr_Reggae_Summer_2013_-_Jah_Mason_08.jpg" alt="Jah Mason live"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Ruhr_Reggae_Summer_2013_-_Jah_Mason_04.jpg/960px-Ruhr_Reggae_Summer_2013_-_Jah_Mason_04.jpg" alt="Jah Mason live"></div>
+<div class="gal rv"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Ruhr_Reggae_Summer_2013_-_Jah_Mason_03.jpg/960px-Ruhr_Reggae_Summer_2013_-_Jah_Mason_03.jpg" alt="Jah Mason live" loading="lazy"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Ruhr_Reggae_Summer_2013_-_Jah_Mason_08.jpg/960px-Ruhr_Reggae_Summer_2013_-_Jah_Mason_08.jpg" alt="Jah Mason live" loading="lazy"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Ruhr_Reggae_Summer_2013_-_Jah_Mason_04.jpg/960px-Ruhr_Reggae_Summer_2013_-_Jah_Mason_04.jpg" alt="Jah Mason live" loading="lazy"></div>
 
 <section class="tour" id="tour"><div class="wrap rv">
   <div class="eyebrow" data-i18n="tour">Tour dates</div><h2 class="h2" data-i18n="on_tour">On tour</h2>

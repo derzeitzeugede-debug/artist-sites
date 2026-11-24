@@ -1010,11 +1010,11 @@
   ],
   "hero": "https://i.ytimg.com/vi/U29_SXt7anU/maxresdefault.jpg",
   "hero_pos": "50% 30%",
-  "about_img": "https://i.ytimg.com/vi/naJbgtWIUI0/sddefault.jpg",
+  "about_img": "https://i.ytimg.com/vi/naJbgtWIUI0/sd2.jpg",
   "gallery": [
-   "https://i.ytimg.com/vi/-V9C2v9mjxk/maxresdefault.jpg",
-   "https://i.ytimg.com/vi/qwU_S3eGCOE/sddefault.jpg",
-   "https://i.ytimg.com/vi/ktfxPm7pTDw/sddefault.jpg"
+   "https://i.ytimg.com/vi/-V9C2v9mjxk/maxres2.jpg",
+   "https://i.ytimg.com/vi/P9922oYLnKw/sd2.jpg",
+   "https://i.ytimg.com/vi/P9922oYLnKw/sd3.jpg"
   ],
   "band_img": "https://i.ytimg.com/vi/U29_SXt7anU/maxresdefault.jpg",
   "credits": "Images: stills from the artist's official music videos on YouTube. Preview only, to be replaced by press photos",
@@ -1044,8 +1044,8 @@
     "50% 30%"
    ],
    [
-    "https://i.ytimg.com/vi/naJbgtWIUI0/sddefault.jpg",
-    "50% 40%"
+    "https://i.ytimg.com/vi/-V9C2v9mjxk/maxres2.jpg",
+    "50% 30%"
    ]
   ],
   "spotify_id": "2uNN342UyBqKSXSacWgvlD",
@@ -1297,7 +1297,7 @@
   "gallery": [
    "https://i.ytimg.com/vi/7DGXyGQkshc/maxresdefault.jpg",
    "https://i.ytimg.com/vi/fx_DuNsNATo/maxresdefault.jpg",
-   "https://i.ytimg.com/vi/l4rUcAPvATo/sddefault.jpg"
+   "https://i.ytimg.com/vi/aL3uPIj6Ebs/maxres1.jpg"
   ],
   "band_img": "https://i.ytimg.com/vi/aL3uPIj6Ebs/maxresdefault.jpg",
   "credits": "Images: stills from the artist's official music videos on YouTube. Preview only, to be replaced by press photos. Portrait: comechatwidmi (CC BY 3.0) via Wikimedia Commons",

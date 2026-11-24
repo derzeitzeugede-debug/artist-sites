@@ -142,7 +142,9 @@ section{padding:130px 0}
 .shop .more{text-align:center;margin-top:60px}
 .about{display:grid;grid-template-columns:1fr 1.1fr;gap:90px;align-items:center}
 .about .ph{position:relative;z-index:1}
-.about .ph img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px}
+.about .ph>img,.about .ph>.lbx{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px}
+.lbx{position:relative;overflow:hidden;display:block}.lbx img{position:absolute;left:0;top:-16.67%;width:100%;height:133.34%!important;object-fit:cover;border-radius:0!important}
+.gal>.lbx{height:520px;border-radius:4px}
 .about .ph:before{content:"";position:absolute;inset:26px -26px -26px 26px;border:1px solid var(--acc);border-radius:6px;z-index:-1}
 .about .txt p{color:#d8d1c3;margin-top:20px;font-size:17px}
 .about .txt p:first-of-type{font-size:21px;color:var(--ink);line-height:1.5}
@@ -229,7 +231,7 @@ footer .aff{font-size:12px;color:var(--mute);margin-top:8px}
   .embeds,.extra{grid-template-columns:1fr}.merch .grid4{grid-template-columns:1fr 1fr}
   .everywhere .cols,.form{grid-template-columns:1fr}
   .nav ul{display:none}.listen,.about{grid-template-columns:1fr;gap:50px}.grid{grid-template-columns:repeat(2,1fr);gap:20px}
-  .gal{grid-template-columns:1fr 1fr}.gal img{height:320px}.gal img:first-child{grid-column:1/-1}
+  .gal{grid-template-columns:1fr 1fr}.gal img,.gal>.lbx{height:320px}.gal>:first-child{grid-column:1/-1}
   section{padding:90px 0}.band{margin-top:90px}.scroll{display:none}.tracks li{grid-template-columns:40px 1fr auto}.tracks .y{display:none}
   .bar{grid-template-columns:auto 1fr}.bar .ctl .sec,.bar .btn,.bar img{display:none}
   .hero .wrap{padding-bottom:70px}.demo{display:none}.nav .btn{display:none}
@@ -301,7 +303,7 @@ footer .aff{font-size:12px;color:var(--mute);margin-top:8px}
 </div></section>
 
 <section id="about"><div class="wrap about">
-  <div class="ph rv"><img src="{{ABOUT_IMG}}" alt="{{NAME}} live"></div>
+  <div class="ph rv">{{ABOUT_PIC}}</div>
   <div class="txt rv"><div class="eyebrow" data-i18n="bio">Biography</div><h2 class="h2" data-i18n="story">The story</h2><div id="bio">{{BIO}}</div><dl class="facts" id="facts">{{FACTS}}</dl></div>
 </div></section>
 

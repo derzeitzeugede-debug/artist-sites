@@ -142,7 +142,9 @@ section{padding:130px 0}
 .shop .more{text-align:center;margin-top:60px}
 .about{display:grid;grid-template-columns:1fr 1.1fr;gap:90px;align-items:center}
 .about .ph{position:relative;z-index:1}
-.about .ph img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px}
+.about .ph>img,.about .ph>.lbx{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px}
+.lbx{position:relative;overflow:hidden;display:block}.lbx img{position:absolute;left:0;top:-16.67%;width:100%;height:133.34%!important;object-fit:cover;border-radius:0!important}
+.gal>.lbx{height:520px;border-radius:4px}
 .about .ph:before{content:"";position:absolute;inset:26px -26px -26px 26px;border:1px solid var(--acc);border-radius:6px;z-index:-1}
 .about .txt p{color:#d8d1c3;margin-top:20px;font-size:17px}
 .about .txt p:first-of-type{font-size:21px;color:var(--ink);line-height:1.5}
@@ -229,7 +231,7 @@ footer .aff{font-size:12px;color:var(--mute);margin-top:8px}
   .embeds,.extra{grid-template-columns:1fr}.merch .grid4{grid-template-columns:1fr 1fr}
   .everywhere .cols,.form{grid-template-columns:1fr}
   .nav ul{display:none}.listen,.about{grid-template-columns:1fr;gap:50px}.grid{grid-template-columns:repeat(2,1fr);gap:20px}
-  .gal{grid-template-columns:1fr 1fr}.gal img{height:320px}.gal img:first-child{grid-column:1/-1}
+  .gal{grid-template-columns:1fr 1fr}.gal img,.gal>.lbx{height:320px}.gal>:first-child{grid-column:1/-1}
   section{padding:90px 0}.band{margin-top:90px}.scroll{display:none}.tracks li{grid-template-columns:40px 1fr auto}.tracks .y{display:none}
   .bar{grid-template-columns:auto 1fr}.bar .ctl .sec,.bar .btn,.bar img{display:none}
   .hero .wrap{padding-bottom:70px}.demo{display:none}.nav .btn{display:none}
@@ -340,11 +342,11 @@ footer .aff{font-size:12px;color:var(--mute);margin-top:8px}
 </div></section>
 
 <section id="about"><div class="wrap about">
-  <div class="ph rv"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Glen_Washington%2C_Ruhr_Reggae_Summer_2009.jpg/960px-Glen_Washington%2C_Ruhr_Reggae_Summer_2009.jpg" alt="Glen Washington live"></div>
+  <div class="ph rv"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Glen_Washington%2C_Ruhr_Reggae_Summer_2009.jpg/960px-Glen_Washington%2C_Ruhr_Reggae_Summer_2009.jpg" alt="Glen Washington live" loading="lazy"></div>
   <div class="txt rv"><div class="eyebrow" data-i18n="bio">Biography</div><h2 class="h2" data-i18n="story">The story</h2><div id="bio"><p>Glen Washington, born Glenroy Washington in 1957, grew up in May Pen, Jamaica. He started out as a drummer and singer and cut his first record, &quot;Rockers Nu Crackers&quot;, in the late 1970s.</p><p>For years he worked mostly behind the scenes as a musician and producer. In 1998 &quot;Kindness For Weakness&quot; brought him back to the charts and started one of the most consistent careers in roots reggae.</p><p>Since then he has released more than 20 albums for Studio One, VP Records, Joe Fraser, Zion High Productions, Love Injection and Tad&#x27;s Record. His husky, soulful voice moves easily between conscious roots and lovers rock. His latest album is Just Giving Thanks (2025).</p></div><dl class="facts" id="facts"><div><dt>Real name</dt><dd>Glenroy Washington</dd></div><div><dt>From</dt><dd>May Pen, Jamaica</dd></div><div><dt>Active</dt><dd>Late 1970s to today</dd></div><div><dt>Latest album</dt><dd>Just Giving Thanks (2025)</dd></div></dl></div>
 </div></section>
 
-<div class="gal rv"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Glen_Washington_%283768331625%29.jpg/960px-Glen_Washington_%283768331625%29.jpg" alt="Glen Washington live"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Glen_Washington_%283769103408%29.jpg/960px-Glen_Washington_%283769103408%29.jpg" alt="Glen Washington live"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Glen_Washington_%283768324649%29.jpg/960px-Glen_Washington_%283768324649%29.jpg" alt="Glen Washington live"></div>
+<div class="gal rv"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Glen_Washington_%283768331625%29.jpg/960px-Glen_Washington_%283768331625%29.jpg" alt="Glen Washington live" loading="lazy"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Glen_Washington_%283769103408%29.jpg/960px-Glen_Washington_%283769103408%29.jpg" alt="Glen Washington live" loading="lazy"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Glen_Washington_%283768324649%29.jpg/960px-Glen_Washington_%283768324649%29.jpg" alt="Glen Washington live" loading="lazy"></div>
 
 <section class="tour" id="tour"><div class="wrap rv">
   <div class="eyebrow" data-i18n="tour">Tour dates</div><h2 class="h2" data-i18n="on_tour">On tour</h2>
