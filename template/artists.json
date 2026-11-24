@@ -2197,7 +2197,7 @@
     "hero_pos": "50% 30%",
     "about_img": "https://i.ytimg.com/vi/uMNUKmEO80I/maxres2.jpg#lb",
     "gallery": [
-      "https://i.ytimg.com/vi/zQJH0nirNJM/maxres1.jpg",
+      "https://i.ytimg.com/vi/zQJH0nirNJM/maxres2.jpg",
       "https://i.ytimg.com/vi/uMNUKmEO80I/maxres3.jpg#lb&x=62"
     ],
     "band_img": "https://i.ytimg.com/vi/zQJH0nirNJM/maxres2.jpg",
@@ -2245,11 +2245,11 @@
     },
     "video_file": "",
     "bandsintown": "https://www.bandsintown.com/a/41803-chuck-fenda",
-    "merch_img": "https://i.ytimg.com/vi/zQJH0nirNJM/maxres1.jpg",
+    "merch_img": "https://i.ytimg.com/vi/uMNUKmEO80I/maxres2.jpg",
     "merch_crop": [
-      0.64,
-      0.38,
-      1.7,
+      0.42,
+      0.42,
+      1.9,
       1.7778
     ],
     "i18n": {
