@@ -195,7 +195,7 @@ def links_for(a):
             ("Discogs", o.get("discogs", f"https://www.discogs.com/search/?q={q}&type=artist")),
             ("Juno Records", o.get("juno", f"https://www.juno.co.uk/search/?q%5Ball%5D%5B%5D={q}")),
             ("Bandcamp", o.get("bandcamp", f"https://bandcamp.com/search?q={q}&item_type=b")),
-            ("Beatport / Traxsource", o.get("downloads", f"https://www.traxsource.com/search?term={q}"))]
+            ("Beatport", o.get("downloads", f"https://www.beatport.com/search?q={q}"))]
     fmt = lambda xs: "".join(f'<a href="{e(aff(u, a.get("_slug", "")))}" target="_blank" rel="noopener">{e(l)}</a>' for l, u in xs)
     return fmt(stream), fmt(shop), [u for _, u in stream + shop if "search" not in u] + list(a.get("social", {}).values())
 
@@ -421,7 +421,7 @@ for slug, a in data.items():
     rep = {"HERO_VIDEO_JS": hero_js, "HERO_VIDEO": hero_video,
            "UI_JSON": json.dumps(UI, ensure_ascii=False).replace("</", "<\\/"),
            "LOC_JSON": json.dumps(loc, ensure_ascii=False).replace("</", "<\\/"),
-           "SPOTIFY_ID": a.get("spotify_id", ""), "NAME_Q": quote_plus(a["name"]),
+           "SPOTIFY_ID": a.get("spotify_id", ""), "NAME_Q": quote_plus(a["name"]), "BIT_URL": a.get("bandsintown", "https://www.bandsintown.com/search?query=" + quote_plus(a["name"])),
            "NEWSLETTER_ENDPOINT": e(a.get("newsletter_endpoint", "")),
            "AFF_NOTE": ('<p class="aff" data-i18n="aff_note">Some shop links are affiliate links: if you buy through them, the shop pays a small commission. The price stays the same for you.</p>' if aff_active() else ""),
            "SOCIAL": ('<div><h3 data-i18n="follow">Follow</h3><div class="links">' + "".join(f'<a href="{e(u)}" target="_blank" rel="noopener">{e(n)}</a>' for n, u in a.get("social", {}).items()) + '</div></div>') if a.get("social") else "",

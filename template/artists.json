@@ -291,7 +291,8 @@
   },
   "theme": "slab",
   "est": 1991,
-  "layout": "center"
+  "layout": "center",
+  "bandsintown": "https://www.bandsintown.com/a/25910-jah-mason"
  },
  "lutan-fyah": {
   "name": "Lutan Fyah",
@@ -586,7 +587,8 @@
   },
   "theme": "poster",
   "est": 1999,
-  "layout": "stack"
+  "layout": "stack",
+  "bandsintown": "https://www.bandsintown.com/a/25913-lutan-fyah"
  },
  "glen-washington": {
   "name": "Glen Washington",
@@ -879,7 +881,8 @@
   },
   "theme": "serif",
   "est": 1976,
-  "layout": "right"
+  "layout": "right",
+  "bandsintown": "https://www.bandsintown.com/a/25934-glen-washington"
  },
  "natural-black": {
   "name": "Natural Black",
@@ -1161,7 +1164,8 @@
      ]
     ]
    }
-  }
+  },
+  "bandsintown": "https://www.bandsintown.com/a/21623-natural-black"
  },
  "ras-shiloh": {
   "name": "Ras Shiloh",
@@ -1443,7 +1447,8 @@
      ]
     ]
    }
-  }
+  },
+  "bandsintown": "https://www.bandsintown.com/a/25938-ras-shiloh"
  },
  "bugle": {
   "name": "Bugle",
@@ -1721,7 +1726,8 @@
      ]
     ]
    }
-  }
+  },
+  "bandsintown": "https://www.bandsintown.com/a/54750-bugle"
  },
  "natty-king": {
   "name": "Natty King",
@@ -2011,6 +2017,7 @@
      ]
     ]
    }
-  }
+  },
+  "bandsintown": "https://www.bandsintown.com/a/25950-natty-king"
  }
 }
