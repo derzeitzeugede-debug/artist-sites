@@ -337,7 +337,7 @@ def _face(a, pid, x, y, w, h, filt, clip):
             f'preserveAspectRatio="none" filter="url(#{filt})"/></g>')
 
 def _name(x, y, s, size, fill, maxw, extra=""):
-    fit = f' textLength="{maxw}" lengthAdjust="spacingAndGlyphs"' if len(s) * size * .62 > maxw else ""
+    fit = f' textLength="{maxw}" lengthAdjust="spacingAndGlyphs"' if len(s) * size * .78 > maxw else ""
     return f'<text x="{x}" y="{y}" text-anchor="middle" font-size="{size}" fill="{fill}" style="font-family:var(--display);font-weight:700"{fit} {extra}>{e(s)}</text>'
 
 def _small(x, y, s, size, fill, ls=3):
