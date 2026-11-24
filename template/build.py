@@ -127,12 +127,20 @@ LAYOUTS = {
 }
 
 DISCO_ALL = json.load(open(os.path.join(HERE, "discography.json")))
+DISCOGS_IDS = {"jah-mason": 154711, "glen-washington": 166268, "lutan-fyah": 413695, "natural-black": 187305, "ras-shiloh": 215529, "bugle": 828489, "natty-king": 232740}
 def disco_html(slug):
     items = DISCO_ALL.get(slug, [])
     out = []
     for n, d in enumerate(items):
-        img = "https://is1-ssl.mzstatic.com/image/thumb/" + d["i"] + "/300x300bb.jpg"
-        out.append(f'<a{" class=\"x\"" if n >= 12 else ""} href="https://music.apple.com/album/{e(d["u"])}" target="_blank" rel="noopener"><img src="{e(img)}" alt="{e(d["t"])} cover" loading="lazy" width="300" height="300"><b>{e(d["t"])}</b><small>{e(d["y"])}</small></a>')
+        cls = ' class="x"' if n >= 12 else ""
+        if d.get("i"):
+            href = "https://music.apple.com/album/" + d["u"]
+            img = "https://is1-ssl.mzstatic.com/image/thumb/" + d["i"] + "/300x300bb.jpg"
+            pic = f'<img src="{e(img)}" alt="{e(d["t"])} cover" loading="lazy" width="300" height="300">'
+        else:
+            href = d["url"]
+            pic = f'<span class="tile"><span>{e(d["t"])}</span><small>{e(d["y"])}</small></span>'
+        out.append(f'<a{cls} href="{e(href)}" target="_blank" rel="noopener">{pic}<b>{e(d["t"])}</b><small>{e(d["y"])}</small></a>')
     more = (f'<div class="more"><button class="btn g" type="button" onclick="this.closest(\'.disco\').classList.add(\'all\')"><span data-i18n="show_all">Show all</span> ({len(items)})</button></div>' if len(items) > 12 else "")
     return "".join(out), more, str(len(items))
 
@@ -406,7 +414,7 @@ for slug, a in data.items():
            "MARQUEE": marquee, "TRACKS_JSON": json.dumps(tracks, ensure_ascii=False), "TRACKS": "\n".join(rows),
            "RELEASES": "\n".join(cards), "GALLERY": gallery, "FACTS": facts, "BIO": bio, "SHOP": a["buyreggae"],
            "APPLE": a["apple"], "BOOKING": a["booking"], "MGMT_BTN": (f'<a class="btn g" href="{e(a["booking"])}" target="_blank" rel="noopener" data-i18n="mgmt">Management page</a>' if a["booking"] else ""), "COUNT": str(len(cards)), "CREDITS": e(a["credits"]),
-           "NEW_LABEL": lbl(a["new_label"]), "DISCO": disco_html(slug)[0], "DISCO_MORE": disco_html(slug)[1], "DISCO_COUNT": disco_html(slug)[2],
+           "NEW_LABEL": lbl(a["new_label"]), "DISCO": disco_html(slug)[0], "DISCO_MORE": disco_html(slug)[1], "DISCO_COUNT": disco_html(slug)[2], "DISCOGS_ID": str(DISCOGS_IDS.get(slug, "")),
            "SLIDES": "".join(f'<div style="background-image:url(\'{u}\');background-position:{p}"></div>' for u, p in a["slides"]),
            "VIDEO": a["video"], "VIDEO_START": str(a["video_start"]), "VIDEO_LABEL": lbl(a["video_label"])}
     out = tpl

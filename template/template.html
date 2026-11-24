@@ -102,6 +102,14 @@ section{padding:130px 0}
 @keyframes eq{0%,100%{height:3px}50%{height:13px}}
 .playing .tracks li.on .eq{display:flex}.playing .tracks li.on .ic{display:none}
 .disco{border-top:1px solid var(--line)}
+.disco .tile{display:flex;flex-direction:column;justify-content:space-between;width:100%;aspect-ratio:1/1;padding:16px;border-radius:4px;background:radial-gradient(circle at 50% 50%,var(--acc) 0 14%,#111 15% 17%,#1c1a17 18% 100%);box-shadow:0 10px 30px rgba(0,0,0,.35);color:var(--ink);font:700 14px/1.2 var(--display,inherit);text-transform:uppercase;letter-spacing:.04em;overflow:hidden;transition:transform .25s}
+.disco .dgrid a:hover .tile{transform:translateY(-4px)}.disco .tile small{color:var(--mute);font-weight:600}
+.singles{margin-top:70px}.singles h3{font:600 12px/1 var(--body);letter-spacing:.28em;text-transform:uppercase;color:var(--acc);margin-bottom:18px}
+.singles ol{list-style:none;columns:2 340px;column-gap:40px;border-top:1px solid var(--line)}
+.singles li{break-inside:avoid;display:grid;grid-template-columns:48px 1fr;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
+.singles li span{color:var(--mute)}.singles li a{color:var(--ink);text-decoration:none}.singles li a:hover{color:var(--acc)}.singles li em{display:block;font-style:normal;color:var(--mute);font-size:12px}
+.singles .note{color:var(--mute);font-size:13px;margin-top:16px}
+
 .dgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:28px 22px}
 .dgrid a{display:block;color:inherit;text-decoration:none}
 .disco .dgrid a img{width:100%;height:auto;aspect-ratio:1/1;max-height:none;object-fit:cover;display:block;border-radius:4px;background:var(--panel);box-shadow:0 10px 30px rgba(0,0,0,.35);transition:transform .25s}
@@ -269,6 +277,7 @@ footer .aff{font-size:12px;color:var(--mute);margin-top:8px}
   <div class="head rv"><div><div class="eyebrow" data-i18n="disco">Discography</div><h2 class="h2" data-i18n-html="disco_h">Every<br>album</h2></div><p><span>{{DISCO_COUNT}}</span> <span data-i18n="disco_p">albums and EPs, newest first. Click a cover to listen on Apple Music.</span></p></div>
   <div class="dgrid rv">{{DISCO}}</div>
   {{DISCO_MORE}}
+  <div class="singles rv" id="singles" data-discogs="{{DISCOGS_ID}}"><h3 data-i18n="singles_h">Singles &amp; 7-inch vinyl</h3><button class="btn g" type="button" id="loadSingles" data-i18n="singles_btn">Show all singles</button><ol></ol><p class="note"><span data-i18n="singles_note">Full list from Discogs, loaded when you click.</span> <a href="https://www.discogs.com/artist/{{DISCOGS_ID}}" target="_blank" rel="noopener">Discogs &rarr;</a></p></div>
 </div></section>
 
 <section class="everywhere" id="links"><div class="wrap rv">
@@ -385,6 +394,16 @@ function setLang(l){LANG=UI[l]?l:'en';localStorage.setItem('lang',LANG);document
   document.querySelectorAll('#lang button').forEach(b=>b.classList.toggle('on',b.dataset.l===LANG));}
 document.querySelectorAll('#lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.l));
 setLang(LANG);
+
+(()=>{const box=document.getElementById('singles');if(!box||!box.dataset.discogs)return;const btn=document.getElementById('loadSingles'),ol=box.querySelector('ol');
+const albumish=/Album|LP\b|\bEP\b|Mini-Album|Comp|DVD/;
+btn.onclick=async()=>{btn.disabled=true;btn.textContent='…';const seen=new Set();let rows=[];
+ try{for(let p=1;p<=8;p++){const r=await fetch('https://api.discogs.com/artists/'+box.dataset.discogs+'/releases?sort=year&sort_order=desc&per_page=100&page='+p);if(!r.ok)break;const j=await r.json();
+  for(const x of j.releases){if(x.role!=='Main'||albumish.test(x.format||''))continue;const k=(x.title||'').toLowerCase().replace(/[^a-z0-9]/g,'');if(seen.has(k))continue;seen.add(k);rows.push(x);}
+  if(p>=j.pagination.pages)break;}}catch(_){}
+ rows.sort((a,b)=>(b.year||0)-(a.year||0));
+ ol.innerHTML=rows.map(x=>'<li><span>'+(x.year||'')+'</span><div><a href="https://www.discogs.com/'+(x.type==='master'?'master/':'release/')+x.id+'" target="_blank" rel="noopener">'+x.title.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</a><em>'+[(x.label||''),(x.format||'')].filter(Boolean).join(' · ').replace(/</g,'&lt;')+'</em></div></li>').join('');
+ btn.remove();if(!rows.length)ol.outerHTML='<p class="note">'+T('singles_err')+'</p>';};})();
 const bf=document.getElementById('bookForm');
 bf.addEventListener('submit',async ev=>{ev.preventDefault();const m=document.getElementById('formMsg');const ep=bf.dataset.endpoint;
   if(!ep){m.textContent=T('form_preview');return;}
