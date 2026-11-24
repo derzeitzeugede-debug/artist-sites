@@ -13,6 +13,32 @@ CART = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width=
 
 from urllib.parse import quote_plus, quote
 
+THEMES = {
+ "poster": {"preload": "anton-latin-400-normal.woff2", "css": ""},
+ "slab": {"preload": "alfa-slab-one-latin-400-normal.woff2", "css": """
+@font-face{font-family:"Alfa Slab One";font-style:normal;font-weight:400;font-display:swap;src:url("../assets/fonts/alfa-slab-one-latin-400-normal.woff2") format("woff2")}
+:root{--display:"Alfa Slab One",Rockwell,"Courier New",serif;--bg:#0a0d0a;--panel:#111611;--ink:#f3f0e4}
+.hero h1{font-size:clamp(60px,10.5vw,164px);line-height:.92;letter-spacing:-.01em}
+.hero h1 span{color:var(--acc);-webkit-text-stroke:0}
+.h2{font-size:clamp(38px,5vw,70px);line-height:1}
+.btn,.rel .shops a,.lang button{border-radius:6px}
+.eyebrow{letter-spacing:.2em}
+.marquee{background:var(--acc)}.marquee div{color:#0a0d0a}
+"""},
+ "serif": {"preload": "playfair-display-latin-700-normal.woff2", "css": """
+@font-face{font-family:"Playfair Display";font-style:normal;font-weight:700;font-display:swap;src:url("../assets/fonts/playfair-display-latin-700-normal.woff2") format("woff2")}
+@font-face{font-family:"Playfair Display";font-style:italic;font-weight:700;font-display:swap;src:url("../assets/fonts/playfair-display-latin-700-italic.woff2") format("woff2")}
+:root{--display:"Playfair Display",Georgia,"Times New Roman",serif;--bg:#110d0a;--panel:#1a1410;--ink:#f7efe2;--mute:#b3a38c}
+.hero h1,.h2,.logo,.marquee div,.consent h3,.merch h3,.extra .h3,.rel h3{text-transform:none;font-weight:700;letter-spacing:-.01em}
+.hero h1{font-size:clamp(70px,11.5vw,176px);line-height:.9}
+.hero h1 span{color:var(--acc);-webkit-text-stroke:0;font-style:italic}
+.h2{font-size:clamp(42px,5.6vw,80px);line-height:1}
+.marquee div{font-style:italic;color:#7d6a52}
+.btn{border-radius:4px;letter-spacing:.02em}
+.eyebrow{font-weight:500;letter-spacing:.32em}
+"""},
+}
+
 def aff(url, slug=""):
     """Append partner tracking where an ID is configured (affiliate.json)."""
     if AFF.get("apple_token") and "music.apple.com" in url:
@@ -162,6 +188,7 @@ for slug, a in data.items():
            "NEWSLETTER_ENDPOINT": e(a.get("newsletter_endpoint", "")),
            "AFF_NOTE": ('<p class="aff" data-i18n="aff_note">Some shop links are affiliate links: if you buy through them, the shop pays a small commission. The price stays the same for you.</p>' if aff_active() else ""),
            "SOCIAL": ('<div><h3>Follow</h3><div class="links">' + "".join(f'<a href="{e(u)}" target="_blank" rel="noopener">{e(n)}</a>' for n, u in a.get("social", {}).items()) + '</div></div>') if a.get("social") else "",
+           "THEME_CSS": THEMES[a.get("theme", "poster")]["css"], "FONT_PRELOAD": THEMES[a.get("theme", "poster")]["preload"],
            "MERCH": merch_cards, "MERCH_BTN": merch_btn,
            "NAME_H1": h1, "STREAM_LINKS": stream_html, "SHOP_LINKS": shop_html, "FAVICON": favicon(a),
            "JSONLD": json.dumps(ld, ensure_ascii=False).replace("</", "<\\/"), "FORM_ENDPOINT": e(a.get("form_endpoint", "")), "NAME": e(a["name"]), "TAGLINE": e(a["tagline"]), "ACCENT2": a["accent2"], "ACCENT": a["accent"],
