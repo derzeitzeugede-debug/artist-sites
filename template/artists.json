@@ -234,7 +234,8 @@
    "SoundCloud": "https://soundcloud.com/jah-mason"
   },
   "theme": "slab",
-  "est": 1991
+  "est": 1991,
+  "layout": "center"
  },
  "lutan-fyah": {
   "name": "Lutan Fyah",
@@ -476,7 +477,8 @@
    "YouTube": "https://www.youtube.com/channel/UCjApOIU9t56OatLUzlVnl0g"
   },
   "theme": "poster",
-  "est": 1999
+  "est": 1999,
+  "layout": "stack"
  },
  "glen-washington": {
   "name": "Glen Washington",
@@ -716,6 +718,918 @@
    }
   },
   "theme": "serif",
-  "est": 1976
+  "est": 1976,
+  "layout": "right"
+ },
+ "natural-black": {
+  "name": "Natural Black",
+  "theme": "mono",
+  "layout": "split",
+  "est": 1995,
+  "accent": "#d63a2f",
+  "accent2": "#f5f5f2",
+  "tagline": "Conscious roots reggae with a smooth, mellow voice. From Georgetown, Guyana, to the heart of Jamaican music.",
+  "bio": [
+   "Natural Black was born Mortimer Softley in Georgetown, Guyana, in 1975. In 1995 he moved to Jamaica to follow his dream of becoming a reggae singer. He worked as a welder and a coffee picker and recorded in his spare time.",
+   "His breakthrough came in the early 2000s with producer Roger Grant and the singles \"With Feeling\" and \"Bad Mind\". Shows at Sting, Reggae Sumfest and Rebel Salute followed, and tours through France, Switzerland and Sweden.",
+   "In 2006 \"Far From Reality\" for Don Corleon went to the top of the charts. His albums include Spiritual Food and World War. Today he is known far beyond Jamaica for his smooth voice and conscious lyrics."
+  ],
+  "facts": [
+   [
+    "Real name",
+    "Mortimer Softley"
+   ],
+   [
+    "From",
+    "Georgetown, Guyana"
+   ],
+   [
+    "Active",
+    "1995 to today"
+   ],
+   [
+    "Big hit",
+    "Far From Reality (2006)"
+   ]
+  ],
+  "buyreggae": "https://www.buyreggae.com/artists/31884/natural-black",
+  "apple": "https://music.apple.com/artist/34279257",
+  "booking": "https://www.aaemusic.com/artist/natural-black",
+  "releases": [
+   [
+    57964,
+    "As The World Turns (feat. Mark Wonder)",
+    "Soul Riddim",
+    "Oneness Grm",
+    2010,
+    "2.00"
+   ],
+   [
+    54047,
+    "Revolution",
+    "Revolution Riddim",
+    "5th Element",
+    2009,
+    "1.98"
+   ],
+   [
+    51966,
+    "Sufferation (feat. Sizzla)",
+    "Sufferation Riddim",
+    "Black House",
+    2009,
+    "1.98"
+   ],
+   [
+    46318,
+    "Africa",
+    "True Life Riddim",
+    "Master J",
+    2008,
+    "1.98"
+   ],
+   [
+    43885,
+    "Do Apologize",
+    "Do Apologize Riddim",
+    "The Hitlist Records",
+    2008,
+    "1.98"
+   ],
+   [
+    38479,
+    "Tell Me Why",
+    "Tears Riddim",
+    "Arrows",
+    2007,
+    "1.98"
+   ],
+   [
+    37730,
+    "No Skylark",
+    "Peace Train Riddim",
+    "In The Streetz",
+    2007,
+    "1.98"
+   ],
+   [
+    40847,
+    "Uplift The Mind",
+    "Generation Riddim",
+    "Real Lyfe",
+    2007,
+    "1.98"
+   ],
+   [
+    37035,
+    "Eye For An Eye",
+    "Journey Riddim",
+    "Black Mangena",
+    2006,
+    "1.98"
+   ],
+   [
+    32405,
+    "There Is A Place",
+    "Street Swing Riddim",
+    "In The Streetz",
+    2006,
+    "1.98"
+   ],
+   [
+    36506,
+    "Stubborn Woman",
+    "Jah Powers Riddim",
+    "Maximum Sound",
+    2006,
+    "2.25"
+   ]
+  ],
+  "hero": "https://i.ytimg.com/vi/U29_SXt7anU/maxresdefault.jpg",
+  "hero_pos": "50% 30%",
+  "about_img": "https://i.ytimg.com/vi/naJbgtWIUI0/sddefault.jpg",
+  "gallery": [
+   "https://i.ytimg.com/vi/-V9C2v9mjxk/maxresdefault.jpg",
+   "https://i.ytimg.com/vi/qwU_S3eGCOE/sddefault.jpg",
+   "https://i.ytimg.com/vi/ktfxPm7pTDw/sddefault.jpg"
+  ],
+  "band_img": "https://i.ytimg.com/vi/U29_SXt7anU/maxresdefault.jpg",
+  "credits": "Images: stills from the artist's official music videos on YouTube. Preview only, to be replaced by press photos",
+  "labels": [
+   "Organic Records",
+   "In The Streetz",
+   "Don Corleon",
+   "Black House",
+   "5th Element",
+   "Patate Records",
+   "Lionroots",
+   "Vizion Sounds",
+   "Maximum Sound",
+   "Real Lyfe"
+  ],
+  "new_label": "Classic: Far From Reality (2006)",
+  "video": "naJbgtWIUI0",
+  "video_start": 5,
+  "video_label": "Watch: Revolution",
+  "slides": [
+   [
+    "https://i.ytimg.com/vi/U29_SXt7anU/maxresdefault.jpg",
+    "50% 30%"
+   ],
+   [
+    "https://i.ytimg.com/vi/-V9C2v9mjxk/maxresdefault.jpg",
+    "50% 30%"
+   ],
+   [
+    "https://i.ytimg.com/vi/naJbgtWIUI0/sddefault.jpg",
+    "50% 40%"
+   ]
+  ],
+  "spotify_id": "2uNN342UyBqKSXSacWgvlD",
+  "links": {
+   "spotify": "https://open.spotify.com/artist/2uNN342UyBqKSXSacWgvlD",
+   "deezer": "https://www.deezer.com/artist/61233",
+   "discogs": "https://www.discogs.com/artist/187305"
+  },
+  "social": {
+   "Facebook": "https://www.facebook.com/naturallblack"
+  },
+  "video_file": "",
+  "i18n": {
+   "de": {
+    "tagline": "Bewusster Roots Reggae mit sanfter, warmer Stimme. Von Georgetown in Guyana mitten ins Herz der jamaikanischen Musik.",
+    "bio": [
+     "Natural Black wurde 1975 als Mortimer Softley in Georgetown, Guyana, geboren. 1995 zog er nach Jamaika, um Reggae-Sänger zu werden. Er arbeitete als Schweißer und Kaffeepflücker und nahm in seiner freien Zeit Songs auf.",
+     "Der Durchbruch kam Anfang der 2000er mit Produzent Roger Grant und den Singles \"With Feeling\" und \"Bad Mind\". Es folgten Auftritte bei Sting, Reggae Sumfest und Rebel Salute und Tourneen durch Frankreich, die Schweiz und Schweden.",
+     "2006 kam \"Far From Reality\" für Don Corleon an die Spitze der Charts. Zu seinen Alben gehören Spiritual Food und World War. Heute kennt man ihn weit über Jamaika hinaus für seine sanfte Stimme und seine bewussten Texte."
+    ],
+    "facts": [
+     [
+      "Bürgerlicher Name",
+      "Mortimer Softley"
+     ],
+     [
+      "Herkunft",
+      "Georgetown, Guyana"
+     ],
+     [
+      "Aktiv",
+      "1995 bis heute"
+     ],
+     [
+      "Größter Hit",
+      "Far From Reality (2006)"
+     ]
+    ]
+   },
+   "fr": {
+    "tagline": "Du roots reggae conscient porté par une voix douce et chaleureuse. De Georgetown, au Guyana, jusqu'au cœur de la musique jamaïcaine.",
+    "bio": [
+     "Natural Black est né Mortimer Softley en 1975 à Georgetown, au Guyana. En 1995, il s'installe en Jamaïque pour devenir chanteur de reggae. Il travaille comme soudeur et cueilleur de café et enregistre pendant son temps libre.",
+     "La percée arrive au début des années 2000 avec le producteur Roger Grant et les singles « With Feeling » et « Bad Mind ». Suivent des concerts à Sting, Reggae Sumfest et Rebel Salute, et des tournées en France, en Suisse et en Suède.",
+     "En 2006, « Far From Reality » pour Don Corleon atteint le sommet des charts. Parmi ses albums figurent Spiritual Food et World War. Aujourd'hui, on le connaît bien au-delà de la Jamaïque pour sa voix douce et ses textes conscients."
+    ],
+    "facts": [
+     [
+      "Nom civil",
+      "Mortimer Softley"
+     ],
+     [
+      "Origine",
+      "Georgetown, Guyana"
+     ],
+     [
+      "Actif",
+      "De 1995 à aujourd'hui"
+     ],
+     [
+      "Grand succès",
+      "Far From Reality (2006)"
+     ]
+    ]
+   }
+  }
+ },
+ "ras-shiloh": {
+  "name": "Ras Shiloh",
+  "theme": "royal",
+  "layout": "framed",
+  "est": 1997,
+  "accent": "#d9b35a",
+  "accent2": "#9a6fd6",
+  "tagline": "Rastafari roots reggae with a clear tenor voice that critics compare to Garnett Silk.",
+  "bio": [
+   "Ras Shiloh was born Thomas Williams in Brooklyn, New York, in 1975. He grew up with the music of the Jamaican diaspora and found his calling in roots reggae and the Rastafari faith.",
+   "His first album Chants came out in 1997. From Rasta To You (2002) and Coming Home (2007) on VP Records and Only King Selassie (2007) on Greensleeves made his name known worldwide. Critics often compare his tenor to the late Garnett Silk.",
+   "He has recorded for Penthouse, Maximum Sound, Firehouse Crew and No Doubt, and he still releases new music, most recently the single \"Think\" (2025)."
+  ],
+  "facts": [
+   [
+    "Real name",
+    "Thomas Williams"
+   ],
+   [
+    "From",
+    "Brooklyn, New York"
+   ],
+   [
+    "Active",
+    "1997 to today"
+   ],
+   [
+    "Albums",
+    "From Rasta To You, Coming Home, Only King Selassie"
+   ]
+  ],
+  "buyreggae": "https://www.buyreggae.com/artists/32137/ras-shiloh",
+  "apple": "https://music.apple.com/artist/6266963",
+  "booking": "https://www.aaemusic.com/artist/ras-shiloh",
+  "releases": [
+   [
+    111938,
+    "Don't Go Astray",
+    "In This Time Riddim",
+    "Mr. Take Care Of Business",
+    2017,
+    "11.98"
+   ],
+   [
+    111635,
+    "Pressuring The Poor (feat. Spryng I)",
+    "Khaki Suit Riddim",
+    "Tren Setta Production",
+    2009,
+    "1.98"
+   ],
+   [
+    49388,
+    "Survivor",
+    "Three Blind Mice Riddim",
+    "Vizion Sounds",
+    2009,
+    "1.98"
+   ],
+   [
+    112167,
+    "I Need You",
+    "Confessions Riddim",
+    "Fashozy",
+    2006,
+    "1.98"
+   ],
+   [
+    32523,
+    "Daddy's Song (feat. Junior Kelly)",
+    "Prayer Riddim",
+    "Firehouse Crew",
+    2006,
+    "1.98"
+   ],
+   [
+    36507,
+    "Tell Me The Reason Why",
+    "Jah Powers Riddim",
+    "Maximum Sound",
+    2006,
+    "2.74"
+   ],
+   [
+    111327,
+    "Humanity",
+    "Key Riddim",
+    "No Doubt",
+    2006,
+    "1.98"
+   ],
+   [
+    35577,
+    "Thank God",
+    "The Formula Riddim",
+    "Shan Shan",
+    2006,
+    "1.98"
+   ],
+   [
+    21384,
+    "Come With Me",
+    "Rent A Title Riddim",
+    "Acoustic Vibes",
+    2005,
+    "1.98"
+   ],
+   [
+    185181,
+    "Love Rastafari",
+    "Ya Ho Riddim",
+    "Maximum Sound",
+    2005,
+    "3.96"
+   ],
+   [
+    184179,
+    "Far Too Long",
+    "Far Too Long Riddim",
+    "Penthouse Records",
+    2001,
+    "3.96"
+   ]
+  ],
+  "hero": "https://i.ytimg.com/vi/aL3uPIj6Ebs/maxresdefault.jpg",
+  "hero_pos": "50% 30%",
+  "about_img": "https://upload.wikimedia.org/wikipedia/commons/1/16/Ras_Shilo_-_Long_Walk_to_Freedom_-_2024%3F.jpg",
+  "gallery": [
+   "https://i.ytimg.com/vi/7DGXyGQkshc/maxresdefault.jpg",
+   "https://i.ytimg.com/vi/fx_DuNsNATo/maxresdefault.jpg",
+   "https://i.ytimg.com/vi/l4rUcAPvATo/sddefault.jpg"
+  ],
+  "band_img": "https://i.ytimg.com/vi/aL3uPIj6Ebs/maxresdefault.jpg",
+  "credits": "Images: stills from the artist's official music videos on YouTube. Preview only, to be replaced by press photos. Portrait: comechatwidmi (CC BY 3.0) via Wikimedia Commons",
+  "labels": [
+   "VP Records",
+   "Greensleeves",
+   "Penthouse",
+   "Maximum Sound",
+   "Firehouse Crew",
+   "No Doubt",
+   "Melchizedek",
+   "Flava McGregor",
+   "Vizion Sounds",
+   "Massive B"
+  ],
+  "new_label": "New single: Think (2025)",
+  "video": "aL3uPIj6Ebs",
+  "video_start": 5,
+  "video_label": "Watch: Think",
+  "slides": [
+   [
+    "https://i.ytimg.com/vi/aL3uPIj6Ebs/maxresdefault.jpg",
+    "50% 30%"
+   ],
+   [
+    "https://i.ytimg.com/vi/7DGXyGQkshc/maxresdefault.jpg",
+    "50% 30%"
+   ],
+   [
+    "https://i.ytimg.com/vi/fx_DuNsNATo/maxresdefault.jpg",
+    "50% 30%"
+   ]
+  ],
+  "spotify_id": "6kiEmNG2akSox9EPxiX36I",
+  "links": {
+   "spotify": "https://open.spotify.com/artist/6kiEmNG2akSox9EPxiX36I",
+   "deezer": "https://www.deezer.com/artist/62433",
+   "discogs": "https://www.discogs.com/artist/215529"
+  },
+  "social": {},
+  "video_file": "",
+  "i18n": {
+   "de": {
+    "tagline": "Rastafari-Roots-Reggae mit klarer Tenorstimme, die Kritiker mit Garnett Silk vergleichen.",
+    "bio": [
+     "Ras Shiloh wurde 1975 als Thomas Williams in Brooklyn, New York, geboren. Er wuchs mit der Musik der jamaikanischen Diaspora auf und fand seine Berufung im Roots Reggae und im Rastafari-Glauben.",
+     "Sein erstes Album Chants erschien 1997. From Rasta To You (2002) und Coming Home (2007) bei VP Records sowie Only King Selassie (2007) bei Greensleeves machten ihn weltweit bekannt. Kritiker vergleichen seinen Tenor oft mit dem verstorbenen Garnett Silk.",
+     "Er hat für Penthouse, Maximum Sound, Firehouse Crew und No Doubt aufgenommen und veröffentlicht bis heute neue Musik, zuletzt die Single \"Think\" (2025)."
+    ],
+    "facts": [
+     [
+      "Bürgerlicher Name",
+      "Thomas Williams"
+     ],
+     [
+      "Herkunft",
+      "Brooklyn, New York"
+     ],
+     [
+      "Aktiv",
+      "1997 bis heute"
+     ],
+     [
+      "Alben",
+      "From Rasta To You, Coming Home, Only King Selassie"
+     ]
+    ]
+   },
+   "fr": {
+    "tagline": "Du roots reggae rastafari porté par une voix de ténor claire, souvent comparée à celle de Garnett Silk.",
+    "bio": [
+     "Ras Shiloh est né Thomas Williams en 1975 à Brooklyn, New York. Il a grandi avec la musique de la diaspora jamaïcaine et a trouvé sa voie dans le roots reggae et la foi rastafari.",
+     "Son premier album, Chants, sort en 1997. From Rasta To You (2002) et Coming Home (2007) chez VP Records, puis Only King Selassie (2007) chez Greensleeves le font connaître dans le monde entier. La critique compare souvent sa voix de ténor à celle du regretté Garnett Silk.",
+     "Il a enregistré pour Penthouse, Maximum Sound, Firehouse Crew et No Doubt, et sort toujours de nouveaux titres, dernièrement le single « Think » (2025)."
+    ],
+    "facts": [
+     [
+      "Nom civil",
+      "Thomas Williams"
+     ],
+     [
+      "Origine",
+      "Brooklyn, New York"
+     ],
+     [
+      "Actif",
+      "De 1997 à aujourd'hui"
+     ],
+     [
+      "Albums",
+      "From Rasta To You, Coming Home, Only King Selassie"
+     ]
+    ]
+   }
+  }
+ },
+ "bugle": {
+  "name": "Bugle",
+  "theme": "loud",
+  "layout": "masthead",
+  "est": 2000,
+  "accent": "#c6ff3d",
+  "accent2": "#ff4f8b",
+  "tagline": "Anointed. Dancehall and reggae from Portland, Jamaica, with a message in every song.",
+  "bio": [
+   "Bugle was born Roy Thompson in Portland, Jamaica. He started writing songs in primary school and got his first real chance in 2000, when he began writing for and touring with Elephant Man.",
+   "After five years on the road, from the Caribbean to the USA, Canada and Japan, he went solo. With the production team Daseca he found his own sound on songs like \"Journeys\", \"Anointed\" and \"Nuh Compatible\".",
+   "Today Bugle is one of the most respected voices in modern Jamaican music, with more than 500 releases. His single \"Thank You Lord\" with Buju Banton and Damian \"Jr. Gong\" Marley has been watched more than 14 million times."
+  ],
+  "facts": [
+   [
+    "Real name",
+    "Roy Thompson"
+   ],
+   [
+    "From",
+    "Portland, Jamaica"
+   ],
+   [
+    "Active",
+    "2000 to today"
+   ],
+   [
+    "Known for",
+    "Anointed, Journeys, Thank You Lord"
+   ]
+  ],
+  "buyreggae": "https://www.buyreggae.com/artists/32189/bugle",
+  "apple": "https://music.apple.com/artist/127455763",
+  "booking": "https://www.aaemusic.com/artist/bugle",
+  "releases": [
+   [
+    181392,
+    "Thank You Lord (feat. Buju Banton, Damian Marley)",
+    "",
+    "Evidence Music",
+    2025,
+    "9.56"
+   ],
+   [
+    50444,
+    "Supremacy",
+    "Supremacy Riddim",
+    "Daseca",
+    2009,
+    "1.98"
+   ],
+   [
+    55023,
+    "Anything Goes",
+    "European Swing Riddim",
+    "Techniques",
+    2009,
+    "1.98"
+   ],
+   [
+    49324,
+    "Fluffy",
+    "Dashboard Riddim",
+    "Truck Back",
+    2009,
+    "1.98"
+   ],
+   [
+    44415,
+    "Always Away",
+    "Always Away Riddim",
+    "Di Block",
+    2008,
+    "1.98"
+   ],
+   [
+    141804,
+    "Set Me Free (feat. Mavado)",
+    "Set Me Free Riddim",
+    "Daseca",
+    2008,
+    "3.96"
+   ],
+   [
+    87638,
+    "Almighty Bless",
+    "Silent River Riddim",
+    "Juke Boxx",
+    2008,
+    "3.16"
+   ],
+   [
+    41831,
+    "Say What U Wanna",
+    "Da Go Go Riddim",
+    "Massive B",
+    2008,
+    "2.25"
+   ],
+   [
+    154214,
+    "Journeys",
+    "Journeys Riddim",
+    "Daseca",
+    2007,
+    "3.16"
+   ],
+   [
+    517,
+    "Genuine",
+    "48 Bus Route Riddim",
+    "Shocking Vibes",
+    2002,
+    "1.98"
+   ]
+  ],
+  "hero": "https://i.ytimg.com/vi/2pHvwy_XgeM/maxresdefault.jpg",
+  "hero_pos": "50% 30%",
+  "about_img": "https://i.ytimg.com/vi/vhafYV4fDEE/maxresdefault.jpg",
+  "gallery": [
+   "https://i.ytimg.com/vi/uqsUsmR_VsM/maxresdefault.jpg",
+   "https://i.ytimg.com/vi/WOxxrfjwrS8/maxresdefault.jpg",
+   "https://i.ytimg.com/vi/JifFYKY4C5Q/maxresdefault.jpg"
+  ],
+  "band_img": "https://i.ytimg.com/vi/7MwsUGbbiOw/maxresdefault.jpg",
+  "credits": "Images: stills from the artist's official music videos on YouTube. Preview only, to be replaced by press photos",
+  "labels": [
+   "Daseca",
+   "Evidence Music",
+   "Massive B",
+   "Juke Boxx",
+   "Jam 2",
+   "Shocking Vibes",
+   "Big Ship",
+   "Techniques",
+   "Jugglerz",
+   "Di Block"
+  ],
+  "new_label": "Thank You Lord feat. Buju Banton & Damian Marley",
+  "video": "2pHvwy_XgeM",
+  "video_start": 5,
+  "video_label": "Watch: Fully Bright",
+  "slides": [
+   [
+    "https://i.ytimg.com/vi/2pHvwy_XgeM/maxresdefault.jpg",
+    "50% 30%"
+   ],
+   [
+    "https://i.ytimg.com/vi/JifFYKY4C5Q/maxresdefault.jpg",
+    "50% 30%"
+   ],
+   [
+    "https://i.ytimg.com/vi/7MwsUGbbiOw/maxresdefault.jpg",
+    "50% 30%"
+   ]
+  ],
+  "spotify_id": "4J51t1ZO7ed5qgsXmz9VXM",
+  "links": {
+   "spotify": "https://open.spotify.com/artist/4J51t1ZO7ed5qgsXmz9VXM",
+   "deezer": "https://www.deezer.com/artist/182881",
+   "tidal": "https://tidal.com/artist/16824",
+   "discogs": "https://www.discogs.com/artist/828489"
+  },
+  "social": {},
+  "video_file": "",
+  "i18n": {
+   "de": {
+    "tagline": "Anointed. Dancehall und Reggae aus Portland, Jamaika, mit einer Botschaft in jedem Song.",
+    "bio": [
+     "Bugle wurde als Roy Thompson in Portland, Jamaika, geboren. Er schrieb schon in der Grundschule Songs. Seine erste echte Chance kam im Jahr 2000, als er begann, für Elephant Man zu schreiben und mit ihm zu touren.",
+     "Nach fünf Jahren auf Tour, von der Karibik über die USA und Kanada bis nach Japan, startete er solo. Mit dem Produktionsteam Daseca fand er seinen eigenen Sound, mit Songs wie \"Journeys\", \"Anointed\" und \"Nuh Compatible\".",
+     "Heute gehört Bugle mit mehr als 500 Veröffentlichungen zu den angesehensten Stimmen der modernen jamaikanischen Musik. Seine Single \"Thank You Lord\" mit Buju Banton und Damian \"Jr. Gong\" Marley wurde mehr als 14 Millionen Mal angesehen."
+    ],
+    "facts": [
+     [
+      "Bürgerlicher Name",
+      "Roy Thompson"
+     ],
+     [
+      "Herkunft",
+      "Portland, Jamaika"
+     ],
+     [
+      "Aktiv",
+      "2000 bis heute"
+     ],
+     [
+      "Bekannt für",
+      "Anointed, Journeys, Thank You Lord"
+     ]
+    ]
+   },
+   "fr": {
+    "tagline": "Anointed. Du dancehall et du reggae de Portland, en Jamaïque, avec un message dans chaque chanson.",
+    "bio": [
+     "Bugle est né Roy Thompson à Portland, en Jamaïque. Il écrit des chansons dès l'école primaire et obtient sa première vraie chance en 2000, lorsqu'il commence à écrire pour Elephant Man et à partir en tournée avec lui.",
+     "Après cinq ans sur la route, des Caraïbes aux États-Unis, au Canada et au Japon, il se lance en solo. Avec l'équipe de production Daseca, il trouve son propre son, sur des titres comme « Journeys », « Anointed » et « Nuh Compatible ».",
+     "Aujourd'hui, avec plus de 500 sorties, Bugle est l'une des voix les plus respectées de la musique jamaïcaine moderne. Son single « Thank You Lord » avec Buju Banton et Damian « Jr. Gong » Marley a été vu plus de 14 millions de fois."
+    ],
+    "facts": [
+     [
+      "Nom civil",
+      "Roy Thompson"
+     ],
+     [
+      "Origine",
+      "Portland, Jamaïque"
+     ],
+     [
+      "Actif",
+      "De 2000 à aujourd'hui"
+     ],
+     [
+      "Connu pour",
+      "Anointed, Journeys, Thank You Lord"
+     ]
+    ]
+   }
+  }
+ },
+ "natty-king": {
+  "name": "Natty King",
+  "theme": "tall",
+  "layout": "vertical",
+  "est": 2003,
+  "accent": "#f2c230",
+  "accent2": "#3fae5a",
+  "tagline": "Roots reggae from St. Thomas, Jamaica. The voice behind \"No Guns To Town\" and \"Mr. Greedy\".",
+  "bio": [
+   "Natty King was born Kevin Christopher Roberts in 1977 and grew up in the countryside of St. Thomas, in the southeast of Jamaica. His heroes are The Wailers, Burning Spear and Luciano.",
+   "In the early 2000s \"Mr. Greedy\" and \"No Guns To Town\" went to number one in Jamaica, on the charts and on the video charts. In 2003 he won Best New Entertainer at the IRAWMA awards in New York. He has played Sting, Rebel Salute, Reggae Sumfest and Rototom Sunsplash.",
+   "His albums include No Guns To Town (2003), Born To Be Free (2010) and Rebellution (2022). His songs speak about faith, the environment and the youths."
+  ],
+  "facts": [
+   [
+    "Real name",
+    "Kevin Christopher Roberts"
+   ],
+   [
+    "From",
+    "St. Thomas, Jamaica"
+   ],
+   [
+    "Active",
+    "Early 2000s to today"
+   ],
+   [
+    "Latest album",
+    "Rebellution (2022)"
+   ]
+  ],
+  "buyreggae": "https://www.buyreggae.com/artists/32159/natty-king",
+  "apple": "https://music.apple.com/artist/79369662",
+  "booking": "https://www.aaemusic.com/artist/natty-king",
+  "releases": [
+   [
+    111499,
+    "Dancehall Nice",
+    "Blue Riddim",
+    "Greatest Friends Fr",
+    2010,
+    "1.98"
+   ],
+   [
+    47590,
+    "Still Have Love",
+    "Highlight Riddim",
+    "Akom",
+    2009,
+    "3.16"
+   ],
+   [
+    46179,
+    "Round Dah Corner Deh",
+    "Obama Riddim",
+    "Hard Drive",
+    2009,
+    "1.98"
+   ],
+   [
+    49317,
+    "Said & Done",
+    "Free Life Riddim",
+    "In The Streetz",
+    2009,
+    "1.98"
+   ],
+   [
+    49582,
+    "Friends",
+    "Prosper Riddim",
+    "Redbud",
+    2009,
+    "2.74"
+   ],
+   [
+    50419,
+    "Protect The Little Children",
+    "Free Mind Riddim",
+    "Stickle",
+    2009,
+    "1.98"
+   ],
+   [
+    41772,
+    "Nah Chat To Dem",
+    "Shining Riddim",
+    "A Lustre Kings",
+    2008,
+    "1.98"
+   ],
+   [
+    38762,
+    "No Problem (feat. Abijah)",
+    "Stay By Me Riddim",
+    "Xterminator Productions",
+    2007,
+    "1.98"
+   ],
+   [
+    33050,
+    "Care For Life",
+    "Consuming Fire Riddim",
+    "Vp Records",
+    2006,
+    "2.00"
+   ],
+   [
+    26141,
+    "Nine Months",
+    "Darker Shade Of Black Riddim",
+    "Fat Eyes Records",
+    2005,
+    "1.98"
+   ],
+   [
+    111121,
+    "Outta Road",
+    "Love Life Riddim",
+    "Gibbo",
+    2005,
+    "1.98"
+   ],
+   [
+    21409,
+    "Bus The Youths",
+    "Cut Down The Price Riddim",
+    "Insight",
+    2005,
+    "1.98"
+   ]
+  ],
+  "hero": "https://i.ytimg.com/vi/y9sjdSG0UzU/maxresdefault.jpg",
+  "hero_pos": "50% 30%",
+  "about_img": "https://i.ytimg.com/vi/nk3RzV5MB5w/sddefault.jpg",
+  "gallery": [
+   "https://i.ytimg.com/vi/IkLjVHPr68g/maxresdefault.jpg",
+   "https://i.ytimg.com/vi/NPacVX8o4Ck/maxresdefault.jpg",
+   "https://i.ytimg.com/vi/nk3RzV5MB5w/sddefault.jpg"
+  ],
+  "band_img": "https://i.ytimg.com/vi/NPacVX8o4Ck/maxresdefault.jpg",
+  "credits": "Images: stills from the artist's official music videos on YouTube. Preview only, to be replaced by press photos",
+  "labels": [
+   "Insight Records",
+   "Two Miles",
+   "House Of Riddim",
+   "A Lustre Kings",
+   "In The Streetz",
+   "VP Records",
+   "Xterminator",
+   "Fat Eyes",
+   "Gibbo",
+   "Redbud"
+  ],
+  "new_label": "Latest album: Rebellution (2022)",
+  "video": "NPacVX8o4Ck",
+  "video_start": 8,
+  "video_label": "Watch: Early Morning",
+  "slides": [
+   [
+    "https://i.ytimg.com/vi/y9sjdSG0UzU/maxresdefault.jpg",
+    "50% 30%"
+   ],
+   [
+    "https://i.ytimg.com/vi/NPacVX8o4Ck/maxresdefault.jpg",
+    "50% 30%"
+   ],
+   [
+    "https://i.ytimg.com/vi/IkLjVHPr68g/maxresdefault.jpg",
+    "50% 30%"
+   ]
+  ],
+  "spotify_id": "47Ap0onH4DwRKRrPec8MBS",
+  "links": {
+   "spotify": "https://open.spotify.com/artist/47Ap0onH4DwRKRrPec8MBS",
+   "deezer": "https://www.deezer.com/artist/171642",
+   "discogs": "https://www.discogs.com/artist/232740"
+  },
+  "social": {},
+  "video_file": "",
+  "i18n": {
+   "de": {
+    "tagline": "Roots Reggae aus St. Thomas, Jamaika. Die Stimme hinter \"No Guns To Town\" und \"Mr. Greedy\".",
+    "bio": [
+     "Natty King wurde 1977 als Kevin Christopher Roberts geboren und wuchs auf dem Land in St. Thomas im Südosten Jamaikas auf. Seine Vorbilder sind The Wailers, Burning Spear und Luciano.",
+     "Anfang der 2000er standen \"Mr. Greedy\" und \"No Guns To Town\" in Jamaika auf Platz eins, in den Charts und in den Video-Charts. 2003 gewann er bei den IRAWMA Awards in New York den Preis als bester neuer Künstler. Er spielte bei Sting, Rebel Salute, Reggae Sumfest und Rototom Sunsplash.",
+     "Zu seinen Alben gehören No Guns To Town (2003), Born To Be Free (2010) und Rebellution (2022). Seine Songs handeln von Glauben, Umwelt und der Jugend."
+    ],
+    "facts": [
+     [
+      "Bürgerlicher Name",
+      "Kevin Christopher Roberts"
+     ],
+     [
+      "Herkunft",
+      "St. Thomas, Jamaika"
+     ],
+     [
+      "Aktiv",
+      "Anfang der 2000er bis heute"
+     ],
+     [
+      "Neuestes Album",
+      "Rebellution (2022)"
+     ]
+    ]
+   },
+   "fr": {
+    "tagline": "Du roots reggae de St. Thomas, en Jamaïque. La voix derrière « No Guns To Town » et « Mr. Greedy ».",
+    "bio": [
+     "Natty King est né Kevin Christopher Roberts en 1977 et a grandi à la campagne, à St. Thomas, dans le sud-est de la Jamaïque. Ses modèles sont The Wailers, Burning Spear et Luciano.",
+     "Au début des années 2000, « Mr. Greedy » et « No Guns To Town » atteignent la première place en Jamaïque, dans les charts comme dans les classements vidéo. En 2003, il reçoit le prix de la meilleure révélation aux IRAWMA à New York. Il s'est produit à Sting, Rebel Salute, Reggae Sumfest et Rototom Sunsplash.",
+     "Parmi ses albums figurent No Guns To Town (2003), Born To Be Free (2010) et Rebellution (2022). Ses chansons parlent de foi, d'environnement et de la jeunesse."
+    ],
+    "facts": [
+     [
+      "Nom civil",
+      "Kevin Christopher Roberts"
+     ],
+     [
+      "Origine",
+      "St. Thomas, Jamaïque"
+     ],
+     [
+      "Actif",
+      "Du début des années 2000 à aujourd'hui"
+     ],
+     [
+      "Dernier album",
+      "Rebellution (2022)"
+     ]
+    ]
+   }
+  }
  }
 }

@@ -37,6 +37,93 @@ THEMES = {
 .btn{border-radius:4px;letter-spacing:.02em}
 .eyebrow{font-weight:500;letter-spacing:.32em}
 """},
+ "mono": {"preload": "archivo-black-latin-400-normal.woff2", "css": """
+@font-face{font-family:"Archivo Black";font-style:normal;font-weight:400;font-display:swap;src:url("../assets/fonts/archivo-black-latin-400-normal.woff2") format("woff2")}
+:root{--display:"Archivo Black","Arial Black",sans-serif;--bg:#0b0b0b;--panel:#151515;--ink:#f5f5f2;--mute:#a8a8a2}
+.hero .slides,.hero .vid{filter:grayscale(1) contrast(1.08)}
+.hero h1,.h2{letter-spacing:-.035em}
+.h2{font-size:clamp(36px,4.8vw,68px);line-height:.98}
+.btn,.rel .shops a,.lang button{border-radius:0}
+.marquee{background:#f5f5f2}.marquee div{color:#0b0b0b}
+"""},
+ "royal": {"preload": "cinzel-latin-900-normal.woff2", "css": """
+@font-face{font-family:"Cinzel";font-style:normal;font-weight:700;font-display:swap;src:url("../assets/fonts/cinzel-latin-700-normal.woff2") format("woff2")}
+@font-face{font-family:"Cinzel";font-style:normal;font-weight:900;font-display:swap;src:url("../assets/fonts/cinzel-latin-900-normal.woff2") format("woff2")}
+:root{--display:"Cinzel",Georgia,serif;--bg:#100c14;--panel:#19131f;--ink:#f4ecdc;--mute:#b4a690}
+.hero h1,.h2,.logo{font-weight:900;letter-spacing:.02em}
+.hero h1 span{color:var(--acc);-webkit-text-stroke:0}
+.h2{font-size:clamp(34px,4.4vw,64px);line-height:1.05}
+.btn,.rel .shops a,.lang button{border-radius:2px}
+.marquee div{color:var(--acc)}
+"""},
+ "loud": {"preload": "bungee-latin-400-normal.woff2", "css": """
+@font-face{font-family:"Bungee";font-style:normal;font-weight:400;font-display:swap;src:url("../assets/fonts/bungee-latin-400-normal.woff2") format("woff2")}
+:root{--display:"Bungee",Impact,sans-serif;--bg:#0b0b0e;--panel:#141419;--ink:#f4f4ef;--mute:#a9a9b3}
+.hero h1 span{color:var(--acc);-webkit-text-stroke:0}
+.h2{font-size:clamp(32px,4.4vw,62px);line-height:1.02}
+.btn{border-radius:99px}
+.marquee{background:var(--acc)}.marquee div{color:#0b0b0e}
+"""},
+ "tall": {"preload": "bebas-neue-latin-400-normal.woff2", "css": """
+@font-face{font-family:"Bebas Neue";font-style:normal;font-weight:400;font-display:swap;src:url("../assets/fonts/bebas-neue-latin-400-normal.woff2") format("woff2")}
+:root{--display:"Bebas Neue",Impact,sans-serif;--bg:#0c0f0b;--panel:#141a13;--ink:#f3efe0;--mute:#aab0a0}
+.hero h1{letter-spacing:.01em}
+.hero h1 span{color:var(--acc);-webkit-text-stroke:0}
+.h2{font-size:clamp(48px,6.4vw,96px);line-height:.92;letter-spacing:.01em}
+.marquee{background:linear-gradient(90deg,#3fae5a,#f2c230,#d2402f)}.marquee div{color:#0c0f0b}
+"""},
+}
+
+# Hero layouts: position and line breaks of the artist name (independent of the font theme)
+LAYOUTS = {
+ "stack": "",
+ "center": """
+.hero{align-items:center;text-align:center}
+.hero .wrap{padding:120px 0 90px;display:flex;flex-direction:column;align-items:center}
+.hero h1{font-size:clamp(58px,9.5vw,150px);line-height:.95}
+.hero h1 span{display:inline}
+.hero p.lead{margin:0 auto}
+.hero .cta{justify-content:center}
+.hero:after{background:radial-gradient(ellipse at center,rgba(8,8,8,.5) 0%,rgba(8,8,8,.86) 75%),linear-gradient(0deg,var(--bg) 0%,transparent 35%)}
+""",
+ "right": """
+.hero .wrap{display:flex;flex-direction:column;align-items:flex-end;text-align:right}
+.hero p.lead{margin-left:auto}
+.hero .cta{justify-content:flex-end}
+.hero:after{background:linear-gradient(270deg,rgba(12,11,10,.92) 0%,rgba(12,11,10,.55) 45%,rgba(12,11,10,.1) 100%),linear-gradient(0deg,var(--bg) 0%,transparent 40%)}
+.hero .watch{right:auto;left:28px}.scroll{right:auto;left:28px}
+""",
+ "split": """
+.hero{align-items:center}
+.hero .wrap{padding:120px 0 80px}
+.hero h1{font-size:clamp(96px,20vw,320px);line-height:.8;margin:30px 0 26px}
+.hero h1 i{display:block;font-size:.2em;letter-spacing:.62em;line-height:1;margin:0 0 .25em .06em;color:var(--acc2)}
+.hero h1 span{display:block;color:var(--ink);-webkit-text-stroke:0}
+""",
+ "masthead": """
+.hero{align-items:stretch}
+.hero .wrap{display:flex;flex-direction:column;min-height:100vh;padding-top:96px}
+.hero h1{order:-1;font-size:clamp(90px,24vw,400px);line-height:.82;margin:0;letter-spacing:-.02em}
+.hero h1 span{display:inline}
+.hero .chip{margin-top:auto;align-self:flex-start}
+.hero:after{background:linear-gradient(180deg,rgba(11,11,14,.82) 0%,rgba(11,11,14,.15) 45%,rgba(11,11,14,.6) 75%,var(--bg) 100%)}
+""",
+ "framed": """
+.hero{align-items:center}
+.hero .wrap{padding:120px 0 90px}
+.hero h1{display:inline-block;font-size:clamp(50px,7.6vw,118px);line-height:1.02;border:3px solid var(--acc);padding:.22em .34em .16em;margin:28px 0 26px;background:rgba(16,12,20,.45);backdrop-filter:blur(3px)}
+.hero h1 span{display:block}
+.hero p.lead{border-left:2px solid var(--acc);padding-left:18px}
+""",
+ "vertical": """
+@media(min-width:900px){
+.hero .wrap{display:grid;grid-template-columns:auto 1fr;column-gap:56px;align-items:end;align-content:end}
+.hero h1{grid-column:1;grid-row:1/span 3;writing-mode:vertical-rl;transform:rotate(180deg);font-size:clamp(90px,15vh,170px);line-height:.86;margin:0;white-space:nowrap}
+.hero h1 span{display:inline}
+.hero .wrap>*:not(h1){grid-column:2;justify-self:start}
+.hero .chip{align-self:end}
+}
+""",
 }
 
 def aff(url, slug=""):
@@ -266,7 +353,7 @@ for slug, a in data.items():
                      + "".join(f'<a href="{e(u)}" target="_blank" rel="noopener">{n}</a>' for n, u in more_shops(a["name"], title))
                      + '</div></article>')
     words = a["name"].split()
-    h1 = e(words[0]) + "".join(f"<span>{e(w)}</span>" for w in words[1:])
+    h1 = f"<i>{e(words[0])}</i>" + "".join(f" <span>{e(w)}</span>" for w in words[1:])
     marquee = "".join(f"<span>{e(l)}</span><i>✦</i>" for l in a["labels"])
     gallery = "".join(f'<img src="{u}" alt="{e(a["name"])} live">' for u in a["gallery"])
     facts = "".join(f"<div><dt>{e(k)}</dt><dd>{e(v)}</dd></div>" for k, v in a["facts"])
@@ -292,7 +379,7 @@ for slug, a in data.items():
            "NEWSLETTER_ENDPOINT": e(a.get("newsletter_endpoint", "")),
            "AFF_NOTE": ('<p class="aff" data-i18n="aff_note">Some shop links are affiliate links: if you buy through them, the shop pays a small commission. The price stays the same for you.</p>' if aff_active() else ""),
            "SOCIAL": ('<div><h3>Follow</h3><div class="links">' + "".join(f'<a href="{e(u)}" target="_blank" rel="noopener">{e(n)}</a>' for n, u in a.get("social", {}).items()) + '</div></div>') if a.get("social") else "",
-           "THEME_CSS": THEMES[a.get("theme", "poster")]["css"], "FONT_PRELOAD": THEMES[a.get("theme", "poster")]["preload"],
+           "THEME_CSS": THEMES[a.get("theme", "poster")]["css"] + LAYOUTS[a.get("layout", "stack")], "FONT_PRELOAD": THEMES[a.get("theme", "poster")]["preload"],
            "MERCH": merch_cards, "MERCH_BTN": merch_btn,
            "NAME_H1": h1, "STREAM_LINKS": stream_html, "SHOP_LINKS": shop_html, "FAVICON": favicon(a),
            "JSONLD": json.dumps(ld, ensure_ascii=False).replace("</", "<\\/"), "FORM_ENDPOINT": e(a.get("form_endpoint", "")), "NAME": e(a["name"]), "TAGLINE": e(a["tagline"]), "ACCENT2": a["accent2"], "ACCENT": a["accent"],
