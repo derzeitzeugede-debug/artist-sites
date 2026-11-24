@@ -79,7 +79,7 @@ LAYOUTS = {
  "stack": "",
  "center": """
 .hero{align-items:center;text-align:center}
-.hero .wrap{padding:120px 0 90px;display:flex;flex-direction:column;align-items:center}
+.hero .wrap{padding-top:120px;padding-bottom:90px;display:flex;flex-direction:column;align-items:center}
 .hero h1{font-size:clamp(58px,9.5vw,150px);line-height:.95}
 .hero h1 span{display:inline}
 .hero p.lead{margin:0 auto}
@@ -95,7 +95,7 @@ LAYOUTS = {
 """,
  "split": """
 .hero{align-items:center}
-.hero .wrap{padding:120px 0 80px}
+.hero .wrap{padding-top:120px;padding-bottom:80px}
 .hero h1{font-size:clamp(96px,20vw,320px);line-height:.8;margin:30px 0 26px}
 .hero h1 i{display:block;font-size:.2em;letter-spacing:.62em;line-height:1;margin:0 0 .25em .06em;color:var(--acc2)}
 .hero h1 span{display:block;color:var(--ink);-webkit-text-stroke:0}
@@ -110,7 +110,7 @@ LAYOUTS = {
 """,
  "framed": """
 .hero{align-items:center}
-.hero .wrap{padding:120px 0 90px}
+.hero .wrap{padding-top:120px;padding-bottom:90px}
 .hero h1{display:table;font-size:clamp(50px,7.6vw,118px);line-height:1.02;border:3px solid var(--acc);padding:.22em .34em .16em;margin:28px 0 26px;background:rgba(16,12,20,.45);backdrop-filter:blur(3px)}
 .hero h1 span{display:block}
 .hero p.lead{border-left:2px solid var(--acc);padding-left:18px}
