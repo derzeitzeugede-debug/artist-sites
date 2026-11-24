@@ -170,7 +170,10 @@
   ],
   "spotify_id": "3oX8XeAmdg9wximJieP8dG",
   "links": {
-   "spotify": "https://open.spotify.com/artist/3oX8XeAmdg9wximJieP8dG"
+   "spotify": "https://open.spotify.com/artist/3oX8XeAmdg9wximJieP8dG",
+   "deezer": "https://www.deezer.com/artist/9454",
+   "tidal": "https://tidal.com/artist/15741",
+   "discogs": "https://www.discogs.com/artist/154711"
   },
   "video_file": "",
   "i18n": {
@@ -226,6 +229,9 @@
      ]
     ]
    }
+  },
+  "social": {
+   "SoundCloud": "https://soundcloud.com/jah-mason"
   }
  },
  "lutan-fyah": {
@@ -399,7 +405,11 @@
   ],
   "spotify_id": "1QfjByidqUrsRhcT3fpWTU",
   "links": {
-   "spotify": "https://open.spotify.com/artist/1QfjByidqUrsRhcT3fpWTU"
+   "spotify": "https://open.spotify.com/artist/1QfjByidqUrsRhcT3fpWTU",
+   "deezer": "https://www.deezer.com/artist/13379",
+   "tidal": "https://tidal.com/artist/17017",
+   "discogs": "https://www.discogs.com/artist/413695",
+   "youtube": "https://www.youtube.com/channel/UCjApOIU9t56OatLUzlVnl0g"
   },
   "video_file": "",
   "i18n": {
@@ -455,6 +465,13 @@
      ]
     ]
    }
+  },
+  "social": {
+   "Instagram": "https://www.instagram.com/lutanfyahmusic/",
+   "Facebook": "https://www.facebook.com/lutanfyahofficial",
+   "X / Twitter": "https://twitter.com/lutanfyah1",
+   "SoundCloud": "https://soundcloud.com/lutanfyahofficial",
+   "YouTube": "https://www.youtube.com/channel/UCjApOIU9t56OatLUzlVnl0g"
   }
  }
 }

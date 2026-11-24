@@ -139,7 +139,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 footer .logo{color:var(--ink)}
 footer .cr{max-width:620px;font-size:12px;opacity:.8}
 .everywhere{padding:90px 0 0}
-.everywhere .cols{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px}
+.everywhere .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:40px;margin-top:40px}
 .everywhere h3{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);margin-bottom:16px;font-weight:600}
 .links{display:flex;flex-wrap:wrap;gap:10px}
 .links a{border:1px solid var(--line);padding:12px 18px;border-radius:999px;font-weight:600;font-size:14px;transition:border-color .2s,color .2s}
@@ -255,7 +255,7 @@ footer .aff{font-size:12px;color:var(--mute);margin-top:8px}
 
 <section class="everywhere" id="links"><div class="wrap rv">
   <div class="eyebrow" data-i18n="everywhere">Listen &amp; buy everywhere</div><h2 class="h2" data-i18n="find">Find the music</h2>
-  <div class="cols"><div><h3>Stream</h3><div class="links">{{STREAM_LINKS}}</div></div><div><h3>Vinyl &amp; downloads</h3><div class="links">{{SHOP_LINKS}}</div></div></div>
+  <div class="cols"><div><h3>Stream</h3><div class="links">{{STREAM_LINKS}}</div></div><div><h3>Vinyl &amp; downloads</h3><div class="links">{{SHOP_LINKS}}</div></div>{{SOCIAL}}</div>
 </div></section>
 
 <section id="watch"><div class="wrap">

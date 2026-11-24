@@ -38,7 +38,7 @@ def links_for(a):
             ("Bandcamp", o.get("bandcamp", f"https://bandcamp.com/search?q={q}&item_type=b")),
             ("Beatport / Traxsource", o.get("downloads", f"https://www.traxsource.com/search?term={q}"))]
     fmt = lambda xs: "".join(f'<a href="{e(aff(u, a.get("_slug", "")))}" target="_blank" rel="noopener">{e(l)}</a>' for l, u in xs)
-    return fmt(stream), fmt(shop), [u for _, u in stream + shop if "search" not in u]
+    return fmt(stream), fmt(shop), [u for _, u in stream + shop if "search" not in u] + list(a.get("social", {}).values())
 
 def favicon(a):
     ini = "".join(w[0] for w in a["name"].split()[:2]).upper()
@@ -161,6 +161,7 @@ for slug, a in data.items():
            "SPOTIFY_ID": a.get("spotify_id", ""), "NAME_Q": quote_plus(a["name"]),
            "NEWSLETTER_ENDPOINT": e(a.get("newsletter_endpoint", "")),
            "AFF_NOTE": ('<p class="aff" data-i18n="aff_note">Some shop links are affiliate links: if you buy through them, the shop pays a small commission. The price stays the same for you.</p>' if aff_active() else ""),
+           "SOCIAL": ('<div><h3>Follow</h3><div class="links">' + "".join(f'<a href="{e(u)}" target="_blank" rel="noopener">{e(n)}</a>' for n, u in a.get("social", {}).items()) + '</div></div>') if a.get("social") else "",
            "MERCH": merch_cards, "MERCH_BTN": merch_btn,
            "NAME_H1": h1, "STREAM_LINKS": stream_html, "SHOP_LINKS": shop_html, "FAVICON": favicon(a),
            "JSONLD": json.dumps(ld, ensure_ascii=False).replace("</", "<\\/"), "FORM_ENDPOINT": e(a.get("form_endpoint", "")), "NAME": e(a["name"]), "TAGLINE": e(a["tagline"]), "ACCENT2": a["accent2"], "ACCENT": a["accent"],
