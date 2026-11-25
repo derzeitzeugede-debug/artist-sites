@@ -102,7 +102,8 @@ THEMES = {
 :root{--display:"Bowlby One",Impact,sans-serif;--bg:#120b08;--panel:#1c120d;--ink:#fbf1e2;--mute:#c0ab93}
 .hero h1{letter-spacing:-.01em}
 .hero h1 span{-webkit-text-stroke:0;color:var(--acc)}
-.h2{font-size:clamp(34px,4.6vw,66px);line-height:1}
+.h2{font-size:clamp(34px,4.6vw,66px);line-height:1.14}
+.logo{font-size:19px;letter-spacing:.02em}
 .btn{border-radius:14px}.rel .shops a,.lang button{border-radius:10px}
 .marquee{background:linear-gradient(90deg,#d42a20,#f2a516)}.marquee div{color:#120b08}
 """},
