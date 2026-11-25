@@ -158,7 +158,7 @@ section{padding:130px 0}
 .gal{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:16px;padding:0 16px}
 .gal img{width:100%;height:520px;object-fit:cover;object-position:50% 22%;border-radius:4px}
 .band{position:relative;padding:170px 0;overflow:hidden;text-align:center;margin-top:130px}
-.band .bg{position:absolute;inset:0;background:url("https://i.ytimg.com/vi/VZcH-WuitwA/maxres3.jpg") center 35%/cover;filter:grayscale(.3)}
+.band .bg{position:absolute;inset:0;background:url("https://i.ytimg.com/vi/e05HLUSHIRs/maxres1.jpg") center 35%/cover;filter:grayscale(.3)}
 .band:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(12,11,10,.88),rgba(12,11,10,.6))}
 .band .wrap{position:relative;z-index:2}
 .band .h2{font-size:clamp(54px,9vw,140px)}
@@ -265,10 +265,10 @@ footer .aff{font-size:12px;color:var(--mute);margin-top:8px}
 <div class="demo">Design preview</div>
 
 <header class="hero" id="top">
-  <div class="slides"><div style="background-image:url('https://i.ytimg.com/vi/5Nw84tV86ns/maxres1.jpg');background-position:30% 30%"></div><div style="background-image:url('https://i.ytimg.com/vi/e05HLUSHIRs/maxres2.jpg');background-position:50% 30%"></div><div style="background-image:url('https://i.ytimg.com/vi/ONPmedjqxok/maxres3.jpg');background-position:50% 30%"></div></div>
+  <div class="slides"><div style="background-image:url('https://i.ytimg.com/vi/5Nw84tV86ns/maxres1.jpg');background-position:30% 30%"></div><div style="background-image:url('https://i.ytimg.com/vi/e05HLUSHIRs/maxres2.jpg');background-position:50% 10%"></div><div style="background-image:url('https://i.ytimg.com/vi/ONPmedjqxok/maxres3.jpg');background-position:50% 30%"></div></div>
   <div class="vid" id="vid"><div id="yt"></div></div>
   <div class="grain"></div>
-  <a class="watch" href="https://www.youtube.com/watch?v=5Nw84tV86ns" target="_blank" rel="noopener"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></span><em class="lb"><em data-i18n="lbl_watch">Watch</em>: Watch Your Friends</em></a>
+  <a class="watch" href="https://www.youtube.com/watch?v=ONPmedjqxok" target="_blank" rel="noopener"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></span><em class="lb"><em data-i18n="lbl_watch">Watch</em>: Violence Cease</em></a>
   <div class="wrap">
     <a class="chip" href="#listen"><b data-i18n="new">NEW</b>Signature tune: Bandelero</a>
     <h1><i>Pinchers</i></h1>
@@ -336,7 +336,7 @@ footer .aff{font-size:12px;color:var(--mute);margin-top:8px}
   <div class="head rv"><div><div class="eyebrow" data-i18n="watch">Watch &amp; stream</div><h2 class="h2" data-i18n-html="see">See it<br>live</h2></div><p data-i18n="watch_p">Players load only after you click, so no data goes to Spotify or YouTube before that.</p></div>
   <div class="embeds rv">
     <div class="consent" data-src="https://open.spotify.com/embed/artist/0qPme7vL5lolpwxquzeSF7?theme=0"><div class="in"><h3>Spotify</h3><p data-i18n="consent_sp">Loading the player connects to Spotify and shares your IP address with them.</p><button class="btn p" onclick="loadEmbed(this)" data-i18n="load_player">Load player</button></div></div>
-    <div class="consent" style="background-image:url('https://i.ytimg.com/vi/5Nw84tV86ns/hqdefault.jpg')" data-src="https://www.youtube-nocookie.com/embed/5Nw84tV86ns?autoplay=1&amp;rel=0"><div class="in"><h3>YouTube</h3><p data-i18n="consent_yt">Loading the video connects to YouTube (Google) and shares your IP address with them.</p><button class="btn p" onclick="loadEmbed(this)" data-i18n="load_video">Load video</button></div></div>
+    <div class="consent" style="background-image:url('https://i.ytimg.com/vi/ONPmedjqxok/hqdefault.jpg')" data-src="https://www.youtube-nocookie.com/embed/ONPmedjqxok?autoplay=1&amp;rel=0"><div class="in"><h3>YouTube</h3><p data-i18n="consent_yt">Loading the video connects to YouTube (Google) and shares your IP address with them.</p><button class="btn p" onclick="loadEmbed(this)" data-i18n="load_video">Load video</button></div></div>
   </div>
 </div></section>
 
@@ -433,7 +433,7 @@ if (!matchMedia('(prefers-reduced-motion: reduce)').matches && innerWidth > 700)
     const hide = () => { firstMove = 0; v.classList.remove('on'); };
     new IntersectionObserver(es => { seen = es[0].isIntersecting; if (!seen) hide(); }).observe(v);
     document.addEventListener('visibilitychange', () => { if (document.hidden) hide(); });
-    const START = 5;
+    const START = 8;
     const tick = () => {
       let t, d, s;
       try { t = p.getCurrentTime(); d = p.getDuration(); s = p.getPlayerState(); } catch (_) { return; }
@@ -446,8 +446,8 @@ if (!matchMedia('(prefers-reduced-motion: reduce)').matches && innerWidth > 700)
       if (moving && seen && !document.hidden) { if (firstMove && now - firstMove >= 3000) v.classList.add('on'); }
       else { hide(); if (seen && s !== 1 && s !== 3 && !document.hidden) p.playVideo(); }
     };
-    p = new YT.Player('yt', {videoId: '5Nw84tV86ns',
-      playerVars: {autoplay:1, mute:1, controls:0, loop:1, playlist:'5Nw84tV86ns', start:START, playsinline:1, rel:0, origin: location.origin, modestbranding:1, iv_load_policy:3, disablekb:1, fs:0},
+    p = new YT.Player('yt', {videoId: 'ONPmedjqxok',
+      playerVars: {autoplay:1, mute:1, controls:0, loop:1, playlist:'ONPmedjqxok', start:START, playsinline:1, rel:0, origin: location.origin, modestbranding:1, iv_load_policy:3, disablekb:1, fs:0},
       events: {
         onReady: e => { e.target.mute(); e.target.playVideo(); dog = setInterval(tick, 100); },
         onStateChange: e => { if (e.data !== 1) { firstMove = 0; v.classList.remove('on'); } },
