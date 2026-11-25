@@ -88,6 +88,41 @@ THEMES = {
 .btn{border-radius:99px}.rel .shops a,.lang button{border-radius:8px}
 .marquee{background:#f6c21a}.marquee div{color:#0b0d0a}
 """},
+ "poet": {"preload": "abril-fatface-latin-400-normal.woff2", "css": """
+@font-face{font-family:"Abril Fatface";font-style:normal;font-weight:400;font-display:swap;src:url("../assets/fonts/abril-fatface-latin-400-normal.woff2") format("woff2")}
+:root{--display:"Abril Fatface",Georgia,serif;--bg:#0a0c12;--panel:#121624;--ink:#f4efe4;--mute:#a9adbd}
+.hero h1,.h2,.logo,.marquee div{text-transform:none;letter-spacing:0}
+.hero h1 span{-webkit-text-stroke:0;color:var(--acc)}
+.h2{font-size:clamp(40px,5.4vw,78px);line-height:1}
+.btn,.rel .shops a,.lang button{border-radius:2px}
+.marquee{background:#121624}.marquee div{color:var(--acc)}
+"""},
+ "groove": {"preload": "bowlby-one-latin-400-normal.woff2", "css": """
+@font-face{font-family:"Bowlby One";font-style:normal;font-weight:400;font-display:swap;src:url("../assets/fonts/bowlby-one-latin-400-normal.woff2") format("woff2")}
+:root{--display:"Bowlby One",Impact,sans-serif;--bg:#120b08;--panel:#1c120d;--ink:#fbf1e2;--mute:#c0ab93}
+.hero h1{letter-spacing:-.01em}
+.hero h1 span{-webkit-text-stroke:0;color:var(--acc)}
+.h2{font-size:clamp(34px,4.6vw,66px);line-height:1}
+.btn{border-radius:14px}.rel .shops a,.lang button{border-radius:10px}
+.marquee{background:linear-gradient(90deg,#d42a20,#f2a516)}.marquee div{color:#120b08}
+"""},
+ "herb": {"preload": "ultra-latin-400-normal.woff2", "css": """
+@font-face{font-family:"Ultra";font-style:normal;font-weight:400;font-display:swap;src:url("../assets/fonts/ultra-latin-400-normal.woff2") format("woff2")}
+:root{--display:"Ultra",Rockwell,Georgia,serif;--bg:#081009;--panel:#0f1a10;--ink:#eef3e2;--mute:#a3b199}
+.hero h1 span{-webkit-text-stroke:0;color:var(--acc)}
+.h2{font-size:clamp(34px,4.6vw,66px);line-height:1.02}
+.btn,.rel .shops a,.lang button{border-radius:5px}
+.marquee{background:var(--acc)}.marquee div{color:#081009}
+"""},
+ "kick": {"preload": "staatliches-latin-400-normal.woff2", "css": """
+@font-face{font-family:"Staatliches";font-style:normal;font-weight:400;font-display:swap;src:url("../assets/fonts/staatliches-latin-400-normal.woff2") format("woff2")}
+:root{--display:"Staatliches",Impact,sans-serif;--bg:#0c0b10;--panel:#15131c;--ink:#f2f0ea;--mute:#a7a3b4}
+.hero h1{letter-spacing:.02em}
+.hero h1 span{-webkit-text-stroke:0;color:var(--acc)}
+.h2{font-size:clamp(46px,6vw,90px);line-height:.94;letter-spacing:.01em}
+.btn,.rel .shops a,.lang button{border-radius:0}
+.marquee{background:linear-gradient(90deg,var(--acc),var(--acc2))}.marquee div{color:#0c0b10}
+"""},
 }
 
 # Hero layouts: position and line breaks of the artist name (independent of the font theme)
@@ -163,7 +198,7 @@ LAYOUTS = {
 }
 
 DISCO_ALL = json.load(open(os.path.join(HERE, "discography.json")))
-DISCOGS_IDS = {"chuck-fenda": 81766, "turbulence": 306321, "jah-mason": 154711, "glen-washington": 166268, "lutan-fyah": 413695, "natural-black": 187305, "ras-shiloh": 215529, "bugle": 828489, "natty-king": 232740}
+DISCOGS_IDS = {"chuck-fenda": 81766, "turbulence": 306321, "jah-mason": 154711, "glen-washington": 166268, "lutan-fyah": 413695, "natural-black": 187305, "ras-shiloh": 215529, "bugle": 828489, "natty-king": 232740, "junior-kelly": 217125, "everton-blender": 619426, "chezidek": 306313, "norris-man": 779825}
 def disco_html(slug):
     items = DISCO_ALL.get(slug, [])
     out = []
