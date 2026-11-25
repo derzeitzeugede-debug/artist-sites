@@ -36,6 +36,7 @@ img{display:block;max-width:100%}
 .btn.p{background:var(--acc);color:#0c0b0a}
 .btn.g{background:rgba(255,255,255,.08);color:var(--ink);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.18)}
 .btn svg{width:16px;height:16px}
+@property --ga{syntax:"<angle>";inherits:false;initial-value:0deg}.glow{position:relative;isolation:isolate;border:2px solid transparent!important;background:linear-gradient(var(--acc),var(--acc)) padding-box,conic-gradient(from var(--ga),rgba(255,255,255,0) 0deg 250deg,#d42a20 285deg,#f6c21a 315deg,#fff 330deg,#1f8a3b 345deg,rgba(255,255,255,0) 360deg) border-box!important;animation:gspin 3.2s linear infinite,gpulse 3.2s ease-in-out infinite}.glow:hover{animation-duration:1.6s,3.2s}@keyframes gspin{to{--ga:360deg}}@keyframes gpulse{0%,100%{box-shadow:0 0 0 0 rgba(246,194,26,0),0 0 14px rgba(246,194,26,.25)}50%{box-shadow:0 0 0 4px rgba(246,194,26,.12),0 0 26px rgba(246,194,26,.45)}}@media (prefers-reduced-motion:reduce){.glow{animation:none;box-shadow:0 0 18px rgba(246,194,26,.4)}}
 .nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
 .nav.solid{background:rgba(12,11,10,.86);backdrop-filter:blur(14px);border-color:var(--line)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px}
@@ -263,7 +264,7 @@ footer .aff{font-size:12px;color:var(--mute);margin-top:8px}
 <nav class="nav" id="nav"><div class="wrap">
   <a class="logo" href="#top">Chuck Fenda</a>
   <ul><li><a href="#listen" data-i18n="nav_listen">Listen</a></li><li><a href="#vinyl" data-i18n="nav_vinyl">Vinyl</a></li><li><a href="#discography" data-i18n="nav_disco">Discography</a></li><li><a href="#tour" data-i18n="nav_tour">Tour</a></li><li><a href="#about" data-i18n="nav_about">About</a></li><li><a href="#merch" data-i18n="nav_merch">Merch</a></li><li><a href="#press" data-i18n="nav_press">Press</a></li><li><a href="#booking" data-i18n="nav_booking">Booking</a></li></ul>
-  <div style="display:flex;align-items:center"><div class="lang" id="lang"><button data-l="en">EN</button><button data-l="de">DE</button><button data-l="fr">FR</button><button data-l="es">ES</button><button data-l="pt">PT</button></div><a class="btn p" href="https://www.buyreggae.com/artists/31882/chuck-fender" target="_blank" rel="noopener" data-i18n="shop_vinyl">Shop vinyl</a></div>
+  <div style="display:flex;align-items:center"><div class="lang" id="lang"><button data-l="en">EN</button><button data-l="de">DE</button><button data-l="fr">FR</button><button data-l="es">ES</button><button data-l="pt">PT</button></div><a class="btn p glow" href="https://www.buyreggae.com/artists/31882/chuck-fender" target="_blank" rel="noopener" data-i18n="shop_vinyl">Shop vinyl</a></div>
 </div></nav>
 <div class="demo">Design preview</div>
 
@@ -374,7 +375,7 @@ footer .aff{font-size:12px;color:var(--mute);margin-top:8px}
     <div class="full"><label for="f-msg" data-i18n="f_msg">Message</label><textarea id="f-msg" name="message" required></textarea></div>
     <label class="ok full"><input type="checkbox" required> <span data-i18n="f_ok">I agree that my details are used to answer this enquiry (see privacy policy).</span></label>
     <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-    <div class="send full"><button class="btn p" type="submit" data-i18n="send">Send booking enquiry</button><span class="msg" id="formMsg" role="status"></span></div>
+    <div class="send full"><button class="btn p glow" type="submit" data-i18n="send">Send booking enquiry</button><span class="msg" id="formMsg" role="status"></span></div>
   </form>
 </div></section>
 
@@ -398,7 +399,7 @@ footer .aff{font-size:12px;color:var(--mute);margin-top:8px}
     <button class="sec" onclick="step(1)" aria-label="Next"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 5h2v14h-2zM4 5v14l11-7z"/></svg></button>
   </div>
   <div class="info"><b id="barT"></b><small id="barS"></small><div class="prog" id="prog"><i id="progI"></i></div></div>
-  <a class="btn p" id="barBuy" href="#" target="_blank" rel="noopener">Buy this record</a>
+  <a class="btn p glow" id="barBuy" href="#" target="_blank" rel="noopener">Buy this record</a>
 </div>
 <audio id="au" preload="none"></audio>
 
