@@ -2952,7 +2952,7 @@
  "everton-blender": {
   "name": "Everton Blender",
   "theme": "groove",
-  "layout": "right",
+  "layout": "split",
   "est": 1979,
   "accent": "#f2a516",
   "accent2": "#d42a20",
@@ -3109,15 +3109,15 @@
   "slides": [
    [
     "https://i.ytimg.com/vi/4Zf2qJvW9Wk/maxres2.jpg",
-    "50% 30%"
+    "50% 15%"
    ],
    [
     "https://i.ytimg.com/vi/sNCrIkdENFs/maxres3.jpg",
-    "50% 30%"
+    "50% 15%"
    ],
    [
     "https://i.ytimg.com/vi/AkG9rNRxJYg/maxres2.jpg",
-    "50% 30%"
+    "50% 15%"
    ]
   ],
   "spotify_id": "4g87eDwWKEcIpEW8kiTUla",
