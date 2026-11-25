@@ -126,6 +126,14 @@ html body .h2{line-height:1.14}
 .btn,.rel .shops a,.lang button{border-radius:0}
 .marquee{background:linear-gradient(90deg,var(--acc),var(--acc2))}.marquee div{color:#0c0b10}
 """},
+ "bandelero": {"preload": "rye-latin-400-normal.woff2", "css": """
+@font-face{font-family:"Rye";font-style:normal;font-weight:400;font-display:swap;src:url("../assets/fonts/rye-latin-400-normal.woff2") format("woff2")}
+:root{--display:"Rye",Georgia,serif;--bg:#140d09;--panel:#1f1510;--ink:#f8ecd8;--mute:#c4ae92}
+.hero h1{letter-spacing:.01em;text-transform:none}
+.hero h1 span{-webkit-text-stroke:0;color:var(--acc)}
+.h2{font-size:clamp(36px,4.8vw,70px);line-height:1.12;text-transform:none}
+.btn{border-radius:4px}.rel .shops a,.lang button{border-radius:4px}
+"""},
  "euphony": {"preload": "passion-one-latin-700-normal.woff2", "css": """
 @font-face{font-family:"Passion One";font-style:normal;font-weight:700;font-display:swap;src:url("../assets/fonts/passion-one-latin-700-normal.woff2") format("woff2")}
 :root{--display:"Passion One",Impact,sans-serif;--bg:#100c18;--panel:#1a1426;--ink:#f6f1ff;--mute:#b3a9c6}
@@ -209,7 +217,7 @@ LAYOUTS = {
 }
 
 DISCO_ALL = json.load(open(os.path.join(HERE, "discography.json")))
-DISCOGS_IDS = {"chuck-fenda": 81766, "turbulence": 306321, "jah-mason": 154711, "glen-washington": 166268, "lutan-fyah": 413695, "natural-black": 187305, "ras-shiloh": 215529, "bugle": 828489, "natty-king": 232740, "junior-kelly": 217125, "everton-blender": 619426, "chezidek": 306313, "norris-man": 779825, "yami-bolo": 153408}
+DISCOGS_IDS = {"chuck-fenda": 81766, "turbulence": 306321, "jah-mason": 154711, "glen-washington": 166268, "lutan-fyah": 413695, "natural-black": 187305, "ras-shiloh": 215529, "bugle": 828489, "natty-king": 232740, "junior-kelly": 217125, "everton-blender": 619426, "chezidek": 306313, "norris-man": 779825, "yami-bolo": 153408, "pinchers": 166396}
 def disco_html(slug):
     items = DISCO_ALL.get(slug, [])
     out = []
