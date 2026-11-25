@@ -126,6 +126,14 @@ html body .h2{line-height:1.14}
 .btn,.rel .shops a,.lang button{border-radius:0}
 .marquee{background:linear-gradient(90deg,var(--acc),var(--acc2))}.marquee div{color:#0c0b10}
 """},
+ "euphony": {"preload": "passion-one-latin-700-normal.woff2", "css": """
+@font-face{font-family:"Passion One";font-style:normal;font-weight:700;font-display:swap;src:url("../assets/fonts/passion-one-latin-700-normal.woff2") format("woff2")}
+:root{--display:"Passion One",Impact,sans-serif;--bg:#100c18;--panel:#1a1426;--ink:#f6f1ff;--mute:#b3a9c6}
+.hero h1{font-weight:700;letter-spacing:.005em;line-height:.9}
+.hero h1 span{-webkit-text-stroke:0;color:var(--acc)}
+.h2{font-weight:700;font-size:clamp(44px,5.6vw,84px);line-height:1}
+.btn{border-radius:999px}.rel .shops a,.lang button{border-radius:999px}
+"""},
 }
 
 # Hero layouts: position and line breaks of the artist name (independent of the font theme)
@@ -201,7 +209,7 @@ LAYOUTS = {
 }
 
 DISCO_ALL = json.load(open(os.path.join(HERE, "discography.json")))
-DISCOGS_IDS = {"chuck-fenda": 81766, "turbulence": 306321, "jah-mason": 154711, "glen-washington": 166268, "lutan-fyah": 413695, "natural-black": 187305, "ras-shiloh": 215529, "bugle": 828489, "natty-king": 232740, "junior-kelly": 217125, "everton-blender": 619426, "chezidek": 306313, "norris-man": 779825}
+DISCOGS_IDS = {"chuck-fenda": 81766, "turbulence": 306321, "jah-mason": 154711, "glen-washington": 166268, "lutan-fyah": 413695, "natural-black": 187305, "ras-shiloh": 215529, "bugle": 828489, "natty-king": 232740, "junior-kelly": 217125, "everton-blender": 619426, "chezidek": 306313, "norris-man": 779825, "yami-bolo": 153408}
 def disco_html(slug):
     items = DISCO_ALL.get(slug, [])
     out = []
